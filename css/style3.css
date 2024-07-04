@@ -1,0 +1,284 @@
+  .cursor2 {
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    pointer-events: none;
+    backdrop-filter: invert(1) grayscale(1);
+    z-index: 99999;
+  }
+
+  .cursor2 .img-box{
+    position: fixed;
+    top: 0;left: 0;
+    transform: translate(-50%,-50%);
+    opacity: 0;
+    width: 600px; height:0;
+    background-size: cover;
+    pointer-events: none;
+    transition: height 0.5s, opacity 0.5s 0.1s;
+}
+.cursor2 .img-box .image{
+    width: 100%;
+    height:0;
+    overflow: hidden;
+    transition: height 1s;
+}
+.cursor2 .image img{
+    transform: scale(1.5);
+    transition: transform 1s 0.2s ease-out;
+position: relative;
+}
+
+.cursor2 #img3-1 img {
+    transform: scale(1);
+    transition: transform 1s 0.2s ease-out;
+position: relative;
+top: -170px;
+}
+
+
+.cursor2 .img-box.on{
+    height: 400px;
+    opacity: 1;
+    transition: height 0.5s 0.1s, opacity 0.5s;
+}
+
+.cursor2 .img-box .image.on{
+    height:100%;
+}
+.cursor2 .image.on img{
+    transform: scale(1.02);
+}
+
+
+.button {
+    background-color: #fff;
+    position: fixed;
+    top: 10px;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: 1;
+    margin-left: 230px;
+}
+
+.button ul {
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    gap: 100px;
+    padding: 0 320px 0 30px;
+}
+
+.button ul li p::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.2s;
+    background: #000;
+    z-index: -1;
+}
+
+
+.button ul li p {
+    position: relative;
+    transition: 0.2s;
+    color: #000;
+    font-size: 25px;
+    font-family: zeph;
+}
+
+.button ul li p:hover {
+    color: #fff;
+}
+
+.button ul li p:hover::after {
+    transform: scaleX(1);
+}
+
+
+/* page1 */
+
+.page1 {
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+}
+
+.title {
+    position: relative;
+    margin: 0;
+    text-align: center;
+    color: #fff;
+    mix-blend-mode: difference;
+    z-index: 2;
+    top: 50%;
+    left: 8%;
+    transform: translateY(-50%);
+    font-family: zeph;
+}
+
+.main_tit {
+    font-size: 300px;
+}
+
+.sub_tit {
+    position: absolute;
+    top: -220px;
+    left: -700px;
+    font-size: 20px;
+}
+
+/* page2 */
+
+.blind {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    clip: rect(0, 0, 0, 0);
+    margin: -1px;
+    overflow: hidden;
+}
+
+.bg-shadow {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+
+.page2 {
+    width: 100%;
+    position: relative;
+}
+
+.page2 .work_wrap {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    left: 0;
+    display: flex;
+    width: 100%;
+    height: 100vh;
+}
+
+.page2 .thumb_box {
+    width: 40vw;
+    clip-path: polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%);
+    overflow: hidden;
+}
+
+.page2 img {
+    width: 100%;
+}
+
+.page2 .wrap1 {
+    background-color: #fff;
+}
+
+.page2 .wrap2 {
+    background-color: #008485;
+}
+
+.page2 .wrap3 {
+    background-color: #083fdc;
+}
+
+.wrap2 .infobox {
+    color: #fff;
+}
+
+.wrap2 .project-tit{
+    color: #d60036;
+    font-family: 'Pretendard-Regular';
+    font-weight: 600;
+}
+
+.wrap3 .infobox {
+    color: #fff;
+}
+
+.page2 .work_wrap .left {
+    width: 60%;
+    display: grid;
+    place-items: center;
+}
+
+.page2 .work_wrap .right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+}
+
+.work_wrap .infobox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 0 6vw;
+    justify-content: center;
+}
+
+.work_wrap .pagination {
+    line-height: 1;
+    font-size: 25px;
+    font-style: italic;
+    font-family: "Zephyr", arial, sans-serif;
+}
+
+.work_wrap .project-tit {
+    margin: 20px 0 25px;
+    line-height: 1;
+    font-size: 50px;
+    font-family: zeph;
+    white-space: nowrap;
+}
+
+.work_wrap .desc {
+    font-size: 18px;
+    line-height: 22px;
+    font-family: "Pretendard", arial, sans-serif;
+    text-align: center;
+}
+
+.page2 .work_wrap .links {
+    margin: 24px 0;
+    font-size: 18px;
+    font-family: "Gilroy", sans-serif;
+}
+
+.page2 .work_wrap .links a {
+    display: inline-block;
+    padding: 10px 20px;
+    border: 1px solid #000;
+    border-radius: 30px;
+    transition: all 0.5s;
+}
+.page2 .wrap2 .links a {
+    display: inline-block;
+    padding: 10px 20px;
+    border: 1px solid #fff;
+    border-radius: 30px;
+    transition: all 0.5s;
+}
+.page2 .wrap3 .links a {
+    display: inline-block;
+    padding: 10px 20px;
+    border: 1px solid #fff;
+    border-radius: 30px;
+    transition: all 0.5s;
+}
