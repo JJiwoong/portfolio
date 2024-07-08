@@ -62,6 +62,51 @@ function cursor2() {
 }
 cursor2();
 
+// let imgBoxx=document.querySelectorAll(".img-box")
+// let wrap=document.querySelectorAll(".work_wrap")
+// imgBoxx.forEach(function(ib){
+
+    
+
+// gsap.fromTo(ib,{
+//     opacity:1,
+//     scrollTrigger:{
+//         trigger:wrap,
+//         start:"top top",
+//         end:"bottom bottom",
+//         scrub:1
+//     }
+// },{
+//     opacity:0,
+//     scrollTrigger:{
+//         trigger:wrap,
+//         start:"top top",
+//         end:"bottom bottom",
+//         scrub:1
+//     }
+// })
+// })
+
+    var infoBoxes = document.querySelectorAll('.infobox');
+    var imgBoxes = document.querySelectorAll('.img-box');
+    var wrap= document.querySelectorAll('.work_wrap')
+
+    infoBoxes.forEach(function(infoBox) {
+        infoBox.addEventListener('mouseover', function() {
+            imgBoxes.forEach(function(imgBox) {
+                imgBox.classList.add('hide');
+            });
+        });
+
+        infoBox.addEventListener('mouseleave', function() {
+            imgBoxes.forEach(function(imgBox) {
+                imgBox.classList.remove('hide');
+            });
+        });
+    });
+
+
+
 
 var path = anime.path('.orbit-context path');
 var motionPath = anime({
@@ -75,10 +120,12 @@ var motionPath = anime({
 });
 
 let cursorImgBox = document.querySelector('.cursor2 .img-box');
-let workLinks = document.querySelectorAll('.work_wrap a');
-let lefts = document.querySelectorAll('.thumb_box');
+let hover = document.querySelectorAll('.work_wrap');
+let hide = document.querySelectorAll(".infobox")
 
-workLinks.forEach(i => {
+
+
+hover.forEach(i => {
     imageUrl = $(i).attr('data-img');
     let cursorImg = document.querySelector(`${imageUrl}`);
 
@@ -92,22 +139,9 @@ workLinks.forEach(i => {
         cursorImgBox.classList.remove('on');
         cursorImg.classList.remove('on');
     });
-})
-lefts.forEach(i => {
-    imageUrl = $(i).attr('data-img');
-    let cursorImg = document.querySelector(`${imageUrl}`);
 
-    i.addEventListener('mouseover', () => {
-        cursorImgBox.classList.add('on');
-        cursorImg.classList.add('on');
-
-        // cursorImg.style.backgroundImage = "url("+imageUrl+")"
-    });
-    i.addEventListener('mouseout', () => {
-        cursorImgBox.classList.remove('on');
-        cursorImg.classList.remove('on');
-    });
 })
+
 
 let stickys = document.querySelectorAll(".sticky");
 
@@ -120,14 +154,16 @@ stickys.forEach(function (sticky) {
             scrub: 1,
         },
         y: 250,
-        scale: 0.75,
+        scale: 0,
         rotation: -15,
+        opacity:0,
         ease: "power3.out"
     })
 
 })
 //두번째 영역
 let conScales = document.querySelectorAll(".con-scale")
+let conScales2 = document.querySelectorAll(".con-scale2")
 
 conScales.forEach(function (conScale) {
     gsap.fromTo(conScale, {
@@ -147,8 +183,25 @@ conScales.forEach(function (conScale) {
         rotation: 0,
         ease: "power3.out"
     })
-   
-
+});
+conScales2.forEach(function (conScale2) {
+    gsap.fromTo(conScale2, {
+        y: 100,
+        scale: 0.5,
+        rotation:-15,
+    }, {
+        scrollTrigger: {
+            trigger: conScale2,
+            start: "top 80%",
+            end: "top 60%",
+            scrub: 2,
+        },
+        y: 0,
+        scale: 1,
+        duration: 0.5,
+        rotation: 0,
+        ease: "power3.out"
+    })
 });
 
 const wrapElements = (elems, wrapType, wrapClass) => {
@@ -165,10 +218,11 @@ Splitting();
 
 const fx1Titles = [...document.querySelectorAll('.project-tit[data-splitting][data-effect1]')];
 const fx5Titles = [...document.querySelectorAll('.project-tit[data-splitting][data-effect5]')];
+const fx8Titles = [...document.querySelectorAll('.other-tit[data-splitting][data-effect8]')];
 const fx9Titles = [...document.querySelectorAll('.project-tit[data-splitting][data-effect9]')];
 const fx10Titles = [...document.querySelectorAll('.project-tit[data-splitting][data-effect10]')];
 const fx11Titles = [...document.querySelectorAll('.project-tit[data-splitting][data-effect11]')];
-const fx16Titles = [...document.querySelectorAll('.desc[data-splitting][data-effect16]')];
+const fx16Titles = [...document.querySelectorAll('.contact-msg[data-splitting][data-effect16]')];
 
 const scrollText = () => {
 fx10Titles.forEach(title => {
@@ -208,10 +262,11 @@ fx16Titles.forEach(title => {
         rotate: 0,
         scrollTrigger: {
             trigger: title,
-            start: "top 90%",
-            end: "top top",
+            start: "top 30%",
+            end: "top 20%",
             scrub: true,
-        }
+            markers:true
+        },
     });
 
     gsap.fromTo(title.querySelectorAll('.word'), {
@@ -224,8 +279,8 @@ fx16Titles.forEach(title => {
         stagger: 0.05,
         scrollTrigger: {
             trigger: title,
-            start: "top 90%",
-            end: "top 30%",
+            start: 'top bottom-=20%',
+            end: 'center top+=20%',
             scrub: true,
             markers:true
         }
@@ -337,9 +392,76 @@ fx11Titles.forEach(title => {
     });
 
 });
+const lettersAndSymbols = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', '!', '@', '#', '$', '%', '^', '&', '*', '-', '_', '+', '=', ';', ':', '<', '>', ','];
+    fx8Titles.forEach(title => {
+        
+        const chars = title.querySelectorAll('.char');
+
+        chars.forEach((char, position) => {
+            let initialHTML = char.innerHTML;
+            
+            gsap.fromTo(char, {
+                opacity: 0
+            },
+            {
+                duration: 0.03,
+                innerHTML: () => lettersAndSymbols[Math.floor(Math.random() * lettersAndSymbols.length)],
+                repeat: 1,
+                repeatRefresh: true,
+                opacity: 1,
+                repeatDelay: 0.03,
+                delay: (position+1)*0.18,
+                onComplete: () => gsap.set(char, {innerHTML: initialHTML, delay: 0.03}),
+                scrollTrigger: {
+                    trigger: title,
+                    start: 'top bottom',
+                    end: 'bottom center',
+                    toggleActions: "play resume resume reset",
+                    onEnter: () => gsap.set(char, {opacity: 0})
+                }
+            });
+
+        });
+        
+    });
+
 }
 scrollText()
 
 window.addEventListener("load",() => {
     scrollText();
 });
+
+let cardWrapper = document.querySelectorAll(".cards_item");
+let cardsEl = document.querySelectorAll(".cards_el");
+
+cardWrapper.forEach(function(e,i){//e:아이템, i:아이템의 index
+    let card=cardsEl[i]
+    let img=e.querySelector(".cards_img img");
+    let scale =1;
+    let rotate=0;
+
+    if(i !== cardsEl.length - 1){
+        scale=1 + 0.025 * 1;
+        rotate= -15;
+    }
+    gsap.to(card,{
+        scale:scale,
+        rotateX:rotate,
+        transformOrigin:"center top",
+        ease:"none",
+        scrollTrigger:{
+            trigger: e,
+            start:"top " + ( 100 + 70 * i),
+            end:"bottom +=820px",
+            pin:e,
+            endTrigger:".end-anim",
+            scrub:1,
+            pinSpacing:false
+        }
+    })
+
+})
+
+
+

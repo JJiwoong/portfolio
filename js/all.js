@@ -57,7 +57,7 @@ let smoothScrolling = function () {
       showClock = () => {
         let date = new Date();
         let dayOfMonth = date.getDate();
-  
+
   
         // Days of week
         let days = date.getDay();
@@ -113,3 +113,4 @@ let smoothScrolling = function () {
     }
   }
   yymmdd()
+  document.getElementById("year").innerHTML = new Date().getFullYear();
