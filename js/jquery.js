@@ -15,14 +15,12 @@ $('.project .thumb-box').mouseover(function(){
     gsap.to('.cursor',{scale:1})
     gsap.to('.cursor span', { visibility: "hidden", opacity: 0,})
   })
-//   $(document).ready(function(){
-//     $('.infobox').mouseover(function(){
-//         $('.img-box').addClass("hide");
-//     });
-//     $('.infobox').mouseleave(function(){
-//         $('.img-box').removeClass("hide");
-//     });
-// });
+    $('.blank_page').mouseover(function(){
+        $('.img-box').addClass("hide");
+    });
+    $('.blank_page').mouseleave(function(){
+        $('.img-box').removeClass("hide");
+    });
 
   $('.work_wrap').each(function(i,el){
     child = $(this).find('.bg-shadow')

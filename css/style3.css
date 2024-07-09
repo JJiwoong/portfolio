@@ -62,21 +62,15 @@ body::after {
       height: 0;
       background-size: cover;
       pointer-events: none;
-      transition: height 0.5s, opacity 0.1s;
+      transition: height 0.2s, opacity 0.1s;
   }
 
   .cursor2 .img-box .image {
       width: 100%;
       height: 0;
       overflow: hidden;
-      transition: height 1s;
   }
 
-  .cursor2 .image img {
-      transform: scale(1.5);
-      transition: transform 1s 0.2s ease-out;
-      position: relative;
-  }
 
   .cursor2 #img1-1 img {
       transform: scale(1.1);
@@ -86,40 +80,34 @@ body::after {
 
   .cursor2 #img3-1 img {
       transform: scale(1);
-      transition: transform 1s 0.2s ease-out;
       position: relative;
       top: -170px;
   }
 
   .cursor2 #img2 img {
       transform: scale(1);
-      transition: transform 1s 0.2s ease-out;
       position: relative;
       left: -25px;
   }
   .cursor2 #img3 img {
       transform: scale(1.1);
-      transition: transform 1s 0.2s ease-out;
       position: relative;
       left: 0px;
   }
 
   .cursor2 #img4 img {
       transform: scale(1);
-      transition: transform 1s 0.2s ease-out;
       position: relative;
       left: -30px;
   }
 
   .cursor2 #img5 img {
       transform: scale(1.2);
-      transition: transform 1s 0.2s ease-out;
       position: relative;
   }
 
   .cursor2 #img6 img {
       transform: scale(1);
-      transition: transform 1s 0.2s ease-out;
   }
 
 
@@ -139,6 +127,7 @@ body::after {
 
   .cursor2 .img-box.hide {
     opacity: 0;
+    transition: 0.2s;
   }
 
 
@@ -149,7 +138,7 @@ body::after {
       left: 50%;
       transform: translate(-50%);
       z-index: 10000;
-      margin-left: 230px;
+      margin-left: 220px;
   }
 
   .button ul {
@@ -324,6 +313,15 @@ body::after {
       font-size: 200px;
       text-align: center;
       line-height: 1.2;
+  }
+
+  .blank_page {
+    width: 100vw;
+    height: 25vh;
+    position: absolute;
+    top: -100px;
+    background-color:none;
+    z-index: 1000;
   }
 
   .wrap2 .infobox {
