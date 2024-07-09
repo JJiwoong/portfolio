@@ -391,9 +391,9 @@ scroll()
 
   let tl=gsap.timeline()
 
-  tl.from(".who_tit .text",{
+  tl.from(".who_tit .text,.bird",{
     opacity:0,
-    duration:1,
+    duration:0.5,
     scrollTrigger:{
       trigger:".anime-list",
       start:"10% top",
