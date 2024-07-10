@@ -461,5 +461,6 @@ cardWrapper.forEach(function(e,i){//e:아이템, i:아이템의 index
 
 })
 
+document.getElementById("year").innerHTML = new Date().getFullYear();
 
 

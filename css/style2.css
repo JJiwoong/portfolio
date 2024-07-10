@@ -228,7 +228,7 @@
   font-family: zeph;
   font-weight: 700;
   font-size: 1.5rem;
-  background: url(../img/noise.png), radial-gradient(circle, #50505075 0%, transparent 100%);
+  background: radial-gradient(circle, #50505075 0%, transparent 100%);
   background-size: 250px, 100%;
   transition: all 0.3s;
   cursor: pointer;
