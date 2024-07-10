@@ -265,7 +265,6 @@ fx16Titles.forEach(title => {
             start: "top 30%",
             end: "top 20%",
             scrub: true,
-            markers:true
         },
     });
 
@@ -282,7 +281,6 @@ fx16Titles.forEach(title => {
             start: 'top bottom-=20%',
             end: 'center top+=20%',
             scrub: true,
-            markers:true
         }
     });
 

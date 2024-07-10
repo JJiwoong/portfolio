@@ -399,7 +399,6 @@ scroll()
       start:"10% top",
       end:"bottom bottom",
       scrub:1,
-      markers:true,
     }
   })
 
@@ -411,6 +410,5 @@ scroll()
       start:"10% top",
       end:"bottom bottom",
       scrub:1,
-      markers:true,
     }
   })
