@@ -48,7 +48,7 @@
     background-color: #000;
     position: relative;
     overflow-x: hidden;
-    background-image:  radial-gradient(circle, rgb(70, 70, 70) 1%, rgb(0 0 0) 100%);
+    background-image: url(./img/noise.png), radial-gradient(circle, rgb(70, 70, 70) 1%, rgb(0 0 0) 100%);
     background-size: 400px, 100% 100vh;
     background-attachment: fixed;
     transition: 0.2s;
