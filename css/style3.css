@@ -132,54 +132,55 @@ body::after {
 
 
   .button {
-      background-color: #fff;
-      position: fixed;
-      top: 10px;
-      left: 50%;
-      transform: translate(-50%);
-      z-index: 10000;
-      margin-left: 190px;
+    background-color: #fff;
+    position: fixed;
+    top: 10px;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: 1;
+    margin-left: 230px;
   }
-
+  
   .button ul {
-      display: flex;
-      height: 100%;
-      justify-content: center;
-      gap: 100px;
-      padding: 0 340px 0 30px;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    gap: 100px;
+    padding: 0 320px 0 30px;
   }
-
+  
   .button ul li p::after {
-      content: "";
-      display: block;
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      left: 0;
-      top: 0;
-      transform: scaleX(0);
-      transform-origin: left;
-      transition: transform 0.2s;
-      background: #000;
-      z-index: -1;
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.2s;
+    background: #000;
+    z-index: -1;
   }
-
-
+  
+  
   .button ul li p {
-      position: relative;
-      transition: 0.2s;
-      color: #000;
-      font-size: 25px;
-      font-family: zeph;
+    position: relative;
+    transition: 0.2s;
+    color: #000;
+    font-size: 25px;
+    font-family: zeph;
   }
-
+  
   .button ul li p:hover {
-      color: #fff;
+    color: #fff;
   }
-
+  
   .button ul li p:hover::after {
-      transform: scaleX(1);
+    transform: scaleX(1);
   }
+  
 
 
   /* page1 */
