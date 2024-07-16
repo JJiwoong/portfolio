@@ -218,7 +218,7 @@ Splitting();
 
 const fx1Titles = [...document.querySelectorAll('.project-tit[data-splitting][data-effect1]')];
 const fx5Titles = [...document.querySelectorAll('.project-tit[data-splitting][data-effect5]')];
-const fx8Titles = [...document.querySelectorAll('.other-tit[data-splitting][data-effect8]')];
+const fx8Titles = [...document.querySelectorAll('.work_otherwork__tit[data-splitting][data-effect8]')];
 const fx9Titles = [...document.querySelectorAll('.project-tit[data-splitting][data-effect9]')];
 const fx10Titles = [...document.querySelectorAll('.project-tit[data-splitting][data-effect10]')];
 const fx11Titles = [...document.querySelectorAll('.project-tit[data-splitting][data-effect11]')];
@@ -408,7 +408,7 @@ const lettersAndSymbols = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k'
                 repeatRefresh: true,
                 opacity: 1,
                 repeatDelay: 0.03,
-                delay: (position+1)*0.18,
+                delay: (position+1)*0.13,
                 onComplete: () => gsap.set(char, {innerHTML: initialHTML, delay: 0.03}),
                 scrollTrigger: {
                     trigger: title,

@@ -185,7 +185,7 @@ body::after {
 
   /* page1 */
 
-  .page1 {
+  .work_intro {
       height: 100vh;
       width: 100vw;
       position: relative;
@@ -260,12 +260,12 @@ body::after {
   }
 
 
-  .page2 {
+  .work_main {
       width: 100%;
       position: relative;
   }
 
-  .page2 .work_wrap {
+  .work_main .work_wrap {
       position: -webkit-sticky;
       position: sticky;
       top: 0;
@@ -275,42 +275,42 @@ body::after {
       height: 100vh;
   }
 
-  .page2 .thumb_box {
+  .work_main .thumb_box {
       width: 40vw;
       /* clip-path: polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%); */
       overflow: hidden;
   }
 
-  .page2 img {
+  .work_main img {
       width: 100%;
   }
 
-  .page2 .wrap1 {
+  .work_main .wrap1 {
       background-color: #fff;
   }
 
-  .page2 .wrap2 {
+  .work_main .wrap2 {
       background-color: #008485;
   }
 
-  .page2 .wrap3 {
+  .work_main .wrap3 {
       background-color: #083fdc;
   }
 
-  .page2 .wrap4 {
+  .work_main .wrap4 {
       background-color: #000;
   }
 
-  .page2 .wrap5 {
+  .work_main .wrap5 {
       background-color: #fff;
   }
 
-  .page2 .wrap6 {
+  .work_main .wrap6 {
       background-color: #000;
       color: #fff;
   }
 
-  .page2 .wrap6 .thumb_box h1 {
+  .work_main .wrap6 .thumb_box h1 {
       font-size: 200px;
       text-align: center;
       line-height: 1.2;
@@ -342,13 +342,13 @@ body::after {
   }
 
 
-  .page2 .work_wrap .left {
+  .work_main .work_wrap .left {
       width: 80%;
       display: grid;
       place-items: center;
   }
 
-  .page2 .work_wrap .right {
+  .work_main .work_wrap .right {
       display: flex;
       justify-content: center;
       align-items: center;
@@ -441,11 +441,11 @@ body::after {
 
 /* page3 */
 
-  .page3{
+  .work_otherwork{
     background-color: #000;
   }
 
-  .other-tit {
+  .work_otherwork__tit {
       color: #fff;
       position: relative;
       top: 150px;
@@ -626,7 +626,7 @@ body::after {
 
   }
 
-  .page4 {
+  .contact {
       height: 100vh;
 
   }

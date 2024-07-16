@@ -4,11 +4,11 @@ gsap.registerPlugin(Flip);
 
 const body = document.body; // Reference to the body element
 const frame = document.querySelector('.frame'); // Reference to the frame element
-const content = document.querySelector('.content_header'); // Reference to the content element
+const content = document.querySelector('.about_content__header'); // Reference to the content element
 const enterButton = document.querySelector('.enter'); // Reference to the "Explore" button
 const fullview = document.querySelector('.fullview'); // Reference to the fullview element
-const grid = document.querySelector('.grid2'); // Reference to the grid element
-const gridRows = grid.querySelectorAll('.row'); // Reference to all row elements within the grid
+const grid = document.querySelector('.grid'); // Reference to the grid element
+const gridRows = grid.querySelectorAll('.intro_row'); // Reference to all row elements within the grid
 
 
 // Linear interpolation

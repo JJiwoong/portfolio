@@ -17,7 +17,7 @@
     };
     ////////////////////////////
     
-    let Element = document.querySelector(".main");
+    let Element = document.querySelector(".about_ani4");
     let offset = Element.getBoundingClientRect().top + window.scrollY;
     let offsetWidth = Element.getBoundingClientRect().width;
     //console.log(offsetWidth)
@@ -162,7 +162,7 @@
                 xPercent: -100 * (list.length * 1.4),
                 ease: "none",
                 scrollTrigger: {
-                    trigger: ".main",
+                    trigger: ".about_ani4",
                     start: "center center",
                     scrub: 1,
                     end: "+=300%",

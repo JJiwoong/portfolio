@@ -12,17 +12,17 @@ gsap.registerPlugin(ScrollTrigger,Flip);
 
   let clutter = ""
   //textContent  --> 테스트만 추출
-  let page2_h2 = document.querySelector("#sc_text>h2").textContent.split("")
+  let page2_h2 = document.querySelector("#about_introduce>h2").textContent.split("")
   
   page2_h2.forEach(function (dets) {
       clutter += `<span>${dets}</span>`;
       //clutter = clutter + `<span>T</span>`
-      document.querySelector("#sc_text>h2").innerHTML = clutter
+      document.querySelector("#about_introduce>h2").innerHTML = clutter
   })
   
-  gsap.to("#sc_text>h2>span", {
+  gsap.to("#about_introduce>h2>span", {
       scrollTrigger: {
-          trigger: "#sc_text>h2>span",
+          trigger: "#about_introduce>h2>span",
           start: "top bottom",
           end: "+=400% top",
           scrub: 0.5,
@@ -100,12 +100,12 @@ function hover() {
   
   
   function xScroll() {
-    let horSection = document.querySelectorAll(".sc-intro")
+    let horSection = document.querySelectorAll(".about_personal")
   
     gsap.to(horSection, {
       xPercent: -100,
       scrollTrigger: {
-        trigger: ".sc-intro",
+        trigger: ".about_personal",
         start: "top",
         end: "+=2000px",
         scrub: 1,
@@ -146,7 +146,7 @@ function hover() {
     )}
     skill_sc()
     
-    const textElements = gsap.utils.toArray('.anime-list .text');
+    const textElements = gsap.utils.toArray('.about_ani .text');
 
     textElements.forEach(text => {
       gsap.to(text, {
@@ -219,20 +219,20 @@ function hover() {
 
         gsap.timeline({
           scrollTrigger:{
-              trigger:'.anime-list',
+              trigger:'.about_ani',
               start:'top top',
               end:'30% top',
               scrub:2,
           }
       })
-      .fromTo(".circle",{width:0,height:0,top:'12%'},{width:4000,height:4000})
+      .fromTo(".aa_circle",{width:0,height:0,top:'12%'},{width:4000,height:4000})
 
 
  // use a script tag or an external JS file
  document.addEventListener("DOMContentLoaded", (event) => {
   
   //이미지 애니
-  let items = document.querySelectorAll(".anime-list li");
+  let items = document.querySelectorAll(".about_ani li");
   items.forEach(function (el) {
       gsap.set(".hover-img", {
           xPercent: -50,
@@ -371,11 +371,11 @@ scroll()
 
   let tl=gsap.timeline()
 
-  tl.from(".who_tit .text,.bird",{
+  tl.from(".aa_tit .text,.bird",{
     opacity:0,
     duration:0.5,
     scrollTrigger:{
-      trigger:".anime-list",
+      trigger:".about_ani",
       start:"10% top",
       end:"bottom bottom",
       scrub:1,
@@ -386,7 +386,7 @@ scroll()
     opacity:0,
     duration:1,
     scrollTrigger:{
-      trigger:".anime-list",
+      trigger:".about_ani",
       start:"10% top",
       end:"bottom bottom",
       scrub:1,
