@@ -466,7 +466,7 @@ body::after {
       padding-left: 180px;
       padding-bottom: 80px;
       padding-top: 250px;
-      z-index: 2;
+      z-index: 0;
   }
 
   .cards {

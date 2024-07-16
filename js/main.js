@@ -1,6 +1,13 @@
 gsap.registerPlugin(ScrollTrigger);
 
 
+let noticeElement = document.querySelector(".notice");
+let closeBtn = document.querySelector(".close");
+
+closeBtn.addEventListener("click", function () {
+  noticeElement.style.display = "none";
+});
+
 
 function typing_() {
   const $text = document.querySelector(".sc_typing .text1");

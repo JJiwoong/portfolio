@@ -1,6 +1,61 @@
 
 /* link */
 
+.notice{
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.8);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 600px;
+  height: 600px;
+  z-index: 5;
+}
+
+.popup{
+  width: 450px;
+  position: absolute;
+  top: 42%;
+  left: 48%;
+  transform: translateX(-50%);
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 30px;
+}
+
+.popup_desc{
+  color: #000;
+  font-size: 16px;
+}
+
+.line1 {
+  background-color: rgba(255, 255, 255, 0.2);
+  position: relative;
+  top: 5%;
+  height: 1px;
+  width: 550px;
+}
+
+.line2 {
+  background-color: rgba(255, 255, 255, 0.2);
+  position: relative;
+  top: 8%;
+  left: 95%;
+  height: 550px;
+  width: 1px;
+}
+
+.popup {
+
+}
+
+.notice .close {
+  color: #fff;
+  position: absolute;
+  top: 3%;
+  right: 3.5%;
+  font-size: 16px;
+}
+
 .link {
   background-color: #fff;
   position: fixed;
