@@ -682,7 +682,9 @@ body::after {
   }
 
   .info-box .phone,
-  .info-box .email {
+  .info-box .email,
+  .info-box .git
+  {
       border-bottom: 1px solid#000;
       font-weight: bold;
       font-size: 18px;
