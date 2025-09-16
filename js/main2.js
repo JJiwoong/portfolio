@@ -411,7 +411,3 @@ scroll()
       duration: 8000,
       loop: true,
   });
-  
-  let cursorImgBox = document.querySelector('.cursor2 .img-box');
-  let hover = document.querySelectorAll('.work_wrap');
-  let hide = document.querySelectorAll(".infobox")  
