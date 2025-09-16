@@ -93,7 +93,7 @@
   z-index: 30;
   position: relative;
   width: 90%;
-  font-size: 5rem;
+  font-size: clamp(1.5rem, 5vw, 5rem);
   font-family: 'Pretendard-Regular';
   line-height: 1.5;
   color: #fff;
@@ -478,7 +478,7 @@
   font-family: zeph;
   font-size: 26px;
   position: relative;
-  left: 200px;
+  margin-left: 150px;
 }
 
 .square {
@@ -494,12 +494,11 @@
 }
 
 .about-box:nth-of-type(2) {
-  left: 0;
-  top: 100px;
+  top: 300px;
 }
 .about-box:nth-of-type(3) {
-  margin-left: -250px;
-  margin-top: 100px;
+  margin-left: -200px;
+  top: 100px;
 }
 
 .about-box:nth-of-type(4) {
@@ -569,7 +568,7 @@
   height: 100vh;
   position: absolute;
   top: 30%;
-  left: 40%;
+  left:1800px;
 }
 
 .ap_skill__wrap ul {
