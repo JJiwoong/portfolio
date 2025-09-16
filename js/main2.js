@@ -392,3 +392,26 @@ scroll()
       scrub:1,
     }
   })
+
+
+
+
+
+
+
+
+
+  var path = anime.path('.orbit-context path');
+  var motionPath = anime({
+      targets: '.square',
+      easing: 'easeInQuad',
+      translateX: path('x'),
+      translateY: path('y'),
+      rotate: path('angle'),
+      duration: 8000,
+      loop: true,
+  });
+  
+  let cursorImgBox = document.querySelector('.cursor2 .img-box');
+  let hover = document.querySelectorAll('.work_wrap');
+  let hide = document.querySelectorAll(".infobox")  
