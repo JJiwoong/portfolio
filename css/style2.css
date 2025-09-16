@@ -589,6 +589,13 @@
   font-family: zeph;
 }
 
+.work_intro {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  background-image: radial-gradient(circle, rgb(70, 70, 70) 1%, rgb(0 0 0) 100%);
+}
+
 .sub_tit {
   position: absolute;
   top: -220px;
