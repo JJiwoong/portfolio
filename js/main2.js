@@ -2,7 +2,16 @@ gsap.registerPlugin(ScrollTrigger,Flip);
 
 
 
-
+var path = anime.path('.orbit-context path');
+var motionPath = anime({
+    targets: '.square',
+    easing: 'easeInQuad',
+    translateX: path('x'),
+    translateY: path('y'),
+    rotate: path('angle'),
+    duration: 8000,
+    loop: true,
+});
 
 
 
