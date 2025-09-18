@@ -110,7 +110,7 @@ cursor2();
 
 var path = anime.path('.orbit-context path');
 var motionPath = anime({
-    targets: '.square',
+    targets: '.square_circle',
     easing: 'easeInQuad',
     translateX: path('x'),
     translateY: path('y'),
