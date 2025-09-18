@@ -4,30 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Jiwoo's Portfolio">
-    <meta name="description" content="지우의 포트폴리오입니다.">
-    <meta name="keywords" content="Gsap,Javascript,CSS,HTML,jQuery,library">
     <title>Jiwoo's</title>
     <link rel="shortcut icon" href="./img/favicon-32x32.png" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/style2.css">
     <link rel="stylesheet" href="./css/all.css">
-    <link rel="stylesheet" href="./css/style.css">
 </head>
 
-<body>
-
-    <div class="notice">
-        <div class="popup">
-            <p class="popup_desc"><strong>해당 사이트는 적응형 사이트이며,<br> 해상도 1920x1080 화면에서 보시는 걸 권장드립니다.</strong></p>
-        </div>
-        <input type="checkbox" id="cb" />
-        <label class="hide" for="cb">7일간 보이지 않기</label>
-        <a href="#" class="close"><i class="ri-close-large-line"></i></a>
-      </div>
+<body class="loading">
 
     <div class="fixed">
         <!-- cursor -->
-        <div class="cursor"></div>
+        <div class="cursor"><span>click</span></div>
         <!-- cursor end -->
 
 
@@ -39,84 +27,595 @@
                 </div>
             </div>
         </div>
+
+        <!-- button -->
+        <div class="button">
+            <ul>
+                <li><a target="_blank" href="./index.html">
+                        <p>home</p>
+                    </a></li>
+                <li><a target="_blank" href="./index3.html">
+                        <p>work</p>
+                    </a></li>
+                <li><a target="_blank" href="./index3.html#page4">
+                        <p>contact</p>
+                    </a></li>
+            </ul>
+        </div>
+
         <!-- clock-->
         <div class="clWrap">
             <div class="clock">
                 <div class="time"></div>
                 <p>/</p>
                 <div class="date"></div>
-                
             </div>
+
+
         </div>
         <!-- clock,logo end -->
 
-        <div class="link">
-        <ul>
-            <li>
-                <a target="_blank" href="./index2.html"><p>about</p></a>
-            </li>
-            <li>
-                <a target="_blank" href="./index3.html"><p>work</p></a>
-            </li>
-            <li>
-                <a target="_blank" href="./index3.html#page4"><p>contact</p></a>
-            </li>
-        </ul>
+        <!-- scroll bar -->
+        <div class="progress-container">
+            <div class="progress-bar" id="myBar"></div>
         </div>
+        <!-- scroll bar end -->
 
-                    
 
-        <!-- scroll down -->
-
-        <!-- <div class="scroll">
-            <div class="scrolldown">
-                <div class="text">
-                    <h1 data-splitting>Scroll Down</h1>
+        <!-- <section class="about_intro">
+            <div class="grid">
+                <div class="intro_row">
+                    <div class="row__item">
+                        <div class="row__item-inner">
+                            <div class="row__item-img" style="background-image:url(img/인물사진/1.jpg)"></div>
+                        </div>
+                    </div>
+                    <div class="row__item">
+                        <div class="row__item-inner">
+                            <div class="row__item-img" style="background-image:url(img/인물사진/14.jpg)"></div>
+                        </div>
+                    </div>
+                    <div class="row__item">
+                        <div class="row__item-inner">
+                            <div class="row__item-img" style="background-image:url(img/인물사진/10.jpg)"></div>
+                        </div>
+                    </div>
+                    <div class="row__item">
+                        <div class="row__item-inner">
+                            <div class="row__item-img" style="background-image:url(img/인물사진/23.jpg)"></div>
+                        </div>
+                    </div>
+                    <div class="row__item">
+                        <div class="row__item-inner">
+                            <div class="row__item-img" style="background-image:url(img/취미사진/5.jpg)"></div>
+                        </div>
+                    </div>
+                    <div class="row__item">
+                        <div class="row__item-inner">
+                            <div class="row__item-img" style="background-image:url(img/동물사진/1.jpg)"></div>
+                        </div>
+                    </div>
+                    <div class="row__item">
+                        <div class="row__item-inner">
+                            <div class="row__item-img" style="background-image:url(img/취미사진/7.jpg)"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="intro_row">
+                    <div class="row__item">
+                        <div class="row__item-inner">
+                            <div class="row__item-img" style="background-image:url(img/인물사진/14.jpg)"></div>
+                        </div>
+                    </div>
+                    <div class="row__item">
+                        <div class="row__item-inner">
+                            <div class="row__item-img" style="background-image:url(img/인물사진/10.jpg)"></div>
+                        </div>
+                    </div>
+                    <div class="row__item">
+                        <div class="row__item-inner">
+                            <div class="row__item-img" style="background-image:url(img/인물사진/15.jpg)"></div>
+                        </div>
+                    </div>
+                    <div class="row__item">
+                        <div class="row__item-inner">
+                            <div class="row__item-img" style="background-image:url(img/취미사진/5.jpg)"></div>
+                        </div>
+                    </div>
+                    <div class="row__item">
+                        <div class="row__item-inner">
+                            <div class="row__item-img" style="background-image:url(img/동물사진/1.jpg)"></div>
+                        </div>
+                    </div>
+                    <div class="row__item">
+                        <div class="row__item-inner">
+                            <div class="row__item-img" style="background-image:url(img/취미사진/7.jpg)"></div>
+                        </div>
+                    </div>
+                    <div class="row__item">
+                        <div class="row__item-inner">
+                            <div class="row__item-img" style="background-image:url(img/인물사진/12.jpg)"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="intro_row">
+                    <div class="row__item">
+                        <div class="row__item-inner">
+                            <div class="row__item-img" style="background-image:url(img/동물사진/5.jpg)"></div>
+                        </div>
+                    </div>
+                    <div class="row__item">
+                        <div class="row__item-inner">
+                            <div class="row__item-img" style="background-image:url(img/취미사진/13.jpg)"></div>
+                        </div>
+                    </div>
+                    <div class="row__item">
+                        <div class="row__item-inner">
+                            <div class="row__item-img" style="background-image:url(img/인물사진/19.jpg)"></div>
+                        </div>
+                    </div>
+                    <div class="row__item">
+                        <div class="row__item-inner">
+                            <div class="row__item-img" style="background-image:url(img/인물사진/23.jpg)"></div>
+                        </div>
+                    </div>
+                    <div class="row__item">
+                        <div class="row__item-inner">
+                            <div class="row__item-img" style="background-image:url(img/동물사진/4.jpg)"></div>
+                        </div>
+                    </div>
+                    <div class="row__item">
+                        <div class="row__item-inner">
+                            <div class="row__item-img" style="background-image:url(img/취미사진/9.jpg)"></div>
+                        </div>
+                    </div>
+                    <div class="row__item">
+                        <div class="row__item-inner">
+                            <div class="row__item-img" style="background-image:url(img/취미사진/14.jpg)"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="intro_row">
+                    <div class="row__item">
+                        <div class="row__item-inner">
+                            <div class="row__item-img" style="background-image:url(img/인물사진/17.jpg)"></div>
+                        </div>
+                    </div>
+                    <div class="row__item">
+                        <div class="row__item-inner">
+                            <div class="row__item-img" style="background-image:url(img/동물사진/11.jpg)"></div>
+                        </div>
+                    </div>
+                    <div class="row__item">
+                        <div class="row__item-inner">
+                            <div class="row__item-img" style="background-image:url(img/취미사진/4.jpg)"></div>
+                        </div>
+                    </div>
+                    <div class="row__item">
+                        <div class="row__item-inner">
+                            <div class="row__item-img" style="background-image:url(img/인물사진/20.jpg)"></div>
+                        </div>
+                    </div>
+                    <div class="row__item">
+                        <div class="row__item-inner">
+                            <div class="row__item-img" style="background-image:url(img/인물사진/22.jpg)"></div>
+                        </div>
+                    </div>
+                    <div class="row__item">
+                        <div class="row__item-inner">
+                            <div class="row__item-img" style="background-image:url(img/음식사진/1.jpg)"></div>
+                        </div>
+                    </div>
+                    <div class="row__item">
+                        <div class="row__item-inner">
+                            <div class="row__item-img" style="background-image:url(img/음식사진/3.jpg)"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="intro_row">
+                    <div class="row__item">
+                        <div class="row__item-inner">
+                            <div class="row__item-img" style="background-image:url(img/음식사진/5.jpg)"></div>
+                        </div>
+                    </div>
+                    <div class="row__item">
+                        <div class="row__item-inner">
+                            <div class="row__item-img" style="background-image:url(img/음식사진/8.jpg)"></div>
+                        </div>
+                    </div>
+                    <div class="row__item">
+                        <div class="row__item-inner">
+                            <div class="row__item-img" style="background-image:url(img/음식사진/25.jpg)"></div>
+                        </div>
+                    </div>
+                    <div class="row__item">
+                        <div class="row__item-inner">
+                            <div class="row__item-img" style="background-image:url(img/취미사진/11.jpg)"></div>
+                        </div>
+                    </div>
+                    <div class="row__item">
+                        <div class="row__item-inner">
+                            <div class="row__item-img" style="background-image:url(img/취미사진/2.jpg)"></div>
+                        </div>
+                    </div>
+                    <div class="row__item">
+                        <div class="row__item-inner">
+                            <div class="row__item-img" style="background-image:url(img/취미사진/8.jpg)"></div>
+                        </div>
+                    </div>
+                    <div class="row__item">
+                        <div class="row__item-inner">
+                            <div class="row__item-img" style="background-image:url(img/취미사진/15.jpg)"></div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="arrow">
-                <i class="ri-arrow-down-double-line"></i>
+            <div class="fullview"></div>
+            <div class="enter"><span>About</span></div>
+        </section> -->
+
+        <section class="about_content__header">
+        </section>
+
+        <section class="about_visual">
+            <div class="about_visual-mv">
+                <p class="title">About Jiwoo</p>
             </div>
+        </section>
+
+        <div id="about_introduce">
+            <!-- <h3>CERTIFY YOUR BUILDING AS A DIGsITAL TWIN TOKEN (DTT)</h3> -->
+            <h2>안녕하세요, 웹 퍼블리셔로 시작해 개발 경험을 넓혀가고 있는 정지우입니다.
+                HTML, CSS, JavaScript 기반의 웹 퍼블리싱에 능숙하며, 지난 1년간 PHP와 Laravel을 활용해 실제 프로젝트를 개발·운영한 경험이 있습니다.
+                이를 통해 사용자 친화적인 인터페이스와 안정적인 서버 로직을 함께 고민하며, 퍼블리셔에서 개발자로 성장할 수 있었습니다.
+                앞으로도 끊임없는 학습과 도전을 통해, 창의적이고 효율적인 코드로 최적의 웹 환경을 만드는 데 기여하고 싶습니다.</h2>
         </div>
-    </div> -->
-    <!-- scroll down end -->
-    <section id="page1">
-        <!-- <canvas id="myCanvas"></canvas> -->
-        <div class="sc_typing">
-            <h1 class="text1"></h1>
-        </div>
-    </section>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.trunk.min.js"></script>
-    <script>
-        VANTA.TRUNK({
-            el: "#page1",
-            mouseControls: true,
-            touchControls: true,
-            gyroControls: false,
-            minHeight: 100.00,
-            minWidth: 100.00,
-            scale: 1.00,
-            scaleMobile: 1.00,
-            color: 0x484848,
-            backgroundColor: 0x0,
-            spacing: 0.50,
-            chaos: 5.00
-        })
-    </script>
+        <section class="about_personal" data-color="#000">
+            <!-- <nav class="ap_content__nav">
+                <div class="tags">
+                    <p>010-4871-4889</p>
+                    <p>1998.05.20</p>
+                    <p>#Jiwoo</p>
+                    <p>#ESFP</p>
+                    <p>#Hi</p>
+                    <p>#Portfolio</p>
+                    <p>#About</p>
+                </div>
+            </nav> -->
+            <div class="ap__area">
+                <!-- <div class="intro-box">
+                    <p class="intro-msg">
+                        <span class="txt-line1"><em class="txt1 txt-motion"></em>&nbsp;<em id="profileHover"
+                                class="txt2 txt-motion" data-hover>저는 정지우입니다.</em><span class="intro-bg"><span
+                                    class="profile"></span><span class="blind"></span></span></span>
+                        <span class="txt-line2"><span class="txt txt-motion"></span>&nbsp;<span
+                                class="txt txt-motion"></span></span>
+                        <span class="txt-line3"><span class="txt txt-motion"></span> <span class="txt txt-motion">
+                            </span></span>
+                    </p>
+                </div> -->
+                <div class="about-box">
+                    <h2>About me</h2>
+                    <span class="square"></span>
+                    <div class="about">
+                        <div class="name">
+                            <p>Name</p>
+                            <p>정지우</p>
+                        </div>
+                        <div class="email">
+                            <p>Email</p>
+                            <p>Jeongjw0520@naver.com</p>
+                        </div>
+                        <div class="mbti">
+                            <p>Mbti</p>
+                            <p>ESFP</p>
+                        </div>
+                        <div class="birth">
+                            <p>Birth</p>
+                            <p>1998.05.20</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-box">
+                    <h2>Education</h2>
+                    <span class="square"></span>
+                    <div class="about">
+                        <div class="school">
+                            <p>2024.02</p>
+                            <p>경남정보대학교 시각디자인과 졸업</p>
+                        </div>
+                        <div class="academy">
+                            <p>2024.02~2024.07</p>
+                            <p>그린컴퓨터아카데미 UI/UX 반응형 웹디자인&웹퍼블리셔 양성과정 수료</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-box">
+                    <h2>Work</h2>
+                    <span class="square"></span>
+                    <div class="about">
+                        <div class="samsung">
+                            <p>(주)인베스티</p>
+                            <p>2024.8.26~2025.now</p>
+                        </div>
+                        <div class="fish">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="ap_skill__wrap">
+                <ul>
+                    <li class="desc_skill">
+                        <p> 저는<br>
+                            이런것들을<br>
+                            다룰 수 있어요 </p>
 
-    <script src='https://cdn.jsdelivr.net/gh/tigrr/circle-progress@v0.2.4/dist/circle-progress.min.js'></script>
-    <script src="https://unpkg.com/lenis@1.0.45/dist/lenis.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/MotionPathPlugin.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/Flip.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
-    <script src="https://unpkg.com/splitting/dist/splitting.min.js"></script>
+                    </li>
+                    <li class="skill">
+                        <div class="skill_name">&nbspHTML5,CSS <i class="ri-html5-fill"></i></div>
+                        <input class="value-input" type="range" max="100" value="85">
+                    </li>
+                    <li class="skill">
+                        <div class="skill_name">&nbspJAVASCRIPT,JQUERY<i class="ri-javascript-fill"></i></div>
+                        <input class="value-input" type="range" max="100" value="60">
+                    </li>
+                    <li class="skill">
+                        <div class="skill_name">&nbspAdobe Tool<img src="./img/일러스트레이터.png" alt="" class="illu"></div>
+                        <input class="value-input" type="range" max="100" value="90">
+                    </li>
+                    <li class="skill">
+                        <div class="skill_name">&nbspGsap<img src="./img/포토샵.png" alt=""></div>
+                        <input class="value-input" type="range" max="100" value="80">
+                    </li>
+                    <li class="skill">
+                        <div class="skill_name">&nbspFIGMA <img src="./img/피그마 로고.png" alt=""></div>
+                        <input class="value-input" type="range" max="100" value="70">
+                    </li>
+                    <li class="skill">
+                        <div class="skill_name">&nbspWebflow <img src="./img/인디자인로고.png" alt=""></div>
+                        <input class="value-input" type="range" max="100" value="80">
+                    </li>
+                    <li class="skill">
+                        <div class="skill_name">&nbspGit hub<i class="ri-github-fill"></i></div>
+                        <input class="value-input" type="range" max="100" value="50">
+                    </li>
+                    <li class="skill">
+                        <div class="skill_name">&nbspPHP/Laravel <img src="./img/php로고.png" alt=""></div>
+                        <input class="value-input" type="range" max="100" value="40">
+                    </li>
+                </ul>
+            </div>
+            <div class="ap_path">
+                <svg id="svg" width="6000" height="603" viewBox="0 0 11348 603" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
 
-    <script src="./js/all.js"></script>
-    <script src="./js/main.js"></script>
+                    <circle class="ball ball01" cx="564" cy="222" r="50" fill="white" />
+                    <circle class="ball ball02" cx="550" cy="648" r="50" fill="white" />
+                    <circle class="ball ball03" cx="278" cy="942" r="50" fill="white" />
+                    <circle class="ball ball04" cx="830" cy="1577" r="25" fill="white" />
+                    <text class="text01" x="700" y="205" style="white-space: pre;">Figma</text>
+                    <text class="text02" x="260" y="650" style="white-space: pre;">javaScript</text>
+                    <text class="text03" x="450" y="940" style="white-space: pre;">React</text>
+                    <text class="text04" x="700" y="1505" style="white-space: pre;">Portfolio</text>
+                    <path class="theLine"
+                        d="M1 8.24485C421.5 -10.5885 1360.6 -4.25514 1753 171.745C2145.4 347.745 2831.83 320.745 3126 285.245C3331.83 240.412 3660 176.245 3819.5 211.245C4003.5 228.745 4159 444.245 4715 378.245C5271 312.245 3961 656.745 5103 157.745C5300.5 71.7449 5760 -83 6164 207.5C6568 498 7448 446 7634.5 378C7821 310 8474 180.745 8871 344.245C9268 507.745 9864.5 463.745 10135 389.245C10405.5 314.745 11101.5 -116.755 11347 602.745C11396.2 813.33 11431.3 1258.5 11328.5 1510.5C11293.5 1623.5 11131.4 1887.9 11265 1969.5"
+                        stroke="white" />
+                </svg>
 
+                </svg>
+            </div>
+        </section>
+        <!-- <div class="container">
+            <h1 class="text">#What did I do<span>Cat<i class="ri-star-fill"></i></span></h1>
+            <h1 class="text">#Like<span>health Club</i></span></h1>
+            <h1 class="text">#Hobby<span>Clothes</span></h1>
+            <h1 class="text">#Love<span>>Food</span></h1>
+            <h1 class="text">#Portfolio<span><a href="https://twitter.com/juxtopposed" target="_blank">LET'S CONNECT</a></span></h1>
+          </div> -->
+
+
+        <section class="about_ani">
+            <div class="aa_circle"></div>
+            <div class="work_intro">
+                <div class="orbit-context">
+                    <div class="square" style="transform: translateX(453.609px) translateY(108.612px) rotate(174.085deg);">
+                    </div>
+                    <svg style="position:relative" class="path" width="798" height="125" viewBox="0 0 798 125" fill="none">
+                        <path
+                            d="M796.965 27.5662C797.252 30.8478 794.964 34.4168 789.973 38.2167C785.011 41.9953 777.513 45.8958 767.716 49.8536C748.13 57.7662 719.47 65.863 683.832 73.6771C612.564 89.3038 513.472 103.784 403.45 113.409C293.427 123.035 193.326 125.982 120.427 122.969C83.9742 121.462 54.3432 118.465 33.6805 114.073C23.3455 111.877 15.2842 109.338 9.74097 106.478C4.16656 103.603 1.29285 100.485 1.00574 97.2036C0.718632 93.922 3.00738 90.353 7.99776 86.5531C12.9602 82.7744 20.4581 78.874 30.2547 74.9162C49.841 67.0036 78.5014 58.9068 114.139 51.0927C185.407 35.466 284.499 20.9861 394.521 11.3604C504.544 1.73472 604.645 -1.21266 677.544 1.80113C713.997 3.30817 743.628 6.30511 764.291 10.6964C774.626 12.8929 782.687 15.4321 788.23 18.2916C793.805 21.1672 796.678 24.2845 796.965 27.5662Z"
+                            stroke="#F2F2F2"></path>
+                    </svg>
+                </div>
+            </div>
+        </section>
+
+        <!-- <section class="about_ani2">
+            <div class="gallery-wrap">
+                <div class="gallery gallery--row" id="gallery-1">
+                    <div class="gallery__item gallery__item--s" style="background-image:url(img/인물사진/12.jpg)"></div>
+                    <div class="gallery__item gallery__item--m" style="background-image:url(img/인물사진/5.jpg)"></div>
+                    <div class="gallery__item gallery__item--l" style="background-image:url(img/인물사진/8.jpg)"></div>
+                    <div class="gallery__item gallery__item--xl  gallery__item--center"
+                        style="background-image:url(img/인물사진/10.jpg)">
+                    </div>
+                    <div class="gallery__item gallery__item--l" style="background-image:url(img/인물사진/14.jpg)"></div>
+                    <div class="gallery__item gallery__item--m" style="background-image:url(img/인물사진/6.jpg)"></div>
+                    <div class="gallery__item gallery__item--s" style="background-image:url(img/인물사진/4.jpg)"></div>
+                    <div class="caption">
+                        #고양이 #카페 #옷 #패션
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="about_ani3">
+            <div class="gallery-wrap">
+                <div class="gallery gallery--grid10" id="gallery-3">
+                    <div class="gallery__item pos-1" style="background-image:url(img/음식사진/1.jpg)"></div>
+                    <div class="gallery__item pos-2" style="background-image:url(img/음식사진/2.jpg)"></div>
+                    <div class="gallery__item pos-3" style="background-image:url(img/음식사진/3.jpg)"></div>
+                    <div class="gallery__item pos-4" style="background-image:url(img/음식사진/4.jpg)"></div>
+                    <div class="gallery__item pos-5" style="background-image:url(img/음식사진/5.jpg)"></div>
+                    <div class="gallery__item pos-6" style="background-image:url(img/음식사진/6.jpg)"></div>
+                    <div class="gallery__item pos-7" style="background-image:url(img/음식사진/7.jpg)"></div>
+                    <div class="gallery__item pos-8" style="background-image:url(img/음식사진/8.jpg)"></div>
+                    <div class="gallery__item pos-9" style="background-image:url(img/음식사진/25.jpg)"></div>
+                    <div class="gallery__item pos-10" style="background-image:url(img/음식사진/10.jpg)"></div>
+                    <div class="gallery__item pos-11" style="background-image:url(img/음식사진/11.jpg)"></div>
+                    <div class="gallery__item pos-12" style="background-image:url(img/음식사진/12.jpg)"></div>
+                    <div class="gallery__item pos-13" style="background-image:url(img/음식사진/13.jpg)"></div>
+                    <div class="gallery__item pos-14" style="background-image:url(img/음식사진/14.jpg)"></div>
+                    <div class="gallery__item pos-15" style="background-image:url(img/음식사진/15.jpg)"></div>
+                    <div class="gallery__item pos-16" style="background-image:url(img/음식사진/16.jpg)"></div>
+                    <div class="caption">#맛집 탐방</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="about_ani4">
+            <div class="content3">
+                <div class="gallery" id="gallery">
+                    <div class="gallery__text gt1"><span class="gallery__text-inner" data-scroll data-scroll-speed="3"
+                            data-scroll-direction="vertical">other</span><span data-scroll data-scroll-speed="-1"
+                            data-scroll-direction="vertical" class="gallery__text-inner">things</span></div>
+                    <figure class="gallery__item" data-scroll data-scroll-speed="1">
+                        <div class="gallery__item-img">
+                            <div class="gallery__item-imginner" style="background-image: url(img/인물사진/15.jpg)"></div>
+                        </div>
+                        <figcaption class="gallery__item-caption">
+                            <h2 class="gallery__item-title">엉뚱,발랄</h2>
+                            <span class="gallery__item-number">01</span>
+                            <p class="gallery__item-tags">
+                                <span>#엉뚱함</span>
+                                <span>#기괴</span>
+                                <span>#발랄</span>
+                            </p>
+                        </figcaption>
+                    </figure>
+                    <figure class="gallery__item" data-scroll data-scroll-speed="1">
+                        <div class="gallery__item-img">
+                            <div class="gallery__item-imginner" style="background-image: url(img/동물사진/14.gif)"></div>
+                        </div>
+                        <figcaption class="gallery__item-caption">
+                            <h2 class="gallery__item-title">고양이 사랑</h2>
+                            <span class="gallery__item-number">02</span>
+                            <p class="gallery__item-tags">
+                                <span>#고세구</span>
+                                <span>#주인님</span>
+                            </p>
+                        </figcaption>
+                    </figure>
+
+                    <figure class="gallery__item" data-scroll data-scroll-speed="1">
+                        <div class="gallery__item-img">
+                            <div class="gallery__item-imginner" style="background-image: url(img/감성.jpg)"></div>
+                        </div>
+                        <figcaption class="gallery__item-caption">
+                            <h2 class="gallery__item-title">덩치에 안맞게 감성적</h2>
+                            <span class="gallery__item-number">03</span>
+                            <p class="gallery__item-tags">
+                                <span>#감성</span>
+                                <span>#꽃 좋아함</span>
+                            </p>
+                        </figcaption>
+                    </figure>
+                    <figure class="gallery__item" data-scroll data-scroll-speed="1">
+                        <div class="gallery__item-img">
+                            <div class="gallery__item-imginner" style="background-image: url(img/취미사진/7.jpg)"></div>
+                        </div>
+                        <figcaption class="gallery__item-caption">
+                            <h2 class="gallery__item-title">전시회보러 전국일주</h2>
+                            <span class="gallery__item-number">04</span>
+                            <p class="gallery__item-tags">
+                                <span>#서울현대미술관</span>
+                                <span>#볼 거 많음</span>
+                            </p>
+                        </figcaption>
+                    </figure>
+                    <figure class="gallery__item" data-scroll data-scroll-speed="1" data-scroll data-scroll-speed="1"
+                        data-scroll data-scroll-speed="1" -target="#gallery" data-scroll data-scroll-speed="1"
+                        -speed="1">
+                        <div class="gallery__item-img">
+                            <div class="gallery__item-imginner" style="background-image: url(img/취미사진/5.jpg)"></div>
+                        </div>
+                        <figcaption class="gallery__item-caption">
+                            <h2 class="gallery__item-title">전시회보러 전국일주2</h2>
+                            <span class="gallery__item-number">05</span>
+                            <p class="gallery__item-tags">
+                                <span>#광주비엔날레</span>
+                                <span>#엄청 큼</span>
+                            </p>
+                        </figcaption>
+                    </figure>
+                    <figure class="gallery__item" data-scroll data-scroll-speed="1" data-scroll data-scroll-speed="1"
+                        data-scroll data-scroll-speed="1" -speed="0.5">
+                        <div class="gallery__item-img">
+                            <div class="gallery__item-imginner" style="background-image: url(img/취미.jpg)"></div>
+                        </div>
+                        <figcaption class="gallery__item-caption">
+                            <h2 class="gallery__item-title">헬스</h2>
+                            <span class="gallery__item-number">06</span>
+                            <p class="gallery__item-tags">
+                                <span>#근육돼지</span>
+                            </p>
+                        </figcaption>
+                    </figure>
+                    <figure class="gallery__item" data-scroll data-scroll-speed="1" data-scroll data-scroll-speed="1"
+                        data-scroll data-scroll-speed="1" -speed="2.5">
+                        <div class="gallery__item-img">
+                            <div class="gallery__item-imginner" style="background-image: url(img/취미2.jpg)"></div>
+                        </div>
+                        <figcaption class="gallery__item-caption">
+                            <h2 class="gallery__item-title">혼자 잘 놈</h2>
+                            <span class="gallery__item-number">07</span>
+                            <p class="gallery__item-tags">
+                                <span>#항공샷</span>
+                            </p>
+                        </figcaption>
+                    </figure>
+                    <figure class="gallery__item" data-scroll data-scroll-speed="1" data-scroll data-scroll-speed="1"
+                        data-scroll data-scroll-speed="1" -speed="5">
+                        <div class="gallery__item-img">
+                            <div class="gallery__item-imginner" style="background-image: url(img/인물사진/25.jpg)"></div>
+                        </div>
+                        <figcaption class="gallery__item-caption">
+                            <h2 class="gallery__item-title">패션왕</h2>
+                            <span class="gallery__item-number">08</span>
+                            <p class="gallery__item-tags">
+                                <span>#옷은 못입음</span>
+                            </p>
+                        </figcaption>
+
+                    </figure>
+                    <div class="gallery__text gt2"><span class="gallery__text-inner" data-scroll data-scroll-speed="-4"
+                            data-scroll-direction="vertical">Jiwoo's</span><span data-scroll data-scroll-speed="3"
+                            data-scroll-direction="vertical" class="gallery__text-inner">Portfolio</span></div>
+                    <div class="gallery__text gt3"><span class="gallery__text-inner" data-scroll data-scroll-speed="2"
+                            data-scroll-direction="vertical">Next</span><span data-scroll data-scroll-speed="3"
+                            data-scroll-direction="vertical" class="gallery__text-inner"><a href="./index3.html"
+                                class="NextP">Work</a></span>
+                        <div class="arrow"><img src="./img/인물사진/화살표.흰.png" alt=""></div>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+
+
+        <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+        <script src='https://cdn.jsdelivr.net/gh/tigrr/circle-progress@v0.2.4/dist/circle-progress.min.js'></script>
+        <script src="https://unpkg.com/split-type"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/MotionPathPlugin.min.js"></script>
+        <script src="https://unpkg.com/@studio-freight/lenis@1.0.34/dist/lenis.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/Flip.min.js"></script>
+
+        <script src="./js/jquery.js"></script>
+        <!-- <script type="module" src="./js/index2.js"></script> -->
+        <script src="./js/index.js"></script>
+        <script src="./js/all.js"></script>
+        <script src="./js/main2.js"></script>
 </body>
 
 </html>
