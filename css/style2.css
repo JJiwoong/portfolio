@@ -609,7 +609,7 @@
   width: 798px;
 }
 
-.orbit-context .square {
+.orbit-context .square_circle {
   position: absolute;
   pointer-events: none;
   margin: 4px;
