@@ -1,8 +1,18 @@
-gsap.registerPlugin(ScrollTrigger,Flip); 
+gsap.registerPlugin(ScrollTrigger,Flip,MotionPathPlugin); 
 
 
 
-
+gsap.to(".square_circle", {
+  duration: 8,
+  repeat: -1,
+  ease: "none",
+  motionPath: {
+    path: ".orbit-context path",
+    align: ".orbit-context path",
+    alignOrigin: [0.5, 0.5], // 점의 중심 정렬
+    autoRotate: true
+  }
+});
 
 
 let tl2 = gsap.timeline();
