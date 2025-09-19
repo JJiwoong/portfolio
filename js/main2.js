@@ -20,7 +20,8 @@ gsap.to(".work_intro", {
   ease: "power2.out",    // 부드러운 가속도
   scrollTrigger: {
     trigger: ".work_intro", // 트리거 대상
-    start: "top 80%",       // 화면의 80% 지점에서 애니메이션 시작
+    start: "bottom",       // 화면의 80% 지점에서 애니메이션 시작
+    markers: true,
     toggleActions: "play none none reverse" 
     // (진입시 실행 / 떠날 때 / 다시 진입 / 다시 떠날 때)
   }
