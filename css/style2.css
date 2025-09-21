@@ -594,12 +594,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: opacity 1s ease;
+  transition: opacity 1s ease-in-out;
   /* background-image: radial-gradient(circle, rgb(70, 70, 70) 1%, rgb(0 0 0) 100%); */
 }
 
 .work_intro.active{
   opacity: 1;
+  transition: opacity 1s ease-in-out; opacity: 1;
 }
 
 .sub_tit {
