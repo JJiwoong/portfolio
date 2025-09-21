@@ -1,13 +1,11 @@
 gsap.registerPlugin(ScrollTrigger,Flip,MotionPathPlugin); 
 
-gsap.to("#page1", {
-  scrollTrigger: {
-    trigger: "#page1",
-    start: "top top",
-    end: "bottom+=100% top", // page1이 끝날 때까지
-    scrub: true,
-    pin: true, // 고정
-  }
+ScrollTrigger.create({
+  trigger: "#page1",
+  start: "top top",
+  end: "bottom top",
+  pin: true,
+  pinSpacing: false // <- 이게 핵심!
 });
 
 gsap.to(".square_circle", {
