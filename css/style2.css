@@ -597,6 +597,10 @@
   /* background-image: radial-gradient(circle, rgb(70, 70, 70) 1%, rgb(0 0 0) 100%); */
 }
 
+.work_intro.active{
+  opacity: 1;
+}
+
 .sub_tit {
   position: absolute;
   top: -220px;

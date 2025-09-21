@@ -431,10 +431,20 @@ var motionPath = anime({
     loop: true,
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+  const target = document.querySelector(".work_intro");
 
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        target.classList.add("active");   // 화면에 보일 때 active 추가
+      } else {
+        target.classList.remove("active"); // 다시 안보이면 제거 (옵션)
+      }
+    });
+  }, {
+    threshold: 0.2 // 20% 정도 보이면 실행 (값 조절 가능)
+  });
 
-
-
-
-
-
+  if (target) observer.observe(target);
+});
