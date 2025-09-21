@@ -547,9 +547,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting && entry.intersectionRatio >= 0.5) {
-        document.body.classList.add("bg-active");
-      } else {
         document.body.classList.remove("bg-active");
+      } else {
+        document.body.classList.add("bg-active");
       }
     });
   }, {
