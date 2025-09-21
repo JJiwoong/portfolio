@@ -539,7 +539,25 @@ function typing_() {
   // 초기 실행
   setTimeout(typing, 1500);
 }
-typing_();s
+typing_();
+
+document.addEventListener("DOMContentLoaded", () => {
+  const page1 = document.querySelector("#page1");
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting && entry.intersectionRatio >= 0.5) {
+        document.body.classList.add("bg-active");
+      } else {
+        document.body.classList.remove("bg-active");
+      }
+    });
+  }, {
+    threshold: [0.5] // #page1이 50% 보일 때
+  });
+
+  observer.observe(page1);
+});
         </script>
         
 </body>
