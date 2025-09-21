@@ -52,8 +52,10 @@
     background-size: 400px, 100% 100vh;
     background-attachment: fixed;
     transition: 0.2s;
+    font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui,
+    Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo',
+    'Noto Sans KR', 'Malgun Gothic', sans-serif;
   }
-  
 
   .noscroll {
     height: 100dvh;
@@ -165,7 +167,6 @@
     gap: 30px;
     z-index: 3;
     background-color: #fff;
-    font-family: zeph;
   }
   
   .clock {
