@@ -258,6 +258,13 @@
         <section class="about_content__header">
         </section>
 
+        <section id="page1">
+            <!-- <canvas id="myCanvas"></canvas> -->
+            <div class="sc_typing">
+                <h1 class="text1"></h1>
+            </div>
+        </section>
+
         <section class="about_visual">
             <div class="about_visual-mv">
                 <p class="title">About Jiwoo</p>
@@ -423,7 +430,24 @@
                 </div> -->
             </div>
         </section>
-
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.trunk.min.js"></script>
+        <script>
+            VANTA.TRUNK({
+                el: "#page1",
+                mouseControls: true,
+                touchControls: true,
+                gyroControls: false,
+                minHeight: 100.00,
+                minWidth: 100.00,
+                scale: 1.00,
+                scaleMobile: 1.00,
+                color: 0x484848,
+                backgroundColor: 0x0,
+                spacing: 0.50,
+                chaos: 5.00
+            })
+        </script>
         <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
 
@@ -458,6 +482,62 @@
 
   if (target) observer.observe(target);
 });
+
+function typing_() {
+  const $text = document.querySelector(".sc_typing .text1");
+
+  // 글자 모음
+  const letters = [
+    "Web design &",
+    "Web publisher",
+    "Welcome!"
+  ];
+
+  // 글자 입력 속도
+  const speed = 100;
+  let i = 0;
+
+  // 타이핑 효과
+  const typing = async () => {
+    const letter = letters[i].split("");
+
+    while (letter.length) {
+      await wait(speed);
+      $text.innerHTML += letter.shift();
+    }
+
+    // 잠시 대기
+    await wait(800);
+
+    // 지우는 효과
+    remove();
+  }
+
+  // 글자 지우는 효과
+  const remove = async () => {
+    const letter = letters[i].split("");
+
+    while (letter.length) {
+      await wait(speed);
+
+      letter.pop();
+      $text.innerHTML = letter.join("");
+    }
+
+    // 다음 순서의 글자로 지정, 타이핑 함수 다시 실행
+    i = !letters[i + 1] ? 0 : i + 1;
+    typing();
+  }
+
+  // 딜레이 기능 ( 마이크로초 )
+  function wait(ms) {
+    return new Promise(res => setTimeout(res, ms))
+  }
+
+  // 초기 실행
+  setTimeout(typing, 1500);
+}
+typing_();s
         </script>
         
 </body>
