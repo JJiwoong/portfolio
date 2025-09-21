@@ -342,6 +342,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: #000;
 }
 
 .about_visual .about_visual-mv p {
