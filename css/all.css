@@ -45,16 +45,29 @@
   
  
   body {
-    background-color: #000;
     position: relative;
-    overflow-x: hidden;
-    background-image: url(./img/noise.png), radial-gradient(circle, rgb(70, 70, 70) 1%, rgb(0 0 0) 100%);
-    background-size: 400px, 100% 100vh;
-    background-attachment: fixed;
-    transition: 0.2s;
     font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui,
     Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo',
     'Noto Sans KR', 'Malgun Gothic', sans-serif;
+  }
+
+  body::before {
+    content: "";
+    position: fixed; /* 스크롤해도 고정 */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: 0.2s;
+
+    background-image: url(./img/noise.png),
+      radial-gradient(circle, rgb(70, 70, 70) 1%, rgb(0 0 0) 100%);
+      background-size: 400px, 100% 100vh;
+      overflow-x: hidden;
+      background-attachment: fixed;
+    opacity: 0; /* 처음엔 안보임 */
+    transition: opacity 1.5s ease;
+    z-index: -1; /* 본문 뒤로 */
   }
 
   .noscroll {
