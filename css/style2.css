@@ -59,7 +59,6 @@ body {
   transition: 0.2s;
   color: #000;
   font-size: 25px;
-  font-family: zeph;
 }
 
 .button ul li p:hover {
@@ -119,7 +118,6 @@ body {
   font-size: 4rem;
   color: #fff;
   flex-direction: column;
-  font-family: zeph;
   position: absolute;
   text-align: center;
   top: 50%;
@@ -229,7 +227,6 @@ body {
   padding: 1.2rem 4rem;
   font-weight: 700;
   z-index: 100;
-  font-family: zeph;
   font-weight: 700;
   font-size: 1.5rem;
   background: radial-gradient(circle, #50505075 0%, transparent 100%);
@@ -278,7 +275,6 @@ body {
 .about_content__header h1 {
   color: #fff;
   font-size: 100px;
-  font-family: zeph;
   text-align: center;
 }
 
@@ -318,7 +314,6 @@ body {
 .ap_content__nav .tags p {
   display: block;
   color: #fff;
-  font-family: zeph;
   font-size: 16px;
   background-color: #fff;
   color: #000;
