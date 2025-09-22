@@ -366,18 +366,21 @@
   font-size: 160px;
   text-align: center;
   position: relative;
+  top: -200px;
   z-index: 1;
   transition: 0.2s;
 }
 
 .about_visual .about_visual-mv img {
-  width: 400px;
-  position: absolute;
-  transform: translate(-50%, -100%);
+  width: 600px;
+  /* position: absolute; */
+  /* transform: translate(-50%, -100%); */
   top: 100%;
   left: 50%;
+  z-index: 100;
   filter: url(#crumple-effect-1);
   transition: 0.2s;
+  height: 3;
 }
 
 .about_visual .about_visual-mv img:hover {
@@ -390,7 +393,7 @@
 }
 
 .img-wrap {
-  position: relative;
+  position: absolute;
   display: inline-block;
   overflow: hidden;
 }
