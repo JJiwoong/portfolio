@@ -12,6 +12,29 @@ gsap.to("#page1", {
   }
 });
 
+gsap.to(".about_visual .title", {
+  opacity: 1,
+  y: 0,
+  duration: 1,
+  scrollTrigger: {
+    trigger: ".about_visual",
+    start: "top center+=100",
+    toggleActions: "play none none reverse"
+  }
+});
+
+// 이미지 마스크 왼쪽 → 오른쪽
+gsap.to(".img-mask", {
+  xPercent: 100,   // 박스를 오른쪽으로 밀어내기
+  duration: 1.2,
+  ease: "power2.out",
+  scrollTrigger: {
+    trigger: ".about_visual",
+    start: "top center+=100",
+    toggleActions: "play none none reverse"
+  }
+});
+
 gsap.to(".square_circle", {
   duration: 8,
   repeat: -1,

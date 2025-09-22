@@ -384,6 +384,33 @@
   filter: initial;
 }
 
+.about_visual .title {
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+.img-wrap {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.img-wrap img {
+  display: block;
+  width: 400px; /* 이미지 크기 맞게 조정 */
+  opacity: 1;   /* 이미지 자체는 보이게 */
+}
+
+.img-mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;  /* 박스 색상 (검은색/브랜드컬러 가능) */
+  transform: translateX(0);
+}
+
 .ap_gif {
   position: absolute;
   top: 40%;
