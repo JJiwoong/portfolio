@@ -263,6 +263,7 @@
             <div class="sc_typing">
                 <h1 class="text1"></h1>
             </div>
+            <div class="scroll-indicator">▼ Scroll</div>
         </section>
 
         <section class="about_visual">
@@ -558,6 +559,16 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   observer.observe(page1);
+});
+
+gsap.to(".scroll-indicator", {
+  opacity: 0,
+  duration: 0.5,
+  scrollTrigger: {
+    trigger: "#page1",
+    start: "top top+=50", // 페이지 살짝만 내려도
+    toggleActions: "play none none reverse"
+  }
 });
         </script>
         

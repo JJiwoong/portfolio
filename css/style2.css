@@ -336,6 +336,22 @@
   width: 100vw;
 }
 
+.scroll-indicator {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 14px;
+  color: #fff;
+  animation: blink 1s infinite;
+  pointer-events: none; /* 클릭 방해 안 되게 */
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; transform: translateY(0); }
+  50% { opacity: 0.3; transform: translateY(5px); }
+}
+
 .about_visual .about_visual-mv {
   height: 100%;
   position: relative;
