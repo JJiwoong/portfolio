@@ -26,6 +26,9 @@
   transition: opacity 0.2s ease;
 }
 
+.snb-wrap{
+}
+
 .button ul {
   display: flex;
   height: 100%;
