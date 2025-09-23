@@ -20,7 +20,6 @@ gsap.to(".about_visual .title", {
     trigger: ".about_visual",
     start: "top 35%",
     end: "top 10%", 
-    markers: true
   }
 });
 
@@ -42,7 +41,6 @@ gsap.to(".img-wrap", {
     trigger: ".about_visual",
     start: "top 35%",
     end: "top 10%", 
-    markers: true
   }
 });
 
