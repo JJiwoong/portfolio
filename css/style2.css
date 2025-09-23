@@ -387,9 +387,12 @@
 }
 
 .about_visual .title {
-  transition: transform 0.3s 
-  cubic-bezier(0.22, 0.61, 0.36, 1);
-  transform: translateY(50px);
+  transform: translateY(0);
+  transition: transform 0.6s ease-out;
+}
+
+.about_visual.active .title {
+  transform: translateY(-120px);
 }
 
 .img-wrap {
@@ -419,6 +422,11 @@
   height: 100%;
   background: #000;  /* 박스 색상 (검은색/브랜드컬러 가능) */
   transform: translateX(0);
+  transition: transform 1s ease-out;
+}
+
+.about_visual.active .img-mask {
+  transform: translateX(100%);
 }
 
 .title-mask {

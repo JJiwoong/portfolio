@@ -383,6 +383,24 @@ gsap.to(".scroll-indicator", {
     toggleActions: "play none none reverse"
   }
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const section = document.querySelector(".about_visual");
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        section.classList.add("active");   // 70% 이상 보이면 active 추가
+      } else {
+        section.classList.remove("active"); // 다시 사라지면 원래대로
+      }
+    });
+  }, {
+    threshold: 0.7 // 70% 보일 때 실행
+  });
+
+  observer.observe(section);
+});
         </script>
         
 </body>
