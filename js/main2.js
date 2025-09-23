@@ -12,21 +12,20 @@ gsap.to("#page1", {
   }
 });
 
-gsap.to(".button ul", {
+gsap.to(".about_visual", {
   scrollTrigger: {
     trigger: ".about_visual",
-    start: "top top",       // 섹션 시작이 화면 꼭대기에 닿을 때
-    end: "bottom bottom",   // 섹션 끝까지 화면에 다 보일 때
+    start: "top top",
+    end: "bottom bottom",
     toggleActions: "play none none reverse",
+    markers: true,
     onEnter: () => {
-      document.querySelector(".button").style.opacity = "0";
-      document.querySelector(".logo").style.opacity = "0";
-      document.querySelector(".button").style.zIndex = "-1";
+      document.querySelector(".button").classList.add("hide");
+      document.querySelector(".logo").classList.add("hide");
     },
     onLeaveBack: () => {
-      document.querySelector(".button").style.opacity = "1";
-      document.querySelector(".logo").style.opacity = "1";
-      document.querySelector(".button").style.zIndex = "1";
+      document.querySelector(".button").classList.remove("hide");
+      document.querySelector(".logo").classList.remove("hide");
     }
   }
 });
