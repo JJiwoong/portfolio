@@ -17,7 +17,7 @@ gsap.to(".about_visual .title", {
   duration: 0.5,
   scrollTrigger: {
     trigger: ".about_visual",
-    start: "top 10%", // ← 트리거의 top이 뷰포트의 90% 지점에 닿을 때
+    start: "top 40%", // ← 트리거의 top이 뷰포트의 90% 지점에 닿을 때
     toggleActions: "play none none reverse",
     markers: true
   }
@@ -29,7 +29,7 @@ gsap.to(".img-mask", {
   ease: "power2.out",
   scrollTrigger: {
     trigger: ".about_visual",
-    start: "top 10%", // 똑같이 맞춰줌
+    start: "top 40%", // 똑같이 맞춰줌
     toggleActions: "play none none reverse",
     markers: true
   }
@@ -91,26 +91,7 @@ function hover() {
     })
   }
   hover();
-/*   let splitTypes=document.querySelectorAll(".title")
 
-  splitTypes.forEach(function(char, i){
-      let parent=char.parentNode.parentNode;
-      const text=new SplitType(char, { types: 'chars' })
-      console.log(text)
-  
-      gsap.from(text.chars,{
-         opacity:0,
-         yPercent:100,
-         duration:0.4,
-         stagger:0.04,
-         scrollTrigger:{
-          trigger:parent,
-          start:"top 60%",
-          end:"top 20%",
-          ease:"power3.out"
-         }
-      })
-  }) */
   function square (){
   let gsapSq = document.querySelectorAll(".square");
   
