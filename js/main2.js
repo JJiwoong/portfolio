@@ -15,6 +15,7 @@ gsap.to("#page1", {
 gsap.to(".about_visual .title", {
   y: -120,
   duration: 0.5,
+  ease: "power3.out", 
   scrollTrigger: {
     trigger: ".about_visual",
     start: "top 40%", // ← 트리거의 top이 뷰포트의 90% 지점에 닿을 때
