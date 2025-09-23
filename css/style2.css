@@ -43,6 +43,15 @@
   gap: 100px;
 }
 
+.snb-wrap ul li a {
+  color: #aaa; /* 기본 옅은 회색 */
+  transition: color 0.3s ease;
+}
+
+.snb-wrap ul li a.active {
+  color: #fff; /* 활성 섹션은 흰색 */
+}
+
 .button ul li p::after {
   content: "";
   display: block;
