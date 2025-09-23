@@ -38,12 +38,12 @@ gsap.to(".snb-wrap", {
     end: "bottom bottom",   // 섹션 끝까지 화면에 다 보일 때
     toggleActions: "play none none reverse",
     onEnter: () => {
-      document.querySelector(".snb-wrap").style.opacity = "0";
-      document.querySelector(".snb-wrap").style.zIndex = "-1";
-    },
-    onLeaveBack: () => {
       document.querySelector(".snb-wrap").style.opacity = "1";
       document.querySelector(".snb-wrap").style.zIndex = "1";
+    },
+    onLeaveBack: () => {
+      document.querySelector(".snb-wrap").style.opacity = "0";
+      document.querySelector(".snb-wrap").style.zIndex = "-1";
     }
   }
 });
