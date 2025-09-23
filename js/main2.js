@@ -12,6 +12,21 @@ gsap.to("#page1", {
   }
 });
 
+gsap.to(".button ul", {
+  scrollTrigger: {
+    trigger: ".about_visual",
+    start: "top top",       // 섹션 시작이 화면 꼭대기에 닿을 때
+    end: "bottom bottom",   // 섹션 끝까지 화면에 다 보일 때
+    toggleActions: "play none none reverse",
+    onEnter: () => {
+      document.querySelector(".button ul").style.display = "none";
+    },
+    onLeaveBack: () => {
+      document.querySelector(".button ul").style.display = "block";
+    }
+  }
+});
+
 gsap.to(".about_visual .title", {
   opacity:1,
   duration: 1.2,
