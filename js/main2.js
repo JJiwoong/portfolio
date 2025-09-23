@@ -12,6 +12,18 @@ gsap.to("#page1", {
   }
 });
 
+const button = document.querySelector(".button");
+const logo = document.querySelector(".logo");
+
+// opacity 애니 끝난 후 z-index 낮추기
+[button, logo].forEach(el => {
+  el.addEventListener("transitionend", () => {
+    if (el.style.opacity === "0") {
+      el.style.zIndex = "-1";
+    }
+  });
+});
+
 gsap.to(".about_visual", {
   scrollTrigger: {
     trigger: ".about_visual",
@@ -20,12 +32,14 @@ gsap.to(".about_visual", {
     toggleActions: "play none none reverse",
     markers: true,
     onEnter: () => {
-      document.querySelector(".button").classList.add("hide");
-      document.querySelector(".logo").classList.add("hide");
+      button.style.zIndex = "1";
+      logo.style.zIndex = "1";
+      button.style.opacity = "1";
+      logo.style.opacity = "1";
     },
     onLeaveBack: () => {
-      document.querySelector(".button").classList.remove("hide");
-      document.querySelector(".logo").classList.remove("hide");
+      button.style.opacity = "0"; // 먼저 페이드아웃
+      logo.style.opacity = "0";
     }
   }
 });
