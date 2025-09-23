@@ -17,21 +17,21 @@ gsap.to(".about_visual .title", {
   duration: 0.5,
   scrollTrigger: {
     trigger: ".about_visual",
-    start: "top center+=100",
+    start: "top 90%", // ← 트리거의 top이 뷰포트의 90% 지점에 닿을 때
     toggleActions: "play none none reverse",
-    markers:true
+    markers: true
   }
 });
 
-// 이미지 마스크 왼쪽 → 오른쪽
 gsap.to(".img-mask", {
-  xPercent: 100,   // 박스를 오른쪽으로 밀어내기
+  xPercent: 100,
   duration: 1.2,
   ease: "power2.out",
   scrollTrigger: {
     trigger: ".about_visual",
-    start: "top center+=100",
-    toggleActions: "play none none reverse"
+    start: "top 90%", // 똑같이 맞춰줌
+    toggleActions: "play none none reverse",
+    markers: true
   }
 });
 
