@@ -24,6 +24,16 @@ gsap.to(".about_visual .title", {
   }
 });
 
+gsap.to(".about_visual .title", {
+  scrollTrigger: {
+    trigger: ".about_visual",
+    start: "bottom top",   // 화면 위로 벗어날 때
+    end: "+=1",
+    toggleClass: {targets: ".about_visual .title", className: "nav"},
+    markers: true
+  }
+});
+
 gsap.to(".img-wrap", {
   opacity:1,
   duration: 1.2,
