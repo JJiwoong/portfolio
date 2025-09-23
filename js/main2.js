@@ -12,29 +12,30 @@ gsap.to("#page1", {
   }
 });
 
-// gsap.to(".about_visual .title", {
-//   y: -120,
-//   ease: "power2.out",  // 스무스 easing
-//   scrollTrigger: {
-//     trigger: ".about_visual",
-//     start: "top 40%",
-//     end: "top 10%",     // 애니메이션 구간 설정
-//     scrub: true,        // 스크롤에 맞춰 부드럽게 연결
-//     markers: true
-//   }
-// });
+gsap.to(".about_visual .title", {
+  opacity:1,
+  duration: 1.2,
+  ease: "power2.out",  // 스무스 easing
+  scrollTrigger: {
+    trigger: ".about_visual",
+    start: "top 40%",
+    end: "top 10%",     // 애니메이션 구간 설정
+    scrub: true,        // 스크롤에 맞춰 부드럽게 연결
+    markers: true
+  }
+});
 
-// gsap.to(".img-mask", {
-//   xPercent: 100,
-//   duration: 1.2,
-//   ease: "power2.out",
-//   scrollTrigger: {
-//     trigger: ".about_visual",
-//     start: "top 40%", // 똑같이 맞춰줌
-//     toggleActions: "play none none reverse",
-//     markers: true
-//   }
-// });
+gsap.to(".img-mask", {
+  opacity:1,
+  duration: 1.2,
+  ease: "power2.out",
+  scrollTrigger: {
+    trigger: ".about_visual",
+    start: "top 40%", // 똑같이 맞춰줌
+    toggleActions: "play none none reverse",
+    markers: true
+  }
+});
 
 
 gsap.to(".square_circle", {
