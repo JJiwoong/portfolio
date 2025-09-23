@@ -13,7 +13,7 @@ gsap.to("#page1", {
 });
 
 gsap.to(".about_visual .title", {
-  y: 0,
+  y: -120,
   duration: 0.5,
   scrollTrigger: {
     trigger: ".about_visual",
