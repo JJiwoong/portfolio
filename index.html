@@ -299,24 +299,39 @@ gsap.to(".scroll-indicator", {
 const sections = document.querySelectorAll("section");
 const navLinks = document.querySelectorAll(".snb-wrap ul li a");
 
+// 📌 스크롤 스파이 (현재 섹션에 active 클래스 붙이기)
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
-      // 모든 링크 초기화
       navLinks.forEach(link => link.classList.remove("active"));
 
-      // 현재 보이는 섹션과 같은 href 가진 a에 active 추가
       const id = entry.target.getAttribute("id");
       const activeLink = document.querySelector(`.snb-wrap ul li a[href="#${id}"]`);
       if (activeLink) activeLink.classList.add("active");
     }
   });
 }, {
-  threshold: 0.6 // 섹션 60% 이상 보일 때 active
+  threshold: 0.6 // 섹션이 60% 이상 보이면 active
 });
 
-// 각 섹션 observe 시작
 sections.forEach(section => observer.observe(section));
+
+// 📌 클릭 시 부드럽게 스크롤 이동
+navLinks.forEach(link => {
+  link.addEventListener("click", (e) => {
+    e.preventDefault(); // 기본 앵커 점프 막기
+
+    const targetId = link.getAttribute("href");
+    const targetEl = document.querySelector(targetId);
+
+    if (targetEl) {
+      targetEl.scrollIntoView({
+        behavior: "smooth", // 부드럽게 이동
+        block: "start"
+      });
+    }
+  });
+});
         </script>
         
 </body>
