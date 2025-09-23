@@ -72,7 +72,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #000;
+  background-color: #101010;
   padding: 0 80px;
 }
 
@@ -359,7 +359,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #000;
+  background-color: #101010;
 }
 
 .about_visual .about_visual-mv p {

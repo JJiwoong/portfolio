@@ -46,7 +46,7 @@
  
   body {
     position: relative;
-    background: #000;
+    background: #101010;
     overflow-x: hidden;
     font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui,
     Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo',
@@ -65,7 +65,7 @@
     width: 100%;
     height: 100%;
     transition: 0.2s;
-    background-color: #000;
+    background-color: #101010;
     overflow-x: hidden;
     background-attachment: fixed;
     opacity: 0; /* 처음엔 안보임 */
