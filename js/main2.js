@@ -13,9 +13,8 @@ gsap.to("#page1", {
 });
 
 gsap.to(".about_visual .title", {
-  opacity: 1,
   y: 0,
-  duration: 0.2,
+  duration: 0.5,
   scrollTrigger: {
     trigger: ".about_visual",
     start: "top center+=100",
