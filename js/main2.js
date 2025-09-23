@@ -31,7 +31,7 @@ gsap.to(".button ul", {
   }
 });
 
-gsap.to(".button ul", {
+gsap.to(".snb-wrap", {
   scrollTrigger: {
     trigger: "#about_introduce",
     start: "top top",       // 섹션 시작이 화면 꼭대기에 닿을 때
