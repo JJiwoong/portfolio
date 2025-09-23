@@ -18,7 +18,8 @@ gsap.to(".about_visual .title", {
   scrollTrigger: {
     trigger: ".about_visual",
     start: "top center+=100",
-    toggleActions: "play none none reverse"
+    toggleActions: "play none none reverse",
+    markers:true;
   }
 });
 
