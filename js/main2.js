@@ -18,19 +18,21 @@ gsap.to(".about_visual .title", {
   ease: "power2.out",  // 스무스 easing
   scrollTrigger: {
     trigger: ".about_visual",
-    start: "top 40%",
-    end: "top 10%",     // 애니메이션 구간 설정
+    start: "top 30%",
+    end: "top 10%", 
+    toggleActions: "play none none reverse",
     markers: true
   }
 });
 
 gsap.to(".img-wrap", {
   opacity:1,
-  duration: 1.2,
+  duration: 1,
+  delay:0.2,
   ease: "power2.out",
   scrollTrigger: {
     trigger: ".about_visual",
-    start: "top 40%", // 똑같이 맞춰줌
+    start: "top 30%", // 똑같이 맞춰줌
     toggleActions: "play none none reverse",
     markers: true
   }
