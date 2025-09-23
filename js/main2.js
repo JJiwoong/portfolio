@@ -15,7 +15,7 @@ gsap.to("#page1", {
 gsap.to(".about_visual .title", {
   opacity: 1,
   y: 0,
-  duration: 1,
+  duration: 0.2,
   scrollTrigger: {
     trigger: ".about_visual",
     start: "top center+=100",
@@ -34,6 +34,7 @@ gsap.to(".img-mask", {
     toggleActions: "play none none reverse"
   }
 });
+
 
 gsap.to(".square_circle", {
   duration: 8,

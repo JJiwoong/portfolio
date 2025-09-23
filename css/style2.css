@@ -416,6 +416,17 @@
   transform: translateX(0);
 }
 
+.title-mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;  /* 박스 색상 (검은색/브랜드컬러 가능) */
+  transform: translateX(0);
+}
+
+
 .ap_gif {
   position: absolute;
   top: 40%;
