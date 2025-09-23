@@ -31,20 +31,27 @@ gsap.to(".button ul", {
   }
 });
 
+const snb = document.querySelector(".snb-wrap");
+
+snb.addEventListener("transitionend", () => {
+  if (snb.style.opacity === "0") {
+    snb.style.zIndex = "-1"; // 완전히 사라지고 나서 z-index 변경
+  }
+});
+
 gsap.to(".snb-wrap", {
   scrollTrigger: {
     trigger: "#about_introduce",
-    start: "bottom 20%", // 섹션의 bottom이 뷰포트 80% 지점에 닿을 때 실행
-    end: "bottom top",   // 끝날 때까지
+    start: "bottom 20%",
+    end: "bottom top",
     toggleActions: "play none none reverse",
     markers:true,
     onEnter: () => {
-      document.querySelector(".snb-wrap").style.opacity = "1";
-      document.querySelector(".snb-wrap").style.zIndex = "1";
+      snb.style.zIndex = "1";
+      snb.style.opacity = "1";
     },
     onLeaveBack: () => {
-      document.querySelector(".snb-wrap").style.opacity = "0";
-      document.querySelector(".snb-wrap").style.zIndex = "-1";
+      snb.style.opacity = "0"; // 먼저 페이드아웃
     }
   }
 });
