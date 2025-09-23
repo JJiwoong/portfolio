@@ -1,7 +1,7 @@
 gsap.registerPlugin(ScrollTrigger,Flip,MotionPathPlugin); 
 
 gsap.to("#page1", {
-  opacity: 0,      // 최종 상태
+  opacity: 0.2,      // 최종 상태
   scrollTrigger: {
     trigger: "#page1",
     start: "top top",

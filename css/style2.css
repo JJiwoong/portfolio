@@ -73,6 +73,7 @@
   justify-content: center;
   align-items: center;
   background-color: #000;
+  padding: 0 80px;
 }
 
 #about_introduce h3 {
