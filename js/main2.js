@@ -35,7 +35,7 @@ gsap.to(".snb-wrap", {
   scrollTrigger: {
     trigger: "#about_introduce",
     start: "bottom 30%", // 섹션의 bottom이 뷰포트 80% 지점에 닿을 때 실행
-    end: "bottom 80%",   // 끝날 때까지
+    end: "bottom top",   // 끝날 때까지
     toggleActions: "play none none reverse",
     markers:true,
     onEnter: () => {
