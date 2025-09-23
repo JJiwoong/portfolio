@@ -138,23 +138,7 @@ function hover() {
     });
   }
   skillmove();
-  
-  
-  function xScroll() {
-    let horSection = document.querySelectorAll(".about_personal")
-  
-    gsap.to(horSection, {
-      xPercent: -100,
-      scrollTrigger: {
-        trigger: ".about_personal",
-        start: "top",
-        end: "+=2000px",
-        scrub: 1,
-        pin: true,
-      }
-    })
-  }
-  xScroll();
+
 
   function skill_sc(){
     let Max = 100;
