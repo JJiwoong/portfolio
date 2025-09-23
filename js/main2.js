@@ -67,7 +67,7 @@ let tl2 = gsap.timeline();
       scrollTrigger: {
           trigger: "#about_introduce>h2>span",
           start: "top bottom",
-          end: "+=250% top",
+          end: "+=100% top",
           scrub: 0.5,
       },
       color: "#fff",
