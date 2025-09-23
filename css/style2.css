@@ -366,7 +366,6 @@
   font-size: 160px;
   text-align: center;
   position: relative;
-  top: -200px;
   z-index: 1;
   transition: 0.2s;
 }
@@ -408,6 +407,7 @@
 .title-wrap{
   position: absolute;
   display: inline-block;
+  top: 100px;
 }
 
 .img-mask {
@@ -422,12 +422,9 @@
 
 .title-mask {
   position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
   background: #000;  /* 박스 색상 (검은색/브랜드컬러 가능) */
-  transform: translateX(0);
 }
 
 
