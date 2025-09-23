@@ -13,7 +13,7 @@ gsap.to("#page1", {
 });
 
 gsap.to(".about_visual .title", {
-  opacity:0,
+  opacity:1,
   duration: 1.2,
   ease: "power2.out",  // 스무스 easing
   scrollTrigger: {
@@ -25,7 +25,7 @@ gsap.to(".about_visual .title", {
 });
 
 gsap.to(".img-wrap", {
-  opacity:0,
+  opacity:1,
   duration: 1.2,
   ease: "power2.out",
   scrollTrigger: {
