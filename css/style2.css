@@ -370,6 +370,11 @@
   transition: 0.2s;
 }
 
+.about_visual .title,
+.about_visual .img-wrap {
+  opacity: 0;
+}
+
 .about_visual .about_visual-mv img {
   width: 600px;
   /* position: absolute; */
