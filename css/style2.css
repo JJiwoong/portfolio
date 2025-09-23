@@ -389,6 +389,7 @@
 
 .about_visual .title {
   opacity: 0;
+  transition: transform 0.2s ease;
   transform: translateY(50px);
 }
 
