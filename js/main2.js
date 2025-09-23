@@ -19,7 +19,7 @@ const logo = document.querySelector(".logo");
 [button, logo].forEach(el => {
   el.addEventListener("transitionend", () => {
     if (el.style.opacity === "0") {
-      el.style.zIndex = "-1";
+      el.style.zIndex = "-1"; // 완전히 사라지고 나서만 z-index 낮춤
     }
   });
 });
@@ -32,14 +32,19 @@ gsap.to(".about_visual", {
     toggleActions: "play none none reverse",
     markers: true,
     onEnter: () => {
-      button.style.opacity = "0"; // 먼저 페이드아웃
+      // 내려갈 때 : opacity 0 → transition으로 자연스럽게 사라짐
+      button.style.opacity = "0";
       logo.style.opacity = "0";
     },
     onLeaveBack: () => {
+      // 다시 올라올 때 : 먼저 zIndex 올려두고
       button.style.zIndex = "1";
       logo.style.zIndex = "1";
-      button.style.opacity = "1";
-      logo.style.opacity = "1";
+      // opacity는 천천히 1로 (transition 적용됨)
+      requestAnimationFrame(() => { 
+        button.style.opacity = "1";
+        logo.style.opacity = "1";
+      });
     }
   }
 });
