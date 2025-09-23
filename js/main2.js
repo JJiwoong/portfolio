@@ -23,16 +23,6 @@ gsap.to(".about_visual .title", {
   }
 });
 
-gsap.to(".about_visual .title", {
-  scrollTrigger: {
-    trigger: ".about_visual",
-    start: "bottom top",   // 화면 위로 벗어날 때
-    end: "+=1",
-    toggleClass: {targets: ".about_visual .title", className: "nav"},
-    markers: true
-  }
-});
-
 gsap.to(".img-wrap", {
   opacity:1,
   duration: 1.2,
@@ -77,10 +67,10 @@ let tl2 = gsap.timeline();
       scrollTrigger: {
           trigger: "#about_introduce>h2>span",
           start: "top bottom",
-          end: "+=400% top",
+          end: "+=300% top",
           scrub: 0.5,
       },
-      color: "#000",
+      color: "#fff",
       stagger: 0.5
   })
 
