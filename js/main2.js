@@ -33,9 +33,9 @@ gsap.to(".button ul", {
 
 gsap.to(".snb-wrap", {
   scrollTrigger: {
-    trigger: ".about_personal",
-    start: "top top",       // 섹션 시작이 화면 꼭대기에 닿을 때
-    end: "bottom bottom",   // 섹션 끝까지 화면에 다 보일 때
+    trigger: "#about_introduce",
+    start: "bottom 80%", // 섹션의 bottom이 뷰포트 80% 지점에 닿을 때 실행
+    end: "bottom top",   // 끝날 때까지
     toggleActions: "play none none reverse",
     onEnter: () => {
       document.querySelector(".snb-wrap").style.opacity = "1";
