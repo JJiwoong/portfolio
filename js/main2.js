@@ -14,12 +14,12 @@ gsap.to("#page1", {
 
 gsap.to(".about_visual .title", {
   y: -120,
-  duration: 1,
-  ease: "power3.out", 
+  ease: "power2.out",  // 스무스 easing
   scrollTrigger: {
     trigger: ".about_visual",
-    start: "top 40%", // ← 트리거의 top이 뷰포트의 90% 지점에 닿을 때
-    toggleActions: "play none none reverse",
+    start: "top 40%",
+    end: "top 10%",     // 애니메이션 구간 설정
+    scrub: true,        // 스크롤에 맞춰 부드럽게 연결
     markers: true
   }
 });
