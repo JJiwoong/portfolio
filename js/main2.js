@@ -20,12 +20,11 @@ gsap.to(".about_visual .title", {
     trigger: ".about_visual",
     start: "top 40%",
     end: "top 10%",     // 애니메이션 구간 설정
-    scrub: true,        // 스크롤에 맞춰 부드럽게 연결
     markers: true
   }
 });
 
-gsap.to(".img-mask", {
+gsap.to(".img-wrap", {
   opacity:1,
   duration: 1.2,
   ease: "power2.out",
