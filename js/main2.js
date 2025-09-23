@@ -20,9 +20,11 @@ gsap.to(".button ul", {
     toggleActions: "play none none reverse",
     onEnter: () => {
       document.querySelector(".button").style.opacity = "0";
+      document.querySelector(".logo").style.opacity = "0";
     },
     onLeaveBack: () => {
       document.querySelector(".button").style.opacity = "1";
+      document.querySelector(".logo").style.opacity = "1";
     }
   }
 });

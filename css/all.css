@@ -157,6 +157,10 @@
   }
   
   /* logo */
+
+  .logo{
+    transition:opacity 0.2s ease;
+  }
   
   .pf_txt .effect {
     width: 100px;
