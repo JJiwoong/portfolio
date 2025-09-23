@@ -22,7 +22,7 @@ gsap.to(".button ul", {
       document.querySelector(".button ul").style.display = "none";
     },
     onLeaveBack: () => {
-      document.querySelector(".button ul").style.display = "block";
+      document.querySelector(".button ul").style.display = "flex";
     }
   }
 });
