@@ -387,7 +387,8 @@
 }
 
 .about_visual .title {
-  transition: transform 0.2s ease;
+  transition: transform 0.3s 
+  cubic-bezier(0.22, 0.61, 0.36, 1);
   transform: translateY(50px);
 }
 
