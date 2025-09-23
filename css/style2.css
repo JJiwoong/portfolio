@@ -396,6 +396,7 @@
   position: absolute;
   display: inline-block;
   overflow: hidden;
+  bottom:0;
 }
 
 .img-wrap img {

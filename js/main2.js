@@ -90,7 +90,7 @@ function hover() {
     })
   }
   hover();
-  let splitTypes=document.querySelectorAll(".title")
+/*   let splitTypes=document.querySelectorAll(".title")
 
   splitTypes.forEach(function(char, i){
       let parent=char.parentNode.parentNode;
@@ -109,7 +109,7 @@ function hover() {
           ease:"power3.out"
          }
       })
-  })
+  }) */
   function square (){
   let gsapSq = document.querySelectorAll(".square");
   
