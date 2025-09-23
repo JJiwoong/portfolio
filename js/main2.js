@@ -18,7 +18,7 @@ gsap.to(".about_visual .title", {
   ease: "power2.out",  // 스무스 easing
   scrollTrigger: {
     trigger: ".about_visual",
-    start: "top 30%",
+    start: "top 35%",
     end: "top 10%", 
     toggleActions: "play none none reverse",
     markers: true
@@ -27,12 +27,12 @@ gsap.to(".about_visual .title", {
 
 gsap.to(".img-wrap", {
   opacity:1,
-  duration: 1,
-  delay:0.2,
+  duration: 1.2,
   ease: "power2.out",
   scrollTrigger: {
     trigger: ".about_visual",
-    start: "top 30%", // 똑같이 맞춰줌
+    start: "top 35%",
+    end: "top 10%", 
     toggleActions: "play none none reverse",
     markers: true
   }
