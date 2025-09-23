@@ -33,7 +33,7 @@ gsap.to(".button ul", {
 
 gsap.to(".button ul", {
   scrollTrigger: {
-    trigger: ".about_introduce",
+    trigger: "#about_introduce",
     start: "top top",       // 섹션 시작이 화면 꼭대기에 닿을 때
     end: "bottom bottom",   // 섹션 끝까지 화면에 다 보일 때
     toggleActions: "play none none reverse",
