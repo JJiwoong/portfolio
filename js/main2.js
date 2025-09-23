@@ -19,10 +19,10 @@ gsap.to(".button ul", {
     end: "bottom bottom",   // 섹션 끝까지 화면에 다 보일 때
     toggleActions: "play none none reverse",
     onEnter: () => {
-      document.querySelector(".button ul").style.display = "none";
+      document.querySelector(".button").style.opacity = "0";
     },
     onLeaveBack: () => {
-      document.querySelector(".button ul").style.display = "flex";
+      document.querySelector(".button").style.opacity = "1";
     }
   }
 });
