@@ -32,14 +32,14 @@ gsap.to(".about_visual", {
     toggleActions: "play none none reverse",
     markers: true,
     onEnter: () => {
+      button.style.opacity = "0"; // 먼저 페이드아웃
+      logo.style.opacity = "0";
+    },
+    onLeaveBack: () => {
       button.style.zIndex = "1";
       logo.style.zIndex = "1";
       button.style.opacity = "1";
       logo.style.opacity = "1";
-    },
-    onLeaveBack: () => {
-      button.style.opacity = "0"; // 먼저 페이드아웃
-      logo.style.opacity = "0";
     }
   }
 });
