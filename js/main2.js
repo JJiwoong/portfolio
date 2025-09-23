@@ -14,7 +14,7 @@ gsap.to("#page1", {
 
 gsap.to(".about_visual .title", {
   y: -120,
-  duration: 0.5,
+  duration: 1,
   ease: "power3.out", 
   scrollTrigger: {
     trigger: ".about_visual",
