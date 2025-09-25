@@ -505,6 +505,16 @@
   z-index: -1;
 }
 
+.about_IdPhoto{
+  display: flex;
+}
+
+.introduction{
+  color: #fff;
+  font-size: 20px;
+  padding: 50px 120px;
+}
+
 .about-box:nth-of-type(2) {
   top: 300px;
 }
