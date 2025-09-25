@@ -59,7 +59,7 @@ snb.addEventListener("transitionend", () => {
 
 gsap.to(".snb-wrap", {
   scrollTrigger: {
-    trigger: "#about_introduce",
+    trigger: ".about_visual",
     start: "bottom 20%",
     end: "bottom top",
     toggleActions: "play none none reverse",
@@ -115,26 +115,7 @@ let tl2 = gsap.timeline();
 
 
 
-  let clutter = ""
-  //textContent  --> 테스트만 추출
-  let page2_h2 = document.querySelector("#about_introduce>h2").textContent.split("")
-  
-  page2_h2.forEach(function (dets) {
-      clutter += `<span>${dets}</span>`;
-      //clutter = clutter + `<span>T</span>`
-      document.querySelector("#about_introduce>h2").innerHTML = clutter
-  })
-  
-  gsap.to("#about_introduce>h2>span", {
-      scrollTrigger: {
-          trigger: "#about_introduce>h2>span",
-          start: "top bottom",
-          end: "+=100% top",
-          scrub: 0.5,
-      },
-      color: "#fff",
-      stagger: 0.3
-  })
+
 
 
   
