@@ -48,9 +48,8 @@
     position: relative;
     background: #101010;
     overflow-x: hidden;
-    font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui,
-    Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo',
-    'Noto Sans KR', 'Malgun Gothic', sans-serif;
+      font-family: "Noto Sans KR", sans-serif;
+      font-weight: 400; /* 100 ~ 900 사이 값 사용 가능 */
   }
 
   body.bg-active::before{
