@@ -94,7 +94,7 @@ gsap.fromTo(".about_IdPhoto img",
     duration: 1,
     ease: "power3.out",
     scrollTrigger: {
-      trigger: "#about",
+      trigger: ".about_personal",
       start: "40% bottom",   // about 섹션의 top이 뷰포트 60% 지점에 닿을 때 시작
       end: "bottom 40%",  // 필요시 조정
       toggleActions: "play none none reverse",
@@ -136,7 +136,7 @@ gsap.fromTo(".introduction_txt p",
     duration: 1,
     ease: "power3.out",
     scrollTrigger: {
-      trigger: "#about",
+      trigger: ".about_personal",
       start: "60% bottom",   // about 섹션의 top이 뷰포트 60% 지점에 닿을 때 시작
       end: "bottom 40%",  // 필요시 조정
       toggleActions: "play none none reverse",
@@ -162,7 +162,7 @@ gsap.fromTo(".career",
     duration: 1,
     ease: "power3.out",
     scrollTrigger: {
-      trigger: "#about",
+      trigger: ".about_personal",
       start: "70% bottom",   // about 섹션의 top이 뷰포트 60% 지점에 닿을 때 시작
       end: "bottom 40%",  // 필요시 조정
       toggleActions: "play none none reverse",
