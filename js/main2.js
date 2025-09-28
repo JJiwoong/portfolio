@@ -109,18 +109,19 @@ gsap.fromTo(".about_IdPhoto img",
   }
 );
 
-const skills = document.querySelectorAll(".skill");
+let list = document.querySelectorAll(".skills_wrap ul li");
 
-gsap.to(".skills_wrap", {
-  xPercent: -100 * (skills.length - 1), // skill 개수만큼 가로로 이동
-  ease: "none",
-  scrollTrigger: {
-    trigger: ".skills_wrap",
-    pin: true,   // 스크롤 시 영역 고정
-    scrub: 1,    // 스크롤과 애니메이션 동기화
-    end: () => "+=" + document.querySelector(".skills_wrap").offsetWidth
-  }
-});
+let scrollTween=gsap.to(list,{
+    xPercent:-100*(list.length - 1),
+    ease:"none",
+    scrollTrigger:{
+        trigger:".skills_wrap",
+        start:"center center",
+        scrub:1,
+        end:"+=300%",
+        pin:true
+    }
+})
 
 gsap.fromTo(".introduction_txt p", 
   { 
