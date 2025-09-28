@@ -540,6 +540,10 @@
   font-weight: 400;
 }
 
+.Education .p:nth-child(2){
+  margin-bottom: 8px;
+}
+
 .about-box:nth-of-type(2) {
   top: 300px;
 }
