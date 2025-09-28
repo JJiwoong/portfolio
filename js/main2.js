@@ -1,16 +1,6 @@
 gsap.registerPlugin(ScrollTrigger,Flip,MotionPathPlugin); 
 
-gsap.to("#page1", {
-  opacity: 0.08,      // 최종 상태
-  scrollTrigger: {
-    trigger: "#page1",
-    start: "top top",
-    end: "bottom top",
-    scrub: true,
-    pin: true,
-    pinSpacing: false
-  }
-});
+
 
 const button = document.querySelector(".button");
 const logo = document.querySelector(".logo");
