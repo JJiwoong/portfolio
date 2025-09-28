@@ -1,6 +1,16 @@
 gsap.registerPlugin(ScrollTrigger,Flip,MotionPathPlugin); 
 
-
+gsap.to("#page1", {
+  opacity: 0.08,      // 최종 상태
+  scrollTrigger: {
+    trigger: "#page1",
+    start: "top top",
+    end: "bottom top",
+    scrub: true,
+    pin: true,
+    pinSpacing: false
+  }
+});
 
 const button = document.querySelector(".button");
 const logo = document.querySelector(".logo");
@@ -191,7 +201,7 @@ gsap.to(".square_circle", {
 });
 
 
-let tl2 = gsap.timeline();
+// let tl2 = gsap.timeline();
 
 
 
@@ -202,261 +212,261 @@ let tl2 = gsap.timeline();
   
 
 
-function hover() {
-    profile = gsap.to('.intro-bg', {
-      width: '25vw',
-      paused: true
-    })
-    $('#profileHover').hover(function () {
-      profile.play();
-    }, function () {
-      profile.reverse();
-    })
-  }
-  hover();
+// function hover() {
+//     profile = gsap.to('.intro-bg', {
+//       width: '25vw',
+//       paused: true
+//     })
+//     $('#profileHover').hover(function () {
+//       profile.play();
+//     }, function () {
+//       profile.reverse();
+//     })
+//   }
+//   hover();
 
-  function square (){
-  let gsapSq = document.querySelectorAll(".square");
+//   function square (){
+//   let gsapSq = document.querySelectorAll(".square");
   
-  gsapSq.forEach(function (gSq, i) {
-    let rotate = gsap.from(gSq, {
-      duration: 3,
-      rotation: 720,
-      scrollTrigger: {
-        trigger: gSq,
-        start: "top bottom",
-        scrub: 1.9,
-      },
-    })
-  });
-  }
-  square();
+//   gsapSq.forEach(function (gSq, i) {
+//     let rotate = gsap.from(gSq, {
+//       duration: 3,
+//       rotation: 720,
+//       scrollTrigger: {
+//         trigger: gSq,
+//         start: "top bottom",
+//         scrub: 1.9,
+//       },
+//     })
+//   });
+//   }
+//   square();
   
-  function skillmove() {
-    gsap.to(".skill", {
-      scrollTrigger: {
-        trigger: ".skill_wrap",
-        start: "top bottom",
-        scrub: 1.9,
-      },
-      // forEach((각각요소,인덱스)=>{})
-      // y:(인덱스,각각요소)=>{}
-      xPercent:100  
-    });
-  }
-  skillmove();
+//   function skillmove() {
+//     gsap.to(".skill", {
+//       scrollTrigger: {
+//         trigger: ".skill_wrap",
+//         start: "top bottom",
+//         scrub: 1.9,
+//       },
+//       // forEach((각각요소,인덱스)=>{})
+//       // y:(인덱스,각각요소)=>{}
+//       xPercent:100  
+//     });
+//   }
+//   skillmove();
 
 
-  function skill_sc(){
-    let Max = 100;
-    let circleProgressInstances = [];
-    let skills=document.querySelectorAll(".skill")
-    skills.forEach((progressEle, index) => {
-      let initialvalue = document.querySelectorAll(".value-input")[index].value;
-      let cp = new CircleProgress(progressEle, {
-        max: Max,
-        value: 0,
-        animationDuration: 2500,
-        textFormat: (val) => val + "%"
-      });
+//   function skill_sc(){
+//     let Max = 100;
+//     let circleProgressInstances = [];
+//     let skills=document.querySelectorAll(".skill")
+//     skills.forEach((progressEle, index) => {
+//       let initialvalue = document.querySelectorAll(".value-input")[index].value;
+//       let cp = new CircleProgress(progressEle, {
+//         max: Max,
+//         value: 0,
+//         animationDuration: 2500,
+//         textFormat: (val) => val + "%"
+//       });
     
-      circleProgressInstances.push[cp]
+//       circleProgressInstances.push[cp]
     
-      ScrollTrigger.create({
-          trigger: ".skill",
-          start: "top 70%",
-          scrub: 1,
-          onEnter: () => {
-            cp.value = initialvalue
-          },
-          onLeaveBack: () => {
-            cp.value = 0
-          },
-          opacity:0
-        })
-      }
-    )}
-    skill_sc()
+//       ScrollTrigger.create({
+//           trigger: ".skill",
+//           start: "top 70%",
+//           scrub: 1,
+//           onEnter: () => {
+//             cp.value = initialvalue
+//           },
+//           onLeaveBack: () => {
+//             cp.value = 0
+//           },
+//           opacity:0
+//         })
+//       }
+//     )}
+//     skill_sc()
     
-    const textElements = gsap.utils.toArray('.about_ani .text');
+//     const textElements = gsap.utils.toArray('.about_ani .text');
 
-    textElements.forEach(text => {
-      gsap.to(text, {
-        backgroundSize: '100%',
-        ease: 'none',
-        scrollTrigger: {
-          trigger: text,
-          start: 'center 80%',
-          end: 'center 20%',
-          scrub: true,
-        },
-      });
-    });
+//     textElements.forEach(text => {
+//       gsap.to(text, {
+//         backgroundSize: '100%',
+//         ease: 'none',
+//         scrollTrigger: {
+//           trigger: text,
+//           start: 'center 80%',
+//           end: 'center 20%',
+//           scrub: true,
+//         },
+//       });
+//     });
 
- // use a script tag or an external JS file
- document.addEventListener("DOMContentLoaded", (event) => {
+//  // use a script tag or an external JS file
+//  document.addEventListener("DOMContentLoaded", (event) => {
   
-  //이미지 애니
-  let items = document.querySelectorAll(".about_ani li");
-  items.forEach(function (el) {
-      gsap.set(".hover-img", {
-          xPercent: -50,
-          yPercent: -50
-      })
-      let image = el.querySelector(".hover-img")
-      let innerImage = el.querySelector(".hover-img img");
-      let pos = {
-          x: window.innerWidth / 2,
-          y: window.innerHeight / 2
-      }
-      let mouse = {
-          x: pos.x
-      }
-      let speed = 0.1;
-      let xSet = gsap.quickSetter(image, "x", "px") //
+//   //이미지 애니
+//   let items = document.querySelectorAll(".about_ani li");
+//   items.forEach(function (el) {
+//       gsap.set(".hover-img", {
+//           xPercent: -50,
+//           yPercent: -50
+//       })
+//       let image = el.querySelector(".hover-img")
+//       let innerImage = el.querySelector(".hover-img img");
+//       let pos = {
+//           x: window.innerWidth / 2,
+//           y: window.innerHeight / 2
+//       }
+//       let mouse = {
+//           x: pos.x
+//       }
+//       let speed = 0.1;
+//       let xSet = gsap.quickSetter(image, "x", "px") //
 
-      window.addEventListener("mousemove", function (e) {
-          //console.log(e.x)
-          mouse.x = e.x;
-      })
+//       window.addEventListener("mousemove", function (e) {
+//           //console.log(e.x)
+//           mouse.x = e.x;
+//       })
 
-      gsap.ticker.add(function () { //requestAnimationFrame()
-          let dt = 1.0 - Math.pow((1.0 - speed), gsap.ticker.deltaRatio())
-          pos.x += (mouse.x - pos.x) * dt;
-          xSet(pos.x)
-      })
+//       gsap.ticker.add(function () { //requestAnimationFrame()
+//           let dt = 1.0 - Math.pow((1.0 - speed), gsap.ticker.deltaRatio())
+//           pos.x += (mouse.x - pos.x) * dt;
+//           xSet(pos.x)
+//       })
 
-      let direction = "",
-          oldx = 0,
-          lastCursorX = null,
-          cursorThreshold = 150;
+//       let direction = "",
+//           oldx = 0,
+//           lastCursorX = null,
+//           cursorThreshold = 150;
 
-      let mousemovemethod = function (e) {
-          if (e.pageX < oldx && e.clientX <= lastCursorX - cursorThreshold) {
-              direction = "left"
-              lastCursorX = e.clientX;
-              innerImage.style.transform = "rotate(-15deg)"
+//       let mousemovemethod = function (e) {
+//           if (e.pageX < oldx && e.clientX <= lastCursorX - cursorThreshold) {
+//               direction = "left"
+//               lastCursorX = e.clientX;
+//               innerImage.style.transform = "rotate(-15deg)"
 
-          } else if (e.pageX > oldx && e.clientX >= lastCursorX + cursorThreshold) {
-              direction = "right"
-              lastCursorX = e.clientX;
-              innerImage.style.transform = "rotate(15deg)"
-          }
-          oldx = e.pageX;
-      }
-      let mouseMoveTimer;
+//           } else if (e.pageX > oldx && e.clientX >= lastCursorX + cursorThreshold) {
+//               direction = "right"
+//               lastCursorX = e.clientX;
+//               innerImage.style.transform = "rotate(15deg)"
+//           }
+//           oldx = e.pageX;
+//       }
+//       let mouseMoveTimer;
 
-      document.addEventListener("mousemove", function () {
-          // setTimeout(할일,시간) 시간뒤에 함수 발생
-          //setTimeout을 멈추고 싶을때 =>변수에 할당
-          //변수=setTimeout(할일(함수),시간)
-          //clearTimeout(변수)=>멈추는 명령
+//       document.addEventListener("mousemove", function () {
+//           // setTimeout(할일,시간) 시간뒤에 함수 발생
+//           //setTimeout을 멈추고 싶을때 =>변수에 할당
+//           //변수=setTimeout(할일(함수),시간)
+//           //clearTimeout(변수)=>멈추는 명령
 
-          clearTimeout(mouseMoveTimer)
-          mouseMoveTimer = setTimeout(function () {
-              innerImage.style.transform = "translateX(0%) rotate(0deg)"
-          }, 100)
-      })
-      document.addEventListener("mousemove", mousemovemethod)
-  })
+//           clearTimeout(mouseMoveTimer)
+//           mouseMoveTimer = setTimeout(function () {
+//               innerImage.style.transform = "translateX(0%) rotate(0deg)"
+//           }, 100)
+//       })
+//       document.addEventListener("mousemove", mousemovemethod)
+//   })
 
-});
-
-
-let triggerFlipOnScroll=(galleryEl, option)=>{
-  let settings={
-      flip:{
-          absolute:false,
-          absoluteOnLeave:false,
-          scale:true,
-          simple:true
-      },
-      scrollTrigger:{
-          start:"center center",
-          end:"+=200%"
-      }
-  }
-
-  settings=Object.assign({},settings,option)//1)
-  //console.log(settings)
-
-  let galleryCaption=galleryEl.querySelector(".caption");
-  let galleryItems=galleryEl.querySelectorAll(".gallery__item");
-  let galleryItemInner=[...galleryItems].map((item)=>{
-      return item.children.length>0?[...item.children]:[]
-  })
+// });
 
 
-  //L:최종상태를 캡처
-  galleryEl.classList.add("gallery--switch");
+// let triggerFlipOnScroll=(galleryEl, option)=>{
+//   let settings={
+//       flip:{
+//           absolute:false,
+//           absoluteOnLeave:false,
+//           scale:true,
+//           simple:true
+//       },
+//       scrollTrigger:{
+//           start:"center center",
+//           end:"+=200%"
+//       }
+//   }
 
-  //F:초기상태를 캡처
+//   settings=Object.assign({},settings,option)//1)
+//   //console.log(settings)
 
-  //수업  getState 오타/////
-  let flipstate=Flip.getState([galleryItems,galleryCaption],{props:'filter,opacity'})
+//   let galleryCaption=galleryEl.querySelector(".caption");
+//   let galleryItems=galleryEl.querySelectorAll(".gallery__item");
+//   let galleryItemInner=[...galleryItems].map((item)=>{
+//       return item.children.length>0?[...item.children]:[]
+//   })
 
-  //초기 상태로 되돌리려면 최종 클래스를 제거합니다, 최종상태를 파악하게만하고 클래스명은 바로 제거한다
-  galleryEl.classList.remove("gallery--switch");
+
+//   //L:최종상태를 캡처
+//   galleryEl.classList.add("gallery--switch");
+
+//   //F:초기상태를 캡처
+
+//   //수업  getState 오타/////
+//   let flipstate=Flip.getState([galleryItems,galleryCaption],{props:'filter,opacity'})
+
+//   //초기 상태로 되돌리려면 최종 클래스를 제거합니다, 최종상태를 파악하게만하고 클래스명은 바로 제거한다
+//   galleryEl.classList.remove("gallery--switch");
 
 
-  //뒤집기 애니메이션 , 타임라인 만들기
-  let tl=Flip.to(flipstate,{
-      ease:"none",
-      absolute:settings.flip.absolute,
-      absoluteOnLeave:settings.flip.absoluteOnLeave,
-      scale:settings.flip.scale,
-      simple:settings.flip.simple,
-      stagger:settings.stagger,
-      scrollTrigger:{
-          trigger:galleryEl,
-          start:settings.scrollTrigger.start,
-          end:settings.scrollTrigger.end,
-          pin:galleryEl.parentNode,
-          scrub:1
-      }
+//   //뒤집기 애니메이션 , 타임라인 만들기
+//   let tl=Flip.to(flipstate,{
+//       ease:"none",
+//       absolute:settings.flip.absolute,
+//       absoluteOnLeave:settings.flip.absoluteOnLeave,
+//       scale:settings.flip.scale,
+//       simple:settings.flip.simple,
+//       stagger:settings.stagger,
+//       scrollTrigger:{
+//           trigger:galleryEl,
+//           start:settings.scrollTrigger.start,
+//           end:settings.scrollTrigger.end,
+//           pin:galleryEl.parentNode,
+//           scrub:1
+//       }
 
-  })
+//   })
 
-}
+// }
 
-let scroll=()=>{
-  let galleries=[
-      {id:"#gallery-1",options:{flip:{absoluteOnLeave:true,scale:false}}},
-      {id:"#gallery-3",options:{flip:{absolute:true,scale:false},scrollTrigger:{
-        end:"+=400%",
-    },stagger:0.05}},
-  ]
-  galleries.forEach((gallery)=>{
-      let galleryElement=document.querySelector(gallery.id);
-      triggerFlipOnScroll(galleryElement,gallery.options)
-  })
+// let scroll=()=>{
+//   let galleries=[
+//       {id:"#gallery-1",options:{flip:{absoluteOnLeave:true,scale:false}}},
+//       {id:"#gallery-3",options:{flip:{absolute:true,scale:false},scrollTrigger:{
+//         end:"+=400%",
+//     },stagger:0.05}},
+//   ]
+//   galleries.forEach((gallery)=>{
+//       let galleryElement=document.querySelector(gallery.id);
+//       triggerFlipOnScroll(galleryElement,gallery.options)
+//   })
 
-}
-scroll()
+// }
+// scroll()
 
-  let tl=gsap.timeline()
+//   let tl=gsap.timeline()
 
-  tl.from(".aa_tit .text,.bird",{
-    opacity:0,
-    duration:0.5,
-    scrollTrigger:{
-      trigger:".about_ani",
-      start:"10% top",
-      end:"bottom bottom",
-      scrub:1,
-    }
-  })
+//   tl.from(".aa_tit .text,.bird",{
+//     opacity:0,
+//     duration:0.5,
+//     scrollTrigger:{
+//       trigger:".about_ani",
+//       start:"10% top",
+//       end:"bottom bottom",
+//       scrub:1,
+//     }
+//   })
 
-  tl.from(".hover-img",{
-    opacity:0,
-    duration:1,
-    scrollTrigger:{
-      trigger:".about_ani",
-      start:"10% top",
-      end:"bottom bottom",
-      scrub:1,
-    }
-  })
+//   tl.from(".hover-img",{
+//     opacity:0,
+//     duration:1,
+//     scrollTrigger:{
+//       trigger:".about_ani",
+//       start:"10% top",
+//       end:"bottom bottom",
+//       scrub:1,
+//     }
+//   })
 
 
 
