@@ -342,6 +342,12 @@
   padding: 0 10px;
 }
 
+.about_personal {
+  display: flex;
+}
+
+
+
 .about_visual {
   height: 100vh;
   width: 100vw;
@@ -531,33 +537,28 @@
   font-weight: 200;
 }
 
-.horizontal-wrap {
-  position: relative;
-  height: 100vh; /* 화면 높이 고정 */
-  overflow: hidden;
-}
-
-.horizontal {
+.skills_wrap {
   display: flex;
-  height: 100%;
+  height: 100vh;      /* 화면 높이에 맞추기 */
 }
 
-.panel {
-  min-width: 100vw; /* 화면 가로 전체 */
+.skill {
+  flex: 0 0 100vw;    /* 한 화면에 하나씩 차지 */
   height: 100vh;
-  flex-shrink: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 5rem;
+  font-size: 3rem;
   font-weight: bold;
   color: #fff;
 }
 
-.panel:nth-child(1) { background: #1abc9c; }
-.panel:nth-child(2) { background: #3498db; }
-.panel:nth-child(3) { background: #9b59b6; }
-.panel:nth-child(4) { background: #e74c3c; }
+.skill:nth-child(1) { background: #1abc9c; }
+.skill:nth-child(2) { background: #3498db; }
+.skill:nth-child(3) { background: #9b59b6; }
+.skill:nth-child(4) { background: #e74c3c; }
+.skill:nth-child(5) { background: #f39c12; }
+.skill:nth-child(6) { background: #2ecc71; }
 
 .stress_txt strong{
   font-size: 28px;
