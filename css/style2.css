@@ -537,6 +537,34 @@
   font-weight: 200;
 }
 
+.horizontal-wrap {
+  position: relative;
+  height: 100vh; /* 화면 높이 고정 */
+  overflow: hidden;
+}
+
+.horizontal {
+  display: flex;
+  height: 100%;
+}
+
+.panel {
+  min-width: 100vw; /* 화면 가로 전체 */
+  height: 100vh;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 5rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.panel:nth-child(1) { background: #1abc9c; }
+.panel:nth-child(2) { background: #3498db; }
+.panel:nth-child(3) { background: #9b59b6; }
+.panel:nth-child(4) { background: #e74c3c; }
+
 .stress_txt strong{
   font-size: 28px;
   display: block;
