@@ -8,7 +8,7 @@ gsap.to("#page1", {
     end: "bottom top",
     scrub: true,
     pin: true,
-    pinSpacing: false
+    // pinSpacing: false
   }
 });
 
