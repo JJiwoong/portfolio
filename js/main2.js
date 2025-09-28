@@ -30,7 +30,6 @@ gsap.to(".about_visual", {
     start: "top top",
     end: "bottom bottom",
     toggleActions: "play none none reverse",
-    markers: true,
     onEnter: () => {
       // 내려갈 때 : opacity 0 → transition으로 자연스럽게 사라짐
       button.style.opacity = "0";
@@ -63,7 +62,6 @@ gsap.to(".snb-wrap", {
     start: "bottom 20%",
     end: "bottom top",
     toggleActions: "play none none reverse",
-    markers:true,
     onEnter: () => {
       snb.style.zIndex = "1";
       snb.style.opacity = "1";
