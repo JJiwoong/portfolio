@@ -346,6 +346,7 @@
   /* display: flex; */
 }
 
+.wrap{    position: relative;}
 .skills_wrap{height: 100vh;}
 .skills_wrap ul{display: flex;  padding:3% 30%; }
 .skills_wrap ul li{width: 700px; padding: 100px; flex-shrink: 0}
