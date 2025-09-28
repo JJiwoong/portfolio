@@ -533,6 +533,10 @@
   gap: 100px;
 }
 
+.Education p{
+  font-weight: 200;
+}
+
 .stress_txt strong{
   font-size: 28px;
   display: block;
@@ -540,7 +544,7 @@
   font-weight: 400;
 }
 
-.Education .p:nth-child(2){
+.Education p:nth-child(2){
   margin-bottom: 8px;
 }
 
