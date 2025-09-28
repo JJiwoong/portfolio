@@ -110,19 +110,20 @@ gsap.fromTo(".about_IdPhoto img",
 );
 
 
-let list = document.querySelectorAll(".skills_wrap ul li");
+let totalWidth = document.querySelector(".skills_list").scrollWidth;
 
-let scrollTween=gsap.to(list,{
-    xPercent:-100*(list.length - 1),
-    ease:"none",
-    scrollTrigger:{
-        trigger:".skills_wrap",
-        start:"center center",
-        scrub:1,
-        end:"+=300%",
-        pin:true
-    }
-})
+gsap.to(".skills_list", {
+  x: () => -(totalWidth - window.innerWidth),
+  ease: "none",
+  scrollTrigger: {
+    trigger: ".skills_wrap",
+    start: "top top",
+    pin: true,
+    scrub: 1,
+    end: () => "+=" + (totalWidth - window.innerWidth),
+    markers: true
+  }
+});
 
 gsap.fromTo(".introduction_txt p", 
   { 
