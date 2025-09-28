@@ -109,9 +109,10 @@ gsap.fromTo(".about_IdPhoto img",
 );
 
 
-let totalWidth = document.querySelector(".skills_list").scrollWidth;
+const list = document.querySelector(".skills_list");
+const totalWidth = list.scrollWidth;
 
-gsap.to(".skills_list", {
+gsap.to(list, {
   x: () => -(totalWidth - window.innerWidth),
   ease: "none",
   scrollTrigger: {
@@ -119,8 +120,8 @@ gsap.to(".skills_list", {
     start: "top top",
     pin: true,
     scrub: 1,
-      markers: true,
-    end: () => "+=" + (totalWidth - window.innerWidth),
+    end: () => "+=" + (totalWidth), // 👈 여기 totalWidth로 (더 넉넉하게)
+    markers: true
   }
 });
 
