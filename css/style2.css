@@ -345,10 +345,16 @@
 .about_personal {
   /* display: flex; */
 }
-
-.skills_wrap{height: 100vh;}
-.skills_wrap ul{display: flex;  padding:3% 30%; }
-.skills_wrap ul li{width: 700px; padding: 100px; flex-shrink: 0!important;}
+.skills_wrap {
+  height: 100vh;    /* pin 영역 보이는 높이 */
+  overflow: hidden;
+}
+.skills_list {
+  display: flex;
+}
+.skill {
+  flex: 0 0 100vw;  /* 한 칸씩 화면 가득 */
+}
 
 .about_visual {
   height: 100vh;
