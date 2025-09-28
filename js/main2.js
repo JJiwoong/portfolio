@@ -85,6 +85,33 @@ gsap.to(".about_visual .title", {
   }
 });
 
+gsap.fromTo(".about_IdPhoto img", 
+  { 
+    y: -100,   // 시작 위치 (위에서)
+    opacity: 0 // 시작 시 투명
+  }, 
+  { 
+    y: 0,      // 원래 위치
+    opacity: 1,
+    duration: 1,
+    ease: "power3.out",
+    scrollTrigger: {
+      trigger: "#about",
+      start: "top 80%",   // about 섹션이 뷰포트 80% 지점에 들어올 때 시작
+      end: "bottom top",  // 필요시 조절
+      toggleActions: "play none none reverse",
+      markers: true,
+      onEnter: () => {
+        snb.style.zIndex = "1"; 
+      },
+      onLeaveBack: () => {
+        snb.style.opacity = "0";
+      }
+    }
+  }
+);
+
+
 gsap.to(".img-wrap", {
   opacity:1,
   duration: 1.2,
