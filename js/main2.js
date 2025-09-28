@@ -98,7 +98,6 @@ gsap.fromTo(".about_IdPhoto img",
       start: "40% bottom",   // about 섹션의 top이 뷰포트 60% 지점에 닿을 때 시작
       end: "bottom 40%",  // 필요시 조정
       toggleActions: "play none none reverse",
-      markers: true,
       onEnter: () => {
         snb.style.zIndex = "1"; 
       },
@@ -120,8 +119,8 @@ gsap.to(".skills_list", {
     start: "top top",
     pin: true,
     scrub: 1,
+      markers: true,
     end: () => "+=" + (totalWidth - window.innerWidth),
-    markers: true
   }
 });
 
@@ -140,7 +139,6 @@ gsap.fromTo(".introduction_txt p",
       start: "60% bottom",   // about 섹션의 top이 뷰포트 60% 지점에 닿을 때 시작
       end: "bottom 40%",  // 필요시 조정
       toggleActions: "play none none reverse",
-      markers: true,
       onEnter: () => {
         snb.style.zIndex = "1"; 
       },
@@ -166,7 +164,6 @@ gsap.fromTo(".career",
       start: "70% bottom",   // about 섹션의 top이 뷰포트 60% 지점에 닿을 때 시작
       end: "bottom 40%",  // 필요시 조정
       toggleActions: "play none none reverse",
-      markers: true,
       onEnter: () => {
         snb.style.zIndex = "1"; 
       },
