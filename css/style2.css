@@ -539,21 +539,7 @@
   font-weight: 200;
 }
 
-.skills_wrap {
-  display: flex;
-  height: 100vh;      /* 화면 높이에 맞추기 */
-}
 
-.skill {
-  flex: 0 0 100vw;    /* 한 화면에 하나씩 차지 */
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 3rem;
-  font-weight: bold;
-  color: #fff;
-}
 
 .skill:nth-child(1) { background: #1abc9c; }
 .skill:nth-child(2) { background: #3498db; }
