@@ -109,18 +109,18 @@ gsap.fromTo(".about_IdPhoto img",
   }
 );
 
-const sections = gsap.utils.toArray(".panel");
+// const sections = gsap.utils.toArray(".panel");
 
-gsap.to(".horizontal", {
-  xPercent: -100 * (sections.length - 1), // 총 길이만큼 가로 이동
-  ease: "none",
-  scrollTrigger: {
-    trigger: ".horizontal-wrap",
-    pin: true,                  // 세로 스크롤 고정
-    scrub: 1,                   // 스크롤과 동기화
-    end: () => "+=" + document.querySelector(".horizontal").offsetWidth
-  }
-});
+// gsap.to(".horizontal", {
+//   xPercent: -100 * (sections.length - 1), // 총 길이만큼 가로 이동
+//   ease: "none",
+//   scrollTrigger: {
+//     trigger: ".horizontal-wrap",
+//     pin: true,                  // 세로 스크롤 고정
+//     scrub: 1,                   // 스크롤과 동기화
+//     end: () => "+=" + document.querySelector(".horizontal").offsetWidth
+//   }
+// });
 
 gsap.fromTo(".introduction_txt p", 
   { 
