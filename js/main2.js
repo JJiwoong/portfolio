@@ -95,8 +95,8 @@ gsap.fromTo(".about_IdPhoto img",
     ease: "power3.out",
     scrollTrigger: {
       trigger: "#about",
-      start: "top 80%",   // about 섹션이 뷰포트 80% 지점에 들어올 때 시작
-      end: "bottom 40%",  // 필요시 조절
+      start: "top 60%",   // about 섹션의 top이 뷰포트 60% 지점에 닿을 때 시작
+      end: "bottom 40%",  // 필요시 조정
       toggleActions: "play none none reverse",
       markers: true,
       onEnter: () => {
