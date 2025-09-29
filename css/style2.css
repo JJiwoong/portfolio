@@ -348,9 +348,9 @@ padding: 200px 0 100px 0;
 
 .wrap{position: relative;}
 .skills_wrap{}
-.skills_wrap ul{display: flex; }
+.skills_wrap ul{display: flex; justify-content: space-between; }
 .skills_wrap ul li{flex-shrink: 0}
-.skills_wrap ul li svg{width: 100px; height: 100px;}
+.skills_wrap ul li svg{width: 80px; height: 80px;}
 
 .skills_title{
       font-size: 28px;
@@ -358,8 +358,8 @@ padding: 200px 0 100px 0;
 }
 
 .skill img{
-  width: 100px;
-  height: 100px;
+  width: 80px;
+  height: 80px;
 }
 
 
