@@ -410,7 +410,7 @@ padding: 200px 0 100px 0;
 }
 
 .about_visual .about_visual-mv img {
-    width: 100%;
+    width: 500px;
     /* position: absolute; */
     /* transform: translate(-50%, -100%); */
     top: 100%;
@@ -437,31 +437,7 @@ padding: 200px 0 100px 0;
   z-index: 1000;
 }
 
-.img-wrap {
-  width: 50%;
-  position: relative;
-  display: flex;
-  align-items: flex-end;
-}
 
-.img-wrap img {
-  display: block;
-  width: 400px; /* 이미지 크기 맞게 조정 */
-  opacity: 1;   /* 이미지 자체는 보이게 */
-}
-
-.img-wrap .about_name{
-  position: absolute;
-  bottom: 0;
-  left: 0;
-}
-
-.title-wrap{
-    /* position: absolute; */
-    /* display: inline-block; */
-    height: 100%;
-    width: 50%;
-}
 
 .img-mask {
   position: absolute;
