@@ -155,10 +155,10 @@ gsap.fromTo(".skills_wrap",
     duration: 1,
     ease: "power3.out",
     scrollTrigger: {
-      trigger: ".about_personal",
-      start: "top bottom",    // 요소가 화면에 들어오기 시작할 때
-      end: "bottom bottom",   // 요소의 bottom이 화면의 bottom에 닿을 때
-      markers:true,
+      trigger: ".skills_wrap",
+      start: "top 80%",   // skills_wrap의 top이 뷰포트 80% 지점에 닿을 때 (즉, 20% 보였을 때)
+      end: "bottom 60%",  // 필요하면 조정 가능
+      markers: true,
       toggleActions: "play none none reverse"
     }
   }
