@@ -146,19 +146,19 @@ gsap.fromTo(".introduction_txt p",
 
 gsap.fromTo(".skills_wrap", 
   { 
-    y: -100,   // 시작 위치 (위에서)
-    opacity: 0 // 시작 시 투명
+    y: -100,
+    opacity: 0
   }, 
   { 
-    y: 0,      // 원래 위치
+    y: 0,
     opacity: 1,
     duration: 1,
     ease: "power3.out",
     scrollTrigger: {
       trigger: ".about_personal",
-      start: "90% bottom",   // about 섹션의 top이 뷰포트 60% 지점에 닿을 때 시작
-      end: "bottom 40%",  // 필요시 조정
-      toggleActions: "play none none reverse",
+      start: "top bottom",    // 요소가 화면에 들어오기 시작할 때
+      end: "bottom bottom",   // 요소의 bottom이 화면의 bottom에 닿을 때
+      toggleActions: "play none none reverse"
     }
   }
 );
