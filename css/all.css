@@ -48,8 +48,7 @@
     position: relative;
     background: #101010;
     overflow-x: hidden;
-      font-family: "Noto Sans KR", sans-serif;
-      font-weight: 400; /* 100 ~ 900 사이 값 사용 가능 */
+    font-family: 'Montserrat', sans-serif;
   }
 
   body.bg-active::before{
