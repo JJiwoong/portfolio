@@ -353,8 +353,9 @@ padding: 200px 0 100px 0;
 .skills_wrap ul li svg{width: 80px; height: 80px;}
 
 .skills_title{
-      font-size: 28px;
-    color: #fff;
+  font-size: 28px;
+  color: #fff;
+  margin-bottom: 24px;
 }
 
 .skill img{
