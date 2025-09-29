@@ -140,17 +140,11 @@ gsap.fromTo(".introduction_txt p",
       start: "60% bottom",   // about 섹션의 top이 뷰포트 60% 지점에 닿을 때 시작
       end: "bottom 40%",  // 필요시 조정
       toggleActions: "play none none reverse",
-      onEnter: () => {
-        snb.style.zIndex = "1"; 
-      },
-      onLeaveBack: () => {
-        snb.style.opacity = "0";
-      }
     }
   }
 );
 
-gsap.fromTo(".skills_wrap ul li", 
+gsap.fromTo(".skills_wrap", 
   { 
     y: -100,   // 시작 위치 (위에서)
     opacity: 0 // 시작 시 투명
@@ -162,15 +156,9 @@ gsap.fromTo(".skills_wrap ul li",
     ease: "power3.out",
     scrollTrigger: {
       trigger: ".about_personal",
-      start: "80% bottom",   // about 섹션의 top이 뷰포트 60% 지점에 닿을 때 시작
+      start: "90% bottom",   // about 섹션의 top이 뷰포트 60% 지점에 닿을 때 시작
       end: "bottom 40%",  // 필요시 조정
       toggleActions: "play none none reverse",
-      onEnter: () => {
-        snb.style.zIndex = "1"; 
-      },
-      onLeaveBack: () => {
-        snb.style.opacity = "0";
-      }
     }
   }
 );
