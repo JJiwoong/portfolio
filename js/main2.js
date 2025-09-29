@@ -158,6 +158,7 @@ gsap.fromTo(".skills_wrap",
       trigger: ".about_personal",
       start: "top bottom",    // 요소가 화면에 들어오기 시작할 때
       end: "bottom bottom",   // 요소의 bottom이 화면의 bottom에 닿을 때
+      markers:true,
       toggleActions: "play none none reverse"
     }
   }
