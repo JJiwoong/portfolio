@@ -347,7 +347,7 @@
 }
 
 .wrap{position: relative;}
-.skills_wrap{}
+.skills_wrap{    padding: 100px 0;}
 .skills_wrap ul{display: flex; }
 .skills_wrap ul li{flex-shrink: 0}
 .skills_wrap ul li svg{width: 100px; height: 100px;}
