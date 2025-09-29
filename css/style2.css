@@ -540,15 +540,6 @@
   font-weight: 200;
 }
 
-
-
-.skill:nth-child(1) { background: #1abc9c; }
-.skill:nth-child(2) { background: #3498db; }
-.skill:nth-child(3) { background: #9b59b6; }
-.skill:nth-child(4) { background: #e74c3c; }
-.skill:nth-child(5) { background: #f39c12; }
-.skill:nth-child(6) { background: #2ecc71; }
-
 .stress_txt strong{
   font-size: 28px;
   display: block;

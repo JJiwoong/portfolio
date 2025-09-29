@@ -109,21 +109,21 @@ gsap.fromTo(".about_IdPhoto img",
 );
 
 
-const list = document.querySelector(".skills_list");
-const totalWidth = list.scrollWidth;
+// const list = document.querySelector(".skills_list");
+// const totalWidth = list.scrollWidth;
 
-gsap.to(list, {
-  x: () => -(totalWidth - window.innerWidth),
-  ease: "none",
-  scrollTrigger: {
-    trigger: ".skills_wrap",
-    start: "top top",
-    pin: true,
-    scrub: 1,
-    end: () => "+=" + (totalWidth), // 👈 여기 totalWidth로 (더 넉넉하게)
-    markers: true
-  }
-});
+// gsap.to(list, {
+//   x: () => -(totalWidth - window.innerWidth),
+//   ease: "none",
+//   scrollTrigger: {
+//     trigger: ".skills_wrap",
+//     start: "top top",
+//     pin: true,
+//     scrub: 1,
+//     end: () => "+=" + (totalWidth), // 👈 여기 totalWidth로 (더 넉넉하게)
+//     markers: true
+//   }
+// });
 
 gsap.fromTo(".introduction_txt p", 
   { 
