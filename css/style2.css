@@ -346,10 +346,15 @@
   /* display: flex; */
 }
 
-.wrap{    position: relative;}
+.wrap{position: relative;}
 .skills_wrap{height: 100vh;}
 .skills_wrap ul{display: flex; }
 .skills_wrap ul li{flex-shrink: 0}
+
+.skills_title{
+      font-size: 28px;
+    color: #fff;
+}
 
 .about_visual {
   height: 100vh;
