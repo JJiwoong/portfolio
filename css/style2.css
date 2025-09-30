@@ -402,6 +402,18 @@ padding: 200px 0 100px 0;
     flex-direction: column;
 }
 
+.about_visual.scrolled .about_title,
+.about_visual.scrolled .about_name{
+  opacity: 0;
+  transform: translateY(100px);
+}
+
+.about_title,
+.about_name{
+  transform: translateY(0);
+  transition: opacity 0.5s ease,transform 0.5s ease;
+}
+
 .sticky_txt{
   position: sticky;
   top: 0;

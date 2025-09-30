@@ -48,32 +48,6 @@ gsap.to(".about_visual", {
   }
 });
 
-gsap.to(".about_title", {
-  opacity:0,
-  duration:1.2,
-  y:100,
-  scrollTrigger: {
-    trigger: ".about_visual",
-    start: "bottom 20%",
-    end: "bottom bottom",
-    toggleActions: "play none none reverse",
-    markers:true,
-  }
-});
-
-gsap.to(".about_name", {
-  opacity:0,
-  duration:1.2,
-  y:100,
-  scrollTrigger: {
-    trigger: ".about_visual",
-    start: "bottom 20%",
-    end: "bottom bottom",
-    toggleActions: "play none none reverse",
-    markers:true,
-  }
-});
-
 const snb = document.querySelector(".snb-wrap");
 
 snb.addEventListener("transitionend", () => {
@@ -184,6 +158,7 @@ gsap.fromTo(".skills_wrap",
       trigger: ".skills_wrap",
       start: "top 80%",   // skills_wrap의 top이 뷰포트 80% 지점에 닿을 때 (즉, 20% 보였을 때)
       end: "bottom 60%",  // 필요하면 조정 가능
+      markers: true,
       toggleActions: "play none none reverse"
     }
   }
@@ -506,3 +481,21 @@ gsap.to(".square_circle", {
 //       scrub:1,
 //     }
 //   })
+
+
+
+
+
+document.addEventListener("scroll", () => {
+  const section = document.querySelector(".about_visual");
+  const sectionTop = section.offsetTop;         // 섹션 시작 위치
+  const sectionHeight = section.offsetHeight;   // 섹션 높이
+  const scrollY = window.scrollY;               // 현재 스크롤 위치
+
+  // 섹션의 중간 지점 이후부터 opacity 0 적용
+  if (scrollY > sectionTop + sectionHeight / 2) {
+    section.classList.add("scrolled");
+  } else {
+    section.classList.remove("scrolled");
+  }
+});
