@@ -64,7 +64,7 @@ gsap.to(".about_name", {
   y:100,
   scrollTrigger: {
     trigger: ".about_name",
-    start: "30% top",
+    start: "70% top",
     end: "bottom bottom",
     markers:true,
     toggleActions: "play none none reverse",
