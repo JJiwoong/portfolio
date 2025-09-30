@@ -493,7 +493,7 @@ document.addEventListener("scroll", () => {
   const scrollY = window.scrollY;               // 현재 스크롤 위치
 
   // 섹션의 중간 지점 이후부터 opacity 0 적용
-  if (scrollY > sectionTop + sectionHeight / 2) {
+  if (scrollY > sectionTop + sectionHeight / 3) {
     section.classList.add("scrolled");
   } else {
     section.classList.remove("scrolled");
