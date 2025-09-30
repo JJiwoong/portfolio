@@ -405,6 +405,18 @@ padding: 200px 0 100px 0;
   text-align: end;
 }
 
+.about_name p:nth-child(1){
+  padding-left: 100px;
+}
+
+.about_name p:nth-child(2){
+  padding-left: 200px;
+}
+
+.about_title{
+  padding-top: 200px;
+}
+
 .about_visual .about_visual-mv p {
   color: #fff;
   font-size: 120px;
