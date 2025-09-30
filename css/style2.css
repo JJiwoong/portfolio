@@ -402,7 +402,7 @@ padding: 200px 0 100px 0;
     flex-direction: column;
 }
 
-.about_title.scrolled,
+/* .about_title.scrolled,
 .about_name.scrolled{
   opacity: 0;
   transform: translateY(100px);
@@ -412,7 +412,7 @@ padding: 200px 0 100px 0;
 .about_name{
   transform: translateY(0);
   transition: opacity 0.5s ease,transform 0.5s ease;
-}
+} */
 
 .sticky_txt{
   position: sticky;
