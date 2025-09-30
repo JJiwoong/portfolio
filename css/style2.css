@@ -394,6 +394,7 @@ padding: 200px 0 100px 0;
     height: 100%;
     max-width: 1380px;
     width: 100%;
+    padding-top: 200px;
     position: relative;
     display: flex;
     justify-content: space-between;
@@ -401,16 +402,9 @@ padding: 200px 0 100px 0;
     flex-direction: column;
 }
 
-.about_visual.scrolled .about_title{
-  opacity: 0;
-  transform: translateY(100px);
-}
-
 .about_title{
   position: sticky;
   top: 0;
-  transform: translateY(0);
-  transition: opacity 0.5 ease,transform 0.5s ease;
 }
 
 .about_title p{
@@ -423,10 +417,6 @@ padding: 200px 0 100px 0;
 
 .about_name p:nth-child(2){
   padding-left: 200px;
-}
-
-.about_title{
-  padding-top: 200px;
 }
 
 .about_visual .about_visual-mv p {

@@ -48,6 +48,16 @@ gsap.to(".about_visual", {
   }
 });
 
+gsap.to(".about_title", {
+  scrollTrigger: {
+    trigger: ".about_visual",
+    start: "top top",
+    end: "bottom bottom",
+    toggleActions: "play none none reverse",
+    markers:true,
+  }
+});
+
 const snb = document.querySelector(".snb-wrap");
 
 snb.addEventListener("transitionend", () => {
@@ -481,21 +491,3 @@ gsap.to(".square_circle", {
 //       scrub:1,
 //     }
 //   })
-
-
-
-
-
-document.addEventListener("scroll", () => {
-  const section = document.querySelector(".about_visual");
-  const sectionTop = section.offsetTop;         // 섹션 시작 위치
-  const sectionHeight = section.offsetHeight;   // 섹션 높이
-  const scrollY = window.scrollY;               // 현재 스크롤 위치
-
-  // 섹션의 중간 지점 이후부터 opacity 0 적용
-  if (scrollY > sectionTop + sectionHeight / 3) {
-    section.classList.add("scrolled");
-  } else {
-    section.classList.remove("scrolled");
-  }
-});
