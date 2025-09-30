@@ -58,6 +58,7 @@ gsap.to(".about_title", {
     toggleActions: "play none none reverse",
   }
 });
+
 gsap.to(".about_name", {
   opacity:0,
   y:100,
@@ -65,6 +66,7 @@ gsap.to(".about_name", {
     trigger: ".about_name",
     start: "bottom 10%",
     end: "bottom bottom",
+    markers:true,
     toggleActions: "play none none reverse",
   }
 });
