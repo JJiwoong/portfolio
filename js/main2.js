@@ -485,24 +485,21 @@ gsap.to(".square_circle", {
 
 
 
+const options = {
+  threshold: 0 // 요소가 1px이라도 보이면 isIntersecting = true
+};
 
-document.addEventListener("scroll", () => {
-  const title = document.querySelector(".about_title");
-  const name = document.querySelector(".about_name");
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    // 요소가 뷰포트 밖으로 나갔고(top이 0보다 작거나 같음) → scrolled 추가
+    if (!entry.isIntersecting && entry.boundingClientRect.top <= 0) {
+      entry.target.classList.add("scrolled");
+    } else {
+      entry.target.classList.remove("scrolled");
+    }
+  });
+}, options);
 
-  const titleRect = title.getBoundingClientRect();
-  const nameRect = name.getBoundingClientRect();
-
-  // 뷰포트 상단에 닿으면 scrolled 클래스 추가
-  if (titleRect.top <= 0) {
-    title.classList.add("scrolled");
-  } else {
-    title.classList.remove("scrolled");
-  }
-
-  if (nameRect.top <= 0) {
-    name.classList.add("scrolled");
-  } else {
-    name.classList.remove("scrolled");
-  }
-});
+// 감시할 대상 등록
+observer.observe(document.querySelector(".about_title"));
+observer.observe(document.querySelector(".about_name"));
