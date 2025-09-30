@@ -487,29 +487,22 @@ gsap.to(".square_circle", {
 
 
 document.addEventListener("scroll", () => {
-  const section = document.querySelector(".about_title");
-  const sectionTop = section.offsetTop;         // 섹션 시작 위치
-  const sectionHeight = section.offsetHeight;   // 섹션 높이
-  const scrollY = window.scrollY;               // 현재 스크롤 위치
+  const title = document.querySelector(".about_title");
+  const name = document.querySelector(".about_name");
 
-  // 섹션의 중간 지점 이후부터 opacity 0 적용
-  if (scrollY > sectionTop + sectionHeight / 2) {
-    section.classList.add("scrolled");
+  const titleRect = title.getBoundingClientRect();
+  const nameRect = name.getBoundingClientRect();
+
+  // 뷰포트 상단에 닿으면 scrolled 클래스 추가
+  if (titleRect.top <= 0) {
+    title.classList.add("scrolled");
   } else {
-    section.classList.remove("scrolled");
+    title.classList.remove("scrolled");
   }
-});
 
-document.addEventListener("scroll", () => {
-  const section = document.querySelector(".about_name");
-  const sectionTop = section.offsetTop;         // 섹션 시작 위치
-  const sectionHeight = section.offsetHeight;   // 섹션 높이
-  const scrollY = window.scrollY;               // 현재 스크롤 위치
-
-  // 섹션의 중간 지점 이후부터 opacity 0 적용
-  if (scrollY > sectionTop + sectionHeight / 3) {
-    section.classList.add("scrolled");
+  if (nameRect.top <= 0) {
+    name.classList.add("scrolled");
   } else {
-    section.classList.remove("scrolled");
+    name.classList.remove("scrolled");
   }
 });
