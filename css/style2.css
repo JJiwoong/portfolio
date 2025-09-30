@@ -402,7 +402,7 @@ padding: 200px 0 100px 0;
     flex-direction: column;
 }
 
-.about_title{
+.sticky_txt{
   position: sticky;
   top: 0;
 }
