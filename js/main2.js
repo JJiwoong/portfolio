@@ -53,7 +53,7 @@ gsap.to(".about_title", {
   y:100,
   scrollTrigger: {
     trigger: ".about_visual",
-    start: "bottom top",
+    start: "bottom 30%",
     end: "bottom bottom",
     toggleActions: "play none none reverse",
     markers:true,
