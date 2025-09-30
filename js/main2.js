@@ -55,7 +55,16 @@ gsap.to(".about_title", {
     trigger: ".about_title",
     start: "bottom 10%",
     end: "bottom bottom",
-    markers:true,
+    toggleActions: "play none none reverse",
+  }
+});
+gsap.to(".about_name", {
+  opacity:0,
+  y:100,
+  scrollTrigger: {
+    trigger: ".about_name",
+    start: "bottom 10%",
+    end: "bottom bottom",
     toggleActions: "play none none reverse",
   }
 });
