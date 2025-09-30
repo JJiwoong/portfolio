@@ -170,7 +170,6 @@ gsap.fromTo(".skills_wrap",
       trigger: ".skills_wrap",
       start: "top 80%",   // skills_wrap의 top이 뷰포트 80% 지점에 닿을 때 (즉, 20% 보였을 때)
       end: "bottom 60%",  // 필요하면 조정 가능
-      markers: true,
       toggleActions: "play none none reverse"
     }
   }
