@@ -48,29 +48,30 @@ gsap.to(".about_visual", {
   }
 });
 
-// gsap.to(".about_title", {
-//   opacity:0,
-//   y:100,
-//   scrollTrigger: {
-//     trigger: ".about_title",
-//     start: "bottom 10%",
-//     end: "bottom bottom",
-//     toggleActions: "play none none reverse",
-//   }
-// });
+gsap.to(".about_title", {
+  opacity:0,
+  y:100,
+  scrollTrigger: {
+    trigger: ".about_title",
+    start: "bottom 10%",
+    end: "bottom bottom",
+    toggleActions: "play none none reverse",
+  }
+});
 
-// gsap.to(".about_name", {
-//   opacity:0,
-//   y:100,
-//   scrollTrigger: {
-//     trigger: ".about_name",
-//     start: "70% top",
-//     end: "bottom bottom",
-//     markers:true,
-//     toggleActions: "play none none reverse",
-//   }
-// });
+gsap.to(".about_name", {
+  opacity:0,
+  y:100,
+  scrollTrigger: {
+    trigger: ".about_name",
+    start: "70% top",
+    end: "bottom bottom",
+    markers:true,
+    toggleActions: "play none none reverse",
+  }
+});
 
+//10월 1일 작업시 about_name top 값 좀 올려놓기 
 
 const snb = document.querySelector(".snb-wrap");
 
