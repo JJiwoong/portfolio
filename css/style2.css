@@ -389,6 +389,7 @@ padding: 200px 0 100px 0;
 .about_visual .about_visual-mv {
     height: 100%;
     position: relative;
+        padding: 0 300px;
     /* display: flex; */
     /* align-items: center; */
     /* justify-content: center; */
@@ -402,7 +403,6 @@ padding: 200px 0 100px 0;
 .about_visual .about_visual-mv p {
   color: #fff;
   font-size: 120px;
-  text-align: center;
   position: relative;
   z-index: 1;
   transition: 0.2s;
@@ -413,13 +413,17 @@ padding: 200px 0 100px 0;
   opacity: 0;
 }
 
+.img-wrap{
+      position: absolute;
+    bottom: 0;
+    left: 10%;
+}
+
+
 .about_visual .about_visual-mv img {
     width: 500px;
     /* position: absolute; */
     /* transform: translate(-50%, -100%); */
-    top: 100%;
-    left: 50%;
-    z-index: 100;
     filter: url(#crumple-effect-1);
     transition: 0.2s;
 }
