@@ -402,8 +402,8 @@ padding: 200px 0 100px 0;
     flex-direction: column;
 }
 
-.about_visual.scrolled .about_title,
-.about_visual.scrolled .about_name{
+.about_title.scrolled,
+.about_name.scrolled{
   opacity: 0;
   transform: translateY(100px);
 }

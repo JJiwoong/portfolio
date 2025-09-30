@@ -487,13 +487,27 @@ gsap.to(".square_circle", {
 
 
 document.addEventListener("scroll", () => {
-  const section = document.querySelector(".about_visual");
+  const section = document.querySelector(".about_title");
   const sectionTop = section.offsetTop;         // 섹션 시작 위치
   const sectionHeight = section.offsetHeight;   // 섹션 높이
   const scrollY = window.scrollY;               // 현재 스크롤 위치
 
   // 섹션의 중간 지점 이후부터 opacity 0 적용
   if (scrollY > sectionTop + sectionHeight / 2) {
+    section.classList.add("scrolled");
+  } else {
+    section.classList.remove("scrolled");
+  }
+});
+
+document.addEventListener("scroll", () => {
+  const section = document.querySelector(".about_name");
+  const sectionTop = section.offsetTop;         // 섹션 시작 위치
+  const sectionHeight = section.offsetHeight;   // 섹션 높이
+  const scrollY = window.scrollY;               // 현재 스크롤 위치
+
+  // 섹션의 중간 지점 이후부터 opacity 0 적용
+  if (scrollY > sectionTop + sectionHeight / 3) {
     section.classList.add("scrolled");
   } else {
     section.classList.remove("scrolled");
