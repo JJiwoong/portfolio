@@ -50,10 +50,24 @@ gsap.to(".about_visual", {
 
 gsap.to(".about_title", {
   opacity:0,
+  duration:1.2,
   y:100,
   scrollTrigger: {
     trigger: ".about_visual",
-    start: "bottom 30%",
+    start: "bottom 20%",
+    end: "bottom bottom",
+    toggleActions: "play none none reverse",
+    markers:true,
+  }
+});
+
+gsap.to(".about_name", {
+  opacity:0,
+  duration:1.2,
+  y:100,
+  scrollTrigger: {
+    trigger: ".about_visual",
+    start: "bottom 20%",
     end: "bottom bottom",
     toggleActions: "play none none reverse",
     markers:true,
