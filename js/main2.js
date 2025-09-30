@@ -49,6 +49,8 @@ gsap.to(".about_visual", {
 });
 
 gsap.to(".about_title", {
+  opacity:0,
+  y:100,
   scrollTrigger: {
     trigger: ".about_visual",
     start: "top top",
