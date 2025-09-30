@@ -48,28 +48,28 @@ gsap.to(".about_visual", {
   }
 });
 
-gsap.to(".about_title", {
-  opacity:0,
-  y:100,
-  scrollTrigger: {
-    trigger: ".about_title",
-    start: "bottom 10%",
-    end: "bottom bottom",
-    toggleActions: "play none none reverse",
-  }
-});
+// gsap.to(".about_title", {
+//   opacity:0,
+//   y:100,
+//   scrollTrigger: {
+//     trigger: ".about_title",
+//     start: "bottom 10%",
+//     end: "bottom bottom",
+//     toggleActions: "play none none reverse",
+//   }
+// });
 
-gsap.to(".about_name", {
-  opacity:0,
-  y:100,
-  scrollTrigger: {
-    trigger: ".about_name",
-    start: "70% top",
-    end: "bottom bottom",
-    markers:true,
-    toggleActions: "play none none reverse",
-  }
-});
+// gsap.to(".about_name", {
+//   opacity:0,
+//   y:100,
+//   scrollTrigger: {
+//     trigger: ".about_name",
+//     start: "70% top",
+//     end: "bottom bottom",
+//     markers:true,
+//     toggleActions: "play none none reverse",
+//   }
+// });
 
 
 const snb = document.querySelector(".snb-wrap");
