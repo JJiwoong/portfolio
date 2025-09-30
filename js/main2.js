@@ -53,8 +53,9 @@ gsap.to(".about_title", {
   y:100,
   scrollTrigger: {
     trigger: ".about_title",
-    start: "top 90%",
+    start: "top 10%",
     end: "bottom bottom",
+    markers:true,
     toggleActions: "play none none reverse",
   }
 });
@@ -170,7 +171,6 @@ gsap.fromTo(".skills_wrap",
       trigger: ".skills_wrap",
       start: "top 80%",   // skills_wrap의 top이 뷰포트 80% 지점에 닿을 때 (즉, 20% 보였을 때)
       end: "bottom 60%",  // 필요하면 조정 가능
-      markers: true,
       toggleActions: "play none none reverse"
     }
   }
