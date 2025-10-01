@@ -96,13 +96,15 @@ gsap.to(".snb-wrap", {
   scrollTrigger: {
     trigger: ".about_visual",
     start: "top top",
+    // end 제거 → 끝 범위 없음
     toggleActions: "play none none none",
     onEnter: () => {
       snb.style.zIndex = "1";
       snb.style.opacity = "1";
     },
     onLeaveBack: () => {
-      if (window.scrollY <= 0) { // 맨 위로 갔을 때만
+      // 진짜 맨 위로 갔을 때만 꺼지도록 조건 추가
+      if (window.scrollY <= 0) {
         snb.style.opacity = "0";
         snb.style.zIndex = "-1";
       }
