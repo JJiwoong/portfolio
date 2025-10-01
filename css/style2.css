@@ -372,6 +372,7 @@ padding: 200px 0 100px 0;
     position: relative;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .scroll-indicator {
