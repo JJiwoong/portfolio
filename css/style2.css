@@ -464,6 +464,15 @@ padding: 200px 0 100px 0;
   font-size: 24px;
   color: #fff;
   padding-top: 200px;
+  font-weight: 600;
+}
+
+.info_txt{
+  display: flex;
+}
+
+.info_txt_sub{
+  font-weight: 400;
 }
 
 .about_visual .title {
