@@ -31,7 +31,11 @@
   justify-content: center;
 }
 
-.skills_wrap {
+.skills_wrap{
+  
+}
+
+.skills_con {
   display: flex;
   flex-direction: row;        /* 가로로 3등분 */
   height: 100vh;
