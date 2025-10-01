@@ -394,6 +394,7 @@ padding: 200px 0 100px 0;
     height: 100%;
     max-width: 1380px;
     width: 100%;
+    opacity: 1;
     padding-top: 200px;
     position: relative;
     display: flex;

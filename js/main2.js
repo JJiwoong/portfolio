@@ -48,6 +48,16 @@ gsap.to(".about_visual", {
   }
 });
 
+gsap.to(".about_visual-mv", {
+  opacity:1,
+  scrollTrigger: {
+    trigger: ".about_visual",
+    start: "top top",
+    end: "bottom bottom",
+    toggleActions: "play none none reverse",
+  }
+});
+
 gsap.to(".about_title", {
   opacity:0,
   y:100,
