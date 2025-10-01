@@ -50,6 +50,8 @@ gsap.to(".about_visual", {
 
 gsap.to(".about_visual-mv", {
   opacity:1,
+    duration: 1.2, // 1.2초 동안 서서히 나타남
+  ease: "power2.out",
   scrollTrigger: {
     trigger: ".about_visual",
     start: "top 20%",
