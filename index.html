@@ -466,7 +466,7 @@ const observer = new IntersectionObserver((entries) => {
       const activeLink = document.querySelector(`.snb-wrap ul li a[href="#${id}"]`);
       const activeLink2 = document.querySelector(`.button ul li a[href="#${id}"]`);
       if (activeLink) activeLink.classList.add("active");
-      if (activeLink2) activeLink.classList.add("active");
+      if (activeLink2) activeLink2.classList.add("active");
     }
   });
 }, {
