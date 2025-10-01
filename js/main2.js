@@ -179,6 +179,7 @@ document.querySelectorAll(".skills_wrap").forEach((group) => {
   })
   .to(skills[0], { y: "0%", opacity: 1, duration: 1 })
   .to(skills[1], { y: "0%", opacity: 1, duration: 1 })
+  .to(skills[2], { y: "0%", opacity: 1, duration: 1 })
 });
 // const list = document.querySelector(".skills_list");
 // const totalWidth = list.scrollWidth;
