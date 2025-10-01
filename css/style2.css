@@ -470,7 +470,7 @@ padding: 200px 0 100px 0;
 .info_con{
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 16px;
 }
 
 .info_txt{
@@ -479,6 +479,7 @@ padding: 200px 0 100px 0;
 
 .info_txt_sub{
   font-weight: 400;
+  margin-left: 12px;
 }
 
 .about_visual .title {
