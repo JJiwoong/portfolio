@@ -159,6 +159,7 @@ gsap.fromTo(".introduction_txt p",
       trigger: ".introduction_wrap",
       start: "40% bottom",   // about 섹션의 top이 뷰포트 60% 지점에 닿을 때 시작
       end: "bottom 40%",  // 필요시 조정
+      markers:true,
       toggleActions: "play none none reverse",
     }
   }
