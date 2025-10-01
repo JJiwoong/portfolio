@@ -26,6 +26,19 @@
   transition: opacity 0.2s ease;
 }
 
+.introduction_wrap{
+  display: flex;
+  justify-content: center;
+}
+
+.introduction_txt{
+max-width: 1380px;
+    width: 810px;
+    padding: 200px 0;
+    font-size: 20px;
+    color: #fff;
+}
+
 .snb-wrap{
   position: fixed;
   color:#fff;
