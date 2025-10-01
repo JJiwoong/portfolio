@@ -34,7 +34,7 @@
 .skills_wrap {
   display: flex;
   flex-direction: row;        /* 가로로 3등분 */
-  height: 100%;
+  height: 100vh;
 }
 
 .skill_box {
