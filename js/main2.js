@@ -78,7 +78,6 @@ gsap.to(".about_name", {
     trigger: ".about_name",
     start: "20% top",
     end: "bottom bottom",
-    markers:true,
     toggleActions: "play none none reverse",
   }
 });
@@ -99,6 +98,7 @@ gsap.to(".snb-wrap", {
     start: "top top",
     end: "bottom top",
     toggleActions: "play none none reverse",
+    markers:true,
     onEnter: () => {
       snb.style.zIndex = "1";
       snb.style.opacity = "1";
