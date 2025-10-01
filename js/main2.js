@@ -52,7 +52,7 @@ gsap.to(".about_visual-mv", {
   opacity:1,
   scrollTrigger: {
     trigger: ".about_visual",
-    start: "top top",
+    start: "top 20%",
     end: "bottom bottom",
     toggleActions: "play none none reverse",
   }
