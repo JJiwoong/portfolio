@@ -96,15 +96,16 @@ gsap.to(".snb-wrap", {
   scrollTrigger: {
     trigger: ".about_visual",
     start: "top top",
-    end: "bottom top",
-    toggleActions: "play none none reverse",
-    markers:true,
+    toggleActions: "play none none none",
     onEnter: () => {
       snb.style.zIndex = "1";
       snb.style.opacity = "1";
     },
     onLeaveBack: () => {
-      snb.style.opacity = "0"; // 먼저 페이드아웃
+      if (window.scrollY <= 0) { // 맨 위로 갔을 때만
+        snb.style.opacity = "0";
+        snb.style.zIndex = "-1";
+      }
     }
   }
 });
