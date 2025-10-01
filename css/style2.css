@@ -445,20 +445,25 @@ padding: 200px 0 100px 0;
 
 .img-wrap{
     position: absolute;
-    bottom: 0;
     left: 0;
 }
 
 
 .about_visual .about_visual-mv img {
     width: 100%;
-    height: 500px;
+    height: 440px;
     filter: url(#crumple-effect-1);
     transition: 0.2s;
 }
 
 .about_visual .about_visual-mv img:hover {
   filter: initial;
+}
+
+.info_wrap{
+  font-size: 24px;
+  color: #fff;
+  padding-top: 200px;
 }
 
 .about_visual .title {
