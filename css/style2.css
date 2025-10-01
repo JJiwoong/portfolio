@@ -433,7 +433,8 @@ padding: 200px 0 100px 0;
   padding-left: 200px;
 }
 
-.about_visual .about_visual-mv p {
+.about_visual .about_visual-mv .about_name p,
+.about_visual .about_visual-mv .about_title p{
   color: #fff;
   font-size: 120px;
   position: relative;
