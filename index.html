@@ -451,57 +451,59 @@ gsap.to(".scroll-indicator", {
   }
 });
 
-document.addEventListener("DOMContentLoaded", () => {
-  const snb = document.querySelector(".snb-wrap");
-  const sections = document.querySelectorAll("section");
-  const navLinks = document.querySelectorAll(".snb-wrap ul li a");
+const sections = document.querySelectorAll("section");
+const navLinks = document.querySelectorAll(".snb-wrap ul li a");
+const headerLinks = document.querySelectorAll(".button ul li a");
 
-  // 📌 snb-wrap 보이기/숨기기
-  const aboutObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        snb.style.opacity = "1";
-        snb.style.zIndex = "1";
-      } else {
-        // 맨 위로 올라갔을 때만 숨김
-        if (window.scrollY <= 0) {
-          snb.style.opacity = "0";
-          snb.style.zIndex = "-1";
-        }
-      }
-    });
-  }, {
-    threshold: 0.3 // about이 30% 이상 보이면 on
+// 📌 스크롤 스파이 (현재 섹션에 active 클래스 붙이기)
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      navLinks.forEach(link => link.classList.remove("active"));
+      headerLinks.forEach(link => link.classList.remove("active"));
+
+      const id = entry.target.getAttribute("id");
+      const activeLink = document.querySelector(`.snb-wrap ul li a[href="#${id}"]`);
+      const activeLink2 = document.querySelector(`.button ul li a[href="#${id}"]`);
+      if (activeLink) activeLink.classList.add("active");
+      if (activeLink2) activeLink2.classList.add("active");
+    }
   });
+}, {
+  threshold: 0.6 // 섹션이 60% 이상 보이면 active
+});
 
-  const aboutSection = document.querySelector("#about");
-  aboutObserver.observe(aboutSection);
+sections.forEach(section => observer.observe(section));
 
-  // 📌 현재 섹션 감지해서 active 붙이기
-  const spyObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        navLinks.forEach(link => link.classList.remove("active"));
-        const id = entry.target.getAttribute("id");
-        const activeLink = document.querySelector(`.snb-wrap ul li a[href="#${id}"]`);
-        if (activeLink) activeLink.classList.add("active");
-      }
-    });
-  }, {
-    threshold: 0.6 // 60% 보일 때 active
-  });
+// 📌 클릭 시 부드럽게 스크롤 이동
+navLinks.forEach(link => {
+  link.addEventListener("click", (e) => {
+    e.preventDefault(); // 기본 앵커 점프 막기
 
-  sections.forEach(section => spyObserver.observe(section));
+    const targetId = link.getAttribute("href");
+    const targetEl = document.querySelector(targetId);
 
-  // 📌 부드러운 스크롤
-  navLinks.forEach(link => {
-    link.addEventListener("click", (e) => {
-      e.preventDefault();
-      const targetId = link.getAttribute("href");
-      document.querySelector(targetId).scrollIntoView({
-        behavior: "smooth"
+    if (targetEl) {
+      targetEl.scrollIntoView({
+        behavior: "smooth", // 부드럽게 이동
+        block: "start"
       });
-    });
+    }
+  });
+});
+headerLinks.forEach(link => {
+  link.addEventListener("click", (e) => {
+    e.preventDefault(); // 기본 앵커 점프 막기
+
+    const targetId = link.getAttribute("href");
+    const targetEl = document.querySelector(targetId);
+
+    if (targetEl) {
+      targetEl.scrollIntoView({
+        behavior: "smooth", // 부드럽게 이동
+        block: "start"
+      });
+    }
   });
 });
         </script>

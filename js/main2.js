@@ -82,35 +82,34 @@ gsap.to(".about_name", {
   }
 });
 
-//10월 1일 작업시 about_name top 값 좀 올려놓기 
 
-// const snb = document.querySelector(".snb-wrap");
+const snb = document.querySelector(".snb-wrap");
 
-// snb.addEventListener("transitionend", () => {
-//   if (snb.style.opacity === "0") {
-//     snb.style.zIndex = "-1"; // 완전히 사라지고 나서 z-index 변경
-//   }
-// });
+snb.addEventListener("transitionend", () => {
+  if (snb.style.opacity === "0") {
+    snb.style.zIndex = "-1"; // 완전히 사라지고 나서 z-index 변경
+  }
+});
 
-// gsap.to(".snb-wrap", {
-//   scrollTrigger: {
-//     trigger: ".about_visual",
-//     start: "top top",
-//     // end 제거 → 끝 범위 없음
-//     toggleActions: "play none none none",
-//     onEnter: () => {
-//       snb.style.zIndex = "1";
-//       snb.style.opacity = "1";
-//     },
-//     onLeaveBack: () => {
-//       // 진짜 맨 위로 갔을 때만 꺼지도록 조건 추가
-//       if (window.scrollY <= 0) {
-//         snb.style.opacity = "0";
-//         snb.style.zIndex = "-1";
-//       }
-//     }
-//   }
-// });
+gsap.to(".snb-wrap", {
+  scrollTrigger: {
+    trigger: ".about_visual",
+    start: "top top",
+    // end 제거 → 끝 범위 없음
+    toggleActions: "play none none none",
+    onEnter: () => {
+      snb.style.zIndex = "1";
+      snb.style.opacity = "1";
+    },
+    onLeaveBack: () => {
+      // 진짜 맨 위로 갔을 때만 꺼지도록 조건 추가
+      if (window.scrollY <= 0) {
+        snb.style.opacity = "0";
+        snb.style.zIndex = "-1";
+      }
+    }
+  }
+});
 
 gsap.to(".about_visual .title", {
   opacity:1,
