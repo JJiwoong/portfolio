@@ -96,7 +96,7 @@ snb.addEventListener("transitionend", () => {
 gsap.to(".snb-wrap", {
   scrollTrigger: {
     trigger: ".about_visual",
-    start: "bottom 20%",
+    start: "top top",
     end: "bottom top",
     toggleActions: "play none none reverse",
     onEnter: () => {
