@@ -456,44 +456,46 @@ const navLinks = document.querySelectorAll(".snb-wrap ul li a");
 const headerLinks = document.querySelectorAll(".button ul li a");
 const snb = document.querySelector(".snb-wrap");
 
-// 📌 스크롤 스파이 + snb 제어
-const observer = new IntersectionObserver((entries) => {
+// 📌 스크롤 스파이 (현재 섹션 active 처리)
+const spyObserver = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
-    const id = entry.target.getAttribute("id");
-
     if (entry.isIntersecting) {
-      // === 1) active 처리 ===
       navLinks.forEach(link => link.classList.remove("active"));
       headerLinks.forEach(link => link.classList.remove("active"));
 
+      const id = entry.target.getAttribute("id");
       const activeLink = document.querySelector(`.snb-wrap ul li a[href="#${id}"]`);
       const activeLink2 = document.querySelector(`.button ul li a[href="#${id}"]`);
       if (activeLink) activeLink.classList.add("active");
       if (activeLink2) activeLink2.classList.add("active");
+    }
+  });
+}, { threshold: 0.6 });
 
-      // === 2) snb 보이기/숨기기 처리 ===
-      if (id === "about") {
-        // about이 보이면 무조건 켜짐
+sections.forEach(section => spyObserver.observe(section));
+
+
+// 📌 snb 노출 제어 (page1 보이면 숨김, 아니면 항상 보임)
+const snbObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.target.id === "page1") {
+      if (entry.isIntersecting && entry.intersectionRatio > 0.8) {
+        // page1이 화면에 80% 이상 보일 때 → 숨김
+        snb.style.opacity = "0";
+        snb.style.zIndex = "-1";
+      } else {
+        // page1이 안 보이면 무조건 보임
         snb.style.opacity = "1";
         snb.style.zIndex = "1";
       }
-
-      if (id === "page1" && entry.intersectionRatio > 0.9) {
-        // page1이 화면을 거의 다 채울 때만 꺼짐
-        snb.style.opacity = "0";
-        snb.style.zIndex = "-1";
-      }
     }
   });
-}, {
-  threshold: [0.6, 0.9] // 60% 보임, 90% 보임 두 단계 체크
-});
+}, { threshold: [0.2, 0.8] });
 
-// 모든 섹션 observe 시작
-sections.forEach(section => observer.observe(section));
+snbObserver.observe(document.querySelector("#page1"));
 
 
-// 📌 클릭 시 부드럽게 스크롤 이동 (중복 제거)
+// 📌 클릭 시 부드럽게 스크롤 이동
 function smoothScroll(links) {
   links.forEach(link => {
     link.addEventListener("click", (e) => {
@@ -513,6 +515,7 @@ function smoothScroll(links) {
 
 smoothScroll(navLinks);
 smoothScroll(headerLinks);
+
         </script>
         
 </body>
