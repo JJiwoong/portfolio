@@ -31,13 +31,12 @@
   justify-content: center;
 }
 
-.group {
-  height: 100vh;              /* 한 그룹이 화면 꽉 차게 */
+.skills_wrap {
   display: flex;
   flex-direction: row;        /* 가로로 3등분 */
 }
 
-.col {
+.skill_box {
   flex: 1;                    /* 각각 1/3 차지 */
   display: flex;
   align-items: center;

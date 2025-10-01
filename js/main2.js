@@ -165,8 +165,8 @@ gsap.fromTo(".introduction_txt p",
   }
 );
 
-document.querySelectorAll(".group").forEach((group) => {
-  const cols = group.querySelectorAll(".col");
+document.querySelectorAll(".skills_wrap").forEach((group) => {
+  const skills = group.querySelectorAll(".skill_box");
 
   gsap.timeline({
     scrollTrigger: {
@@ -177,9 +177,8 @@ document.querySelectorAll(".group").forEach((group) => {
       pin: true,      // 그룹 고정
     }
   })
-  .to(cols[0], { y: "0%", opacity: 1, duration: 0.5 })
-  .to(cols[1], { y: "0%", opacity: 1, duration: 0.5 })
-  .to(cols[2], { y: "0%", opacity: 1, duration: 0.5 });
+  .to(skills[0], { y: "0%", opacity: 1, duration: 1 })
+  .to(skills[1], { y: "0%", opacity: 1, duration: 1 })
 });
 // const list = document.querySelector(".skills_list");
 // const totalWidth = list.scrollWidth;
