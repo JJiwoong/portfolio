@@ -165,21 +165,21 @@ gsap.fromTo(".introduction_txt p",
   }
 );
 
-document.querySelectorAll(".group").forEach((group, i) => {
-  const panels = group.querySelectorAll(".panel");
+document.querySelectorAll(".group").forEach((group) => {
+  const cols = group.querySelectorAll(".col");
 
   gsap.timeline({
     scrollTrigger: {
       trigger: group,
       start: "top top",
-      end: "+=100%", // 한 화면 동안 고정
+      end: "+=100%",  // 한 화면 동안
       scrub: true,
-      pin: true, // 그룹 고정
+      pin: true,      // 그룹 고정
     }
   })
-  .to(panels[0], { y: "0%", opacity: 1, duration: 0.5 })
-  .to(panels[1], { y: "0%", opacity: 1, duration: 0.5 })
-  .to(panels[2], { y: "0%", opacity: 1, duration: 0.5 });
+  .to(cols[0], { y: "0%", opacity: 1, duration: 0.5 })
+  .to(cols[1], { y: "0%", opacity: 1, duration: 0.5 })
+  .to(cols[2], { y: "0%", opacity: 1, duration: 0.5 });
 });
 // const list = document.querySelector(".skills_list");
 // const totalWidth = list.scrollWidth;
