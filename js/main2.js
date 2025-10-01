@@ -173,7 +173,7 @@ gsap.fromTo(".introduction_txt p",
     duration: 1,
     ease: "power3.out",
     scrollTrigger: {
-      trigger: ".about_personal",
+      trigger: ".introduction_wrap",
       start: "60% bottom",   // about 섹션의 top이 뷰포트 60% 지점에 닿을 때 시작
       end: "bottom 40%",  // 필요시 조정
       toggleActions: "play none none reverse",
