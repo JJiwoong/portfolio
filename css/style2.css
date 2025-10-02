@@ -56,9 +56,14 @@
   font-size: 2rem;
 }
 
-.skill_box div{
+.skill_box > div{
   display: flex;
   flex-direction: column;
+}
+
+.skill_box svg{
+  width: 82px;
+  height: 82px;
 }
 
 .introduction_txt{
