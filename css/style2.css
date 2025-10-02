@@ -42,7 +42,7 @@
   height: 100vh;
   justify-content: center ;
   max-width: 1380px;
-  gap: 50px;
+gap: 100px;
 }
 
 .skill_box {
