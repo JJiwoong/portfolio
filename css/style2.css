@@ -32,29 +32,34 @@
 }
 
 .skills_wrap{
-      display: flex;
+    display: flex;
     justify-content: center;
+    align-items: center;
+
 }
 
 .skills_con {
-  display: flex;
-  flex-direction: row;        /* 가로로 3등분 */
-  height: 100vh;
-  justify-content: center ;
-  max-width: 1380px;
-gap: 100px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    flex-direction: row;
+    /* height: 100vh; */
+    justify-content: center;
+    max-width: 1380px;
+    gap: 100px;
+    align-items: start;
 }
 
 .skill_box {
-  flex: 1;                    /* 각각 1/3 차지 */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transform: translateY(100%); /* 아래에서 올라오도록 숨김 */
-  opacity: 0;
-  color: #fff;
-  font-size: 2rem;
-  flex-direction: column;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(100%);
+    opacity: 0;
+    color: #fff;
+    font-size: 2rem;
+    flex-direction: column;
+    justify-items: center;
 }
 
 .skill_box > p{
