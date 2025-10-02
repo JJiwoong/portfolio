@@ -52,7 +52,6 @@
   transform: translateY(100%); /* 아래에서 올라오도록 숨김 */
   opacity: 0;
   font-size: 2rem;
-  background: #eee;
   border: 1px solid #ccc;
 }
 
