@@ -57,6 +57,10 @@
   flex-direction: column;
 }
 
+.skill_box > p{
+  margin-bottom: 40px;
+}
+
 .skill_box > div{
   display: flex;
   flex-direction: column;
