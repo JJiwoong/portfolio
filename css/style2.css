@@ -54,6 +54,7 @@
   opacity: 0;
   color: #fff;
   font-size: 2rem;
+  flex-direction: column;
 }
 
 .skill_box > div{
