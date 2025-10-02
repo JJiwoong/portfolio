@@ -172,7 +172,7 @@ document.querySelectorAll(".skills_wrap").forEach((group) => {
     scrollTrigger: {
       trigger: group,
       start: "top top",
-      end: "+=300%",  // 한 화면 동안
+      end: "+=200%",  // 한 화면 동안
       scrub: true,
       pin: true,      // 그룹 고정
     }
