@@ -60,6 +60,7 @@
 .skill_box > div{
   display: flex;
   flex-direction: column;
+  gap: 50px;
 }
 
 .skill_box svg{
