@@ -56,6 +56,11 @@
   font-size: 2rem;
 }
 
+.skill_box div{
+  display: flex;
+  flex-direction: column;
+}
+
 .introduction_txt{
 max-width: 1380px;
     width: 810px;
