@@ -254,11 +254,11 @@ max-width: 1380px;
 
 #project .project_box_wrap{
   display: flex;
+  gap: 12px;
 }
 
 #project .project_box_wrap p{
   font-size: 16px;
-  margin-bottom: 8px;
 }
 
 #project .project_box{
@@ -329,6 +329,12 @@ max-width: 1380px;
   height: 70%;
 }
 
+.project_box:hover .hashtag {
+  border: 1px solid transparent;
+  background: #fff;
+  color: #000;
+}
+
 .project_box .hashtag_wrap {
   display: flex;
   gap: 8px;
@@ -340,6 +346,7 @@ max-width: 1380px;
   padding: 4px 8px;
   font-size: 14px;
   color: white;
+  transition: all 0.3s ease;
 }
 
 #project .project_box>p:nth-child(1){
