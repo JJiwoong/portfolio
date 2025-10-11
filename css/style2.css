@@ -256,14 +256,18 @@ max-width: 1380px;
   display: flex;
 }
 
+#project .project_box_wrap p{
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
 #project .project_box{
   width: 33%;
     padding: 12px;
 }
 
-#project .project_box_wrap p{
-  font-size: 16px;
-  margin-bottom: 8px;
+#project .project_box p:nth-child(1){
+  font-weight: 700;
 }
 
 .hashtag_wrap{
