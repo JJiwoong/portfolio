@@ -251,6 +251,10 @@ max-width: 1380px;
   flex-direction: column;
 }
 
+#project .project_box_wrap{
+  display: flex;
+}
+
 #project .project_box_wrap p{
   font-size: 16px;
 }
