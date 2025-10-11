@@ -208,7 +208,7 @@ gsap.fromTo(".skills_wrap .skills_tit",
     ease: "power3.out",
     scrollTrigger: {
       trigger: ".skills_wrap",
-      start: "70% bottom",   // skills_wrap의 top이 뷰포트 80% 지점에 닿을 때 (즉, 20% 보였을 때)
+      start: "40% bottom",   // skills_wrap의 top이 뷰포트 80% 지점에 닿을 때 (즉, 20% 보였을 때)
       end: "bottom 40%",  // 필요하면 조정 가능
       toggleActions: "play none none reverse",
       markers:true,
