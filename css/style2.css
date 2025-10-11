@@ -270,6 +270,10 @@ max-width: 1380px;
   font-weight: 700;
 }
 
+.work_project>p:nth-child(1){
+  margin-bottom: 20px;
+}
+
 .hashtag_wrap{
   display: flex;
   gap: 8px;  
