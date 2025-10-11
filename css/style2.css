@@ -329,7 +329,7 @@ max-width: 1380px;
   height: 70%;
 }
 
-.project_box:hover .hashtag {
+.project_box:hover .hashtag_wrap .hashtag {
   border: 1px solid transparent;
   background: #fff;
   color: #000;
