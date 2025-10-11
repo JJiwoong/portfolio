@@ -561,7 +561,7 @@ padding: 200px 0 100px 0;
 
 .info_txt{
   display: flex;
-  align-items: center;
+  align-items: flex-end;
 }
 
 .info_txt_sub{
