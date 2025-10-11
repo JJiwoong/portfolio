@@ -351,11 +351,11 @@ max-width: 1380px;
 }
 
 .work_project>p:nth-child(1){
-  margin-bottom: 20px;
+  margin-bottom: 32px;
 }
 
 .personal_project>p:nth-child(1) {
-    margin-bottom: 20px;
+  margin-bottom: 32px;
 }
 
 .hashtag_wrap{
