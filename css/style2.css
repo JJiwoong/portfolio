@@ -220,29 +220,23 @@ max-width: 1380px;
 
 /* page2 */
 
-#work p {
+#project p {
   color: #fff;
 }
 
-#work{
+#project{
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-#work .work_tit{
+#project .project_tit{
   font-size: 50px;
   font-weight: 500;
 }
 
-#work .info_txt{
-  font-size: 24px;
-  align-items: center;
-  margin-top: 40px;
-}
-
-.work_wrap{
+.project_wrap{
       max-width: 1380px;
     width: 100%;
     padding: 0 150px;
