@@ -186,6 +186,8 @@ max-width: 1380px;
   z-index: 10;
 }
 
+
+
 /* page1 */
 
 #page1 {
@@ -436,6 +438,11 @@ padding: 200px 0 100px 0;
   font-size: 28px;
   color: #fff;
   margin-bottom: 24px;
+}
+
+.skills_tit{
+      margin-bottom: 40px;
+    text-align: center;
 }
 
 .skill img{
