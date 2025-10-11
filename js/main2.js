@@ -204,7 +204,7 @@ gsap.fromTo(".skills_wrap .skills_tit",
   { 
     y: 0,
     opacity: 1,
-    duration: 1,
+    duration: 0.4,
     ease: "power3.out",
     scrollTrigger: {
       trigger: ".skills_wrap",
