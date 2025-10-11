@@ -233,11 +233,13 @@ max-width: 1380px;
 
 #work .work_tit{
   font-size: 50px;
+  font-weight: 500;
 }
 
 #work .info_txt{
   font-size: 24px;
   align-items: center;
+  margin-top: 40px;
 }
 
 .work_wrap{
