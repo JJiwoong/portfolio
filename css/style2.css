@@ -354,6 +354,10 @@ max-width: 1380px;
   margin-bottom: 20px;
 }
 
+.personal_project>p:nth-child(1) {
+    margin-bottom: 20px;
+}
+
 .hashtag_wrap{
   display: flex;
   gap: 8px;  
