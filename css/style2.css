@@ -268,7 +268,8 @@ max-width: 1380px;
 
 .hashtag_wrap{
   display: flex;
-    gap: 8px;  
+  gap: 8px;  
+  justify-content: flex-end; 
 }
 
 #project .hashtag_wrap .hashtag{
