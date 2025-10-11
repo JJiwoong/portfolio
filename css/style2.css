@@ -286,7 +286,8 @@ max-width: 1380px;
 
 .project_box::after {
   bottom: 0px;
-  right: 10px;
+  right: auto;
+  left: 0px;
 }
 
 .project_box span::before,
