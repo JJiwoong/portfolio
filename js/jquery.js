@@ -7,6 +7,15 @@ $('.project .thumb-box').mouseover(function(){
     gsap.to('.cursor span', { visibility: "hidden", opacity: 0,})
   })
 
+  $('.project_box').mouseover(function(){
+    gsap.to('.cursor',{scale:2})
+    gsap.to('.cursor span', { visibility: "visible", opacity: 1})
+  })
+  $('.project_box').mouseleave(function(){
+    gsap.to('.cursor',{scale:1})
+    gsap.to('.cursor span', { visibility: "hidden", opacity: 0,})
+  })
+
   $('.gt3 .NextP').mouseover(function(){
     gsap.to('.cursor',{scale:2})
     gsap.to('.cursor span', { visibility: "visible", opacity: 1})
