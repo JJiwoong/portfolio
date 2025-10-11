@@ -263,7 +263,89 @@ max-width: 1380px;
 
 #project .project_box{
   width: 33%;
-    padding: 12px;
+  padding: 12px;
+  background-color: purple;
+  position: relative;
+  overflow: hidden;
+}
+
+.project_box::before,
+.project_box::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: white;
+  transition: all 0.3s ease;
+}
+
+.project_box::before {
+  top: 10px;
+  left: 10px;
+}
+
+.project_box::after {
+  bottom: 10px;
+  right: 10px;
+}
+
+/* 좌우 라인 (span 사용) */
+.project_box span::before,
+.project_box span::after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 0;
+  background-color: white;
+  transition: all 0.3s ease;
+}
+
+.project_box span::before {
+  top: 10px;
+  right: 10px;
+  transition-delay: 0.3s;
+}
+
+.project_box span::after {
+  bottom: 10px;
+  left: 10px;
+  transition-delay: 0.3s;
+}
+
+/* hover 시 선 애니메이션 */
+.project_box:hover::before {
+  width: 95%;
+}
+
+.project_box:hover::after {
+  width: 95%;
+}
+
+.project_box:hover span::before {
+  height: 95%;
+}
+
+.project_box:hover span::after {
+  height: 95%;
+}
+
+/* 내부 텍스트 스타일 */
+.project_box p {
+  color: white;
+  margin: 10px;
+}
+
+.project_box .hashtag_wrap {
+  display: flex;
+  gap: 8px;
+  margin-top: 20px;
+}
+
+.project_box .hashtag_wrap .hashtag {
+  border: 1px solid white;
+  padding: 4px 8px;
+  font-size: 14px;
+  color: white;
 }
 
 #project .project_box>p:nth-child(1){
