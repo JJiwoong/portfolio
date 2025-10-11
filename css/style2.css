@@ -266,7 +266,7 @@ max-width: 1380px;
     padding: 12px;
 }
 
-#project .project_box p:nth-child(1){
+#project .project_box>p:nth-child(1){
   font-weight: 700;
 }
 
