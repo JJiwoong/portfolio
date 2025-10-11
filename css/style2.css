@@ -280,7 +280,8 @@ max-width: 1380px;
 
 .project_box::before {
   top: 0px;
-  left: 10px;
+  left: auto;
+  right: 0px;
 }
 
 .project_box::after {
