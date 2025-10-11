@@ -264,7 +264,6 @@ max-width: 1380px;
 #project .project_box{
   width: 33%;
   padding: 12px;
-  background-color: purple;
   position: relative;
   overflow: hidden;
 }
@@ -289,7 +288,6 @@ max-width: 1380px;
   right: 10px;
 }
 
-/* 좌우 라인 (span 사용) */
 .project_box span::before,
 .project_box span::after {
   content: "";
