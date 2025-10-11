@@ -312,19 +312,19 @@ max-width: 1380px;
 
 /* hover 시 선 애니메이션 */
 .project_box:hover::before {
-  width: 95%;
+  width: 97%;
 }
 
 .project_box:hover::after {
-  width: 95%;
+  width: 97%;
 }
 
 .project_box:hover span::before {
-  height: 95%;
+  height: 97%;
 }
 
 .project_box:hover span::after {
-  height: 95%;
+  height: 97%;
 }
 
 /* 내부 텍스트 스타일 */
