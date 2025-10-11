@@ -256,6 +256,10 @@ max-width: 1380px;
   display: flex;
 }
 
+#project .project_box{
+  width: 33%;
+}
+
 #project .project_box_wrap p{
   font-size: 16px;
 }
