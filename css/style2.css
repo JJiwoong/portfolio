@@ -534,26 +534,98 @@ display: flex;
   text-align: center;
 }
 
-.content {
-  padding: var(--page-padding);
-  position: relative;
-}
+.contact {
+      height: 100vh;
 
-.content::before {
-  content: '';
-  position: absolute;
-  border-radius: 10px 10px 0 0;
-  height: calc(100% + (-1) * var(--trans-content));
-  width: 100%;
-  top: 0;
-  left: 0;
-  z-index: 0;
-}
+  }
 
-.content>* {
-  position: relative;
-}
+  .sc-contact {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      padding-top: 5vw;
+      color: #000;
+      padding-bottom: 5vw;
+      gap: 200px;
+  }
 
+  .sc-contact .msg-area {
+      display: flex;
+      justify-content: space-between;
+  }
+
+  .sc-contact .contact-msg {
+      font-size: 18px;
+  }
+
+  .sc-contact .contact-area {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+
+  .contact-area .sub-tit {
+      font-size: 90px;
+      font-family: 'Pretendard-Regular';
+      letter-spacing: -5px;
+  }
+
+  .sc-contact .contact-box {}
+
+  .sc-contact .contact-txt {
+      font-family: "Zephyr", arial, sans-serif;
+      font-size: 5vw;
+      width: 100%;
+      line-height: 1;
+  }
+
+  .sc-contact .info-box {
+      width: 80%;
+      font-family: 'Pretendard-Regular';
+      font-size: 16px;
+      display: flex;
+      justify-content: space-between;
+  }
+
+  .info-box .phone,
+  .info-box .email,
+  .info-box .git
+  {
+      border-bottom: 1px solid#000;
+      font-weight: bold;
+      font-size: 18px;
+  }
+
+
+  .animated-title {
+      font-size: 60px;
+      font-family: zeph;
+      font-weight: 400;
+      letter-spacing: 2px;
+      position: absolute;
+      width: 100%;
+      bottom: 0;
+      height: 61px;
+  }
+
+  .animated-title .track {
+      position: absolute;
+      white-space: nowrap;
+      will-change: transform;
+      animation: marquee 60s linear infinite;
+  }
+
+  @keyframes marquee {
+      from {
+          transform: translateX(0);
+      }
+
+      to {
+          transform: translateX(-50%);
+      }
+  }
 .ap_content__nav {
   margin-left: 100vw;
 }
