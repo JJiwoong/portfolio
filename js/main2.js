@@ -599,7 +599,6 @@ gsap.to("#contact", {
     start: "top 80%",   // contact 섹션의 top이 화면 80% 지점에 닿을 때
     end: "bottom top",  // contact 섹션이 화면 위로 사라질 때까지 유지
     toggleActions: "play reverse play reverse",
-    markers:true,
   }
 });
 
