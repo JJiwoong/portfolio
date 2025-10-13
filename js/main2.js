@@ -309,9 +309,6 @@ twWork.scrollTrigger.addEventListener("enterBack", () => {
   stPersonal && stPersonal.enable();
 });
 
-// 레이아웃 변동 반영
-ScrollTrigger.refresh();
-
 
 // const list = document.querySelector(".skills_list");
 // const totalWidth = list.scrollWidth;
