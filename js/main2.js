@@ -195,7 +195,6 @@ gsap.fromTo(".project_tit",
       end: "bottom 40%",  // 필요시 조정
       toggleActions: "play none none reverse",
       markers:true,
-
       invalidateOnRefresh: true,
     }
   }
