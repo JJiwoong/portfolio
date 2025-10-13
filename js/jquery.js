@@ -65,6 +65,7 @@ $('[data-color]').each(function (i, el) {
       scrub: 1,
       toggleClass: { targets: "body", className: colorClass },
             invalidateOnRefresh: true,
+            markers:true,
     }
   });
 });
