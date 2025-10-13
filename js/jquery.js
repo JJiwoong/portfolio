@@ -53,18 +53,20 @@ $('a').mouseleave(function(){
   gsap.to('.cursor2 span', { visibility: "hidden", opacity: 0,duration:0.1})
 })
 
-$('[data-color]').each(function(i,el){ 
-  color = ($(this).data('color') == '#fff') ? 'white' : 'black' // 만약 data-color = "#fff" 면 "white" 아니면 "black" -> 클래스명 변수
-  gsap.to('.background',{
-      scrollTrigger:{
-          trigger:el,
-          start:"top 10%",
-          end:"bottom 10%",
-          scrub:1,
-          toggleClass: {targets: ".background", className: color}
-      }
-  })
-})
+$('[data-color]').each(function (i, el) {
+  const colorValue = $(el).data('color'); // "#fff" or "#000"
+  const colorClass = (colorValue === '#fff') ? 'white-bg' : 'black-bg';
+
+  gsap.to('body', {
+    scrollTrigger: {
+      trigger: el,
+      start: "top 10%",
+      end: "bottom 10%",
+      scrub: 1,
+      toggleClass: { targets: "body", className: colorClass }
+    }
+  });
+});
 
 $(".sc-contact .sub-tit").mousemove(function(e){
   var x = ((-$(this).width() / 2) + e.offsetX) *0.3;      

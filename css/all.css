@@ -71,6 +71,16 @@
     z-index: -1; /* 본문 뒤로 */
   }
 
+  
+body.white-bg::before {
+  background-color: #fff;
+}
+
+body.black-bg::before {
+    background-color: #101010;
+}
+
+
   .noscroll {
     height: 100dvh;
     width: 100%;
