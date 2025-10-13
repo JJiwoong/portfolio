@@ -599,18 +599,21 @@ smoothScroll(headerLinks);
 
 document.addEventListener("DOMContentLoaded", () => {
   const contactSection = document.querySelector("#contact");
-  const snb = document.querySelector(".snb-wrap ul li a");
 
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
+      const activeLink = document.querySelector(".snb-wrap ul li a.active");
+
+      if (!activeLink) return; // active가 없을 때 에러 방지
+
       if (entry.isIntersecting && entry.intersectionRatio >= 0.9) {
-        snb.classList.add("white"); // contact 90% 보이면 클래스 추가
+        activeLink.classList.add("white"); // contact 90% 보이면 white 추가
       } else {
-        snb.classList.remove("white"); // 90% 이하로 내려가면 제거
+        activeLink.classList.remove("white"); // 벗어나면 제거
       }
     });
   }, {
-    threshold: Array.from({length: 11}, (_, i) => i * 0.1) // 0.0~1.0까지 세밀하게 감지
+    threshold: Array.from({ length: 11 }, (_, i) => i * 0.1) // 0.0 ~ 1.0까지 감지
   });
 
   observer.observe(contactSection);
