@@ -602,3 +602,5 @@ gsap.to("#contact", {
     markers:true,
   }
 });
+
+document.getElementById("year").innerHTML = new Date().getFullYear();
