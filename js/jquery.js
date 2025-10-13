@@ -63,7 +63,8 @@ $('[data-color]').each(function (i, el) {
       start: "top 10%",
       end: "bottom 10%",
       scrub: 1,
-      toggleClass: { targets: "body", className: colorClass }
+      toggleClass: { targets: "body", className: colorClass },
+            invalidateOnRefresh: true,
     }
   });
 });
