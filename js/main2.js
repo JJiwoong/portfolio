@@ -181,57 +181,32 @@ document.querySelectorAll(".skills_wrap").forEach((group) => {
   .to(skills[2], { y: "0%", opacity: 1, duration: 1 })
 });
 
-gsap.fromTo(".project_tit", 
-  { 
-    opacity: 0 // 시작 시 투명
-  }, 
-  { 
-    opacity: 1,
-    duration: 1.5,
-    ease: "power3.out",
-    scrollTrigger: {
-      trigger: "#project",
-      start: "top 40%",   // about 섹션의 top이 뷰포트 60% 지점에 닿을 때 시작
-      end: "bottom 40%",  // 필요시 조정
-      toggleActions: "play none none reverse",
-      invalidateOnRefresh: true,
-    }
+const tl = gsap.timeline({
+  scrollTrigger: {
+    trigger: "#project",
+    start: "top 40%",
+    end: "bottom 40%",
+    toggleActions: "play none none reverse",
+    // scrub: true,   // 스크롤에 연동시키고 싶으면 켜기
+    // markers: true,
+    anticipatePin: 1,
+    invalidateOnRefresh: true,
   }
+});
+
+tl.fromTo(".project_tit",
+  { opacity: 0 },
+  { opacity: 1, duration: 1.2, ease: "power3.out", immediateRender: false }
+).fromTo(".work_project",
+  { opacity: 0 },
+  { opacity: 1, duration: 1.2, ease: "power3.out", immediateRender: false }, "+=0.1"
+).fromTo(".personal_project",
+  { opacity: 0 },
+  { opacity: 1, duration: 1.2, ease: "power3.out", immediateRender: false }, "+=0.1"
 );
-gsap.fromTo(".work_project", 
-  { 
-    opacity: 0 // 시작 시 투명
-  }, 
-  { 
-    opacity: 1,
-    duration: 1.5,
-    ease: "power3.out",
-    scrollTrigger: {
-      trigger: "#project",
-      start: "top 60%",   // about 섹션의 top이 뷰포트 60% 지점에 닿을 때 시작
-      end: "bottom 40%",  // 필요시 조정
-      toggleActions: "play none none reverse",
-      markers:true,
-    }
-  }
-);
-gsap.fromTo(".personal_project", 
-  { 
-    opacity: 0 // 시작 시 투명
-  }, 
-  { 
-    opacity: 1,
-    duration: 1.5,
-    ease: "power3.out",
-    scrollTrigger: {
-      trigger: "#project",
-      start: "top 80%",   // about 섹션의 top이 뷰포트 60% 지점에 닿을 때 시작
-      end: "bottom 40%",  // 필요시 조정
-      toggleActions: "play none none reverse",
-      markers:true,
-    }
-  }
-);
+
+// 모든 트리거 생성 후 레이아웃 변동 있으면 한번 갱신
+ScrollTrigger.refresh();
 
 
 // const list = document.querySelector(".skills_list");
