@@ -183,11 +183,9 @@ document.querySelectorAll(".skills_wrap").forEach((group) => {
 
 gsap.fromTo(".project_tit", 
   { 
-    y: 100,   // 시작 위치 (위에서)
     opacity: 0 // 시작 시 투명
   }, 
   { 
-    y: 0,      // 원래 위치
     opacity: 1,
     duration: 1,
     ease: "power3.out",
