@@ -592,7 +592,7 @@ gsap.to(".square_circle", {
 // observer.observe(document.querySelector(".about_title"));
 // observer.observe(document.querySelector(".about_name"));
 
-gsap.to("body", {
+gsap.to("#contact", {
   backgroundColor: "#fff",
   scrollTrigger: {
     trigger: "#contact",
