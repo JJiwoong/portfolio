@@ -179,6 +179,7 @@ gsap.fromTo(".project_tit",
       start: "top 40%",   // about 섹션의 top이 뷰포트 60% 지점에 닿을 때 시작
       end: "bottom 40%",  // 필요시 조정
       toggleActions: "play none none reverse",
+      markers:true,
     }
   }
 );
@@ -230,7 +231,6 @@ gsap.fromTo(".skills_wrap .skills_tit",
       start: "40% bottom",   // skills_wrap의 top이 뷰포트 80% 지점에 닿을 때 (즉, 20% 보였을 때)
       end: "bottom 40%",  // 필요하면 조정 가능
       toggleActions: "play none none reverse",
-      markers:true,
     }
   }
 );
