@@ -240,7 +240,7 @@ gsap.fromTo(".project_box",
   }, 
   { 
     scale: 1,
-    duration: 1.5,
+    duration: 0.3,
     ease: "power3.out",
     scrollTrigger: {
       trigger: "#project",
