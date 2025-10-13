@@ -941,20 +941,6 @@ padding: 200px 0 100px 0;
   flex-wrap: wrap;
 }
 
-.name,
-.email,
-.mbti,
-.birth {
-  display: flex;
-  justify-content: start;
-  align-items: center;
-  text-align: center;
-  width: 50%;
-  gap: 30px;
-  margin-bottom: 15px;
-  font-size: 20px;
-}
-
 .school,
 .academy,
 .samsung,
