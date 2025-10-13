@@ -198,40 +198,40 @@ gsap.fromTo(".project_tit",
     }
   }
 );
-// gsap.fromTo(".work_project", 
-//   { 
-//     opacity: 0 // 시작 시 투명
-//   }, 
-//   { 
-//     opacity: 1,
-//     duration: 1.5,
-//     ease: "power3.out",
-//     scrollTrigger: {
-//       trigger: "#project",
-//       start: "top 60%",   // about 섹션의 top이 뷰포트 60% 지점에 닿을 때 시작
-//       end: "bottom 40%",  // 필요시 조정
-//       toggleActions: "play none none reverse",
-//       markers:true,
-//     }
-//   }
-// );
-// gsap.fromTo(".personal_project", 
-//   { 
-//     opacity: 0 // 시작 시 투명
-//   }, 
-//   { 
-//     opacity: 1,
-//     duration: 1.5,
-//     ease: "power3.out",
-//     scrollTrigger: {
-//       trigger: "#project",
-//       start: "top 80%",   // about 섹션의 top이 뷰포트 60% 지점에 닿을 때 시작
-//       end: "bottom 40%",  // 필요시 조정
-//       toggleActions: "play none none reverse",
-//       markers:true,
-//     }
-//   }
-// );
+gsap.fromTo(".work_project", 
+  { 
+    opacity: 0 // 시작 시 투명
+  }, 
+  { 
+    opacity: 1,
+    duration: 1.5,
+    ease: "power3.out",
+    scrollTrigger: {
+      trigger: ".project_wrap",
+      start: "top 60%",   // about 섹션의 top이 뷰포트 60% 지점에 닿을 때 시작
+      end: "bottom 40%",  // 필요시 조정
+      toggleActions: "play none none reverse",
+      markers:true,
+    }
+  }
+);
+gsap.fromTo(".personal_project", 
+  { 
+    opacity: 0 // 시작 시 투명
+  }, 
+  { 
+    opacity: 1,
+    duration: 1.5,
+    ease: "power3.out",
+    scrollTrigger: {
+      trigger: ".project_wrap",
+      start: "top 80%",   // about 섹션의 top이 뷰포트 60% 지점에 닿을 때 시작
+      end: "bottom 40%",  // 필요시 조정
+      toggleActions: "play none none reverse",
+      markers:true,
+    }
+  }
+);
 
 
 // const list = document.querySelector(".skills_list");
