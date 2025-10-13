@@ -233,54 +233,83 @@ document.querySelectorAll(".skills_wrap").forEach((group) => {
 //   }
 // );
 
+// 2, 3번째 트리거를 담아둘 변수
 let stWork, stPersonal;
 
-// 1) 제목
-gsap.fromTo(".project_tit", { opacity: 0 }, {
-  opacity: 1, duration: 1.2, ease: "power3.out",
-  scrollTrigger: {
-    trigger: "#project",
-    start: "top 40%",
-    toggleActions: "play none none reverse",
-    onEnter: () => stWork.enable(),  // 제목이 들어오면 work를 허용
-    anticipatePin: 1,
-    invalidateOnRefresh: true,
-  }
-});
-
-// 2) 워크 (처음엔 비활성화)
-stWork = ScrollTrigger.create({
-  trigger: "#project",
-  start: "top 60%",
-  toggleActions: "play none none reverse",
-  onEnter: () => stPersonal.enable(),   // work가 들어오면 personal 허용
-  enabled: false,
-  // markers: true,
-  onToggle: (self) => {
-    if (self.isActive) {
-      gsap.to(".work_project", { opacity: 1, duration: 1.2, ease: "power3.out" });
-    } else {
-      gsap.to(".work_project", { opacity: 0, duration: 0.2 });
+// 2) work_project (처음엔 비활성화)
+const twWork = gsap.fromTo(".work_project",
+  { opacity: 0 },
+  {
+    opacity: 1,
+    duration: 1.5,
+    ease: "power3.out",
+    immediateRender: false,
+    scrollTrigger: {
+      trigger: "#project",
+      start: "top 60%",
+      end: "bottom 40%",
+      toggleActions: "play none none reverse",
+      markers: true,
+      enabled: false,           // << 처음엔 꺼둠
+      anticipatePin: 1,
+      invalidateOnRefresh: true,
     }
   }
-});
+);
+stWork = twWork.scrollTrigger;
 
-// 3) 퍼스널 (처음엔 비활성화)
-stPersonal = ScrollTrigger.create({
-  trigger: "#project",
-  start: "top 80%",
-  toggleActions: "play none none reverse",
-  enabled: false,
-  // markers: true,
-  onToggle: (self) => {
-    if (self.isActive) {
-      gsap.to(".personal_project", { opacity: 1, duration: 1.2, ease: "power3.out" });
-    } else {
-      gsap.to(".personal_project", { opacity: 0, duration: 0.2 });
+// 3) personal_project (처음엔 비활성화)
+const twPersonal = gsap.fromTo(".personal_project",
+  { opacity: 0 },
+  {
+    opacity: 1,
+    duration: 1.5,
+    ease: "power3.out",
+    immediateRender: false,
+    scrollTrigger: {
+      trigger: "#project",
+      start: "top 80%",
+      end: "bottom 40%",
+      toggleActions: "play none none reverse",
+      markers: true,
+      enabled: false,           // << 처음엔 꺼둠
+      anticipatePin: 1,
+      invalidateOnRefresh: true,
     }
   }
+);
+stPersonal = twPersonal.scrollTrigger;
+
+// 1) project_tit (여기서 work를 켜주고, work에서 personal을 켜줌)
+gsap.fromTo(".project_tit",
+  { opacity: 0 },
+  {
+    opacity: 1,
+    duration: 1.5,
+    ease: "power3.out",
+    immediateRender: false,
+    scrollTrigger: {
+      trigger: "#project",
+      start: "top 40%",
+      end: "bottom 40%",
+      toggleActions: "play none none reverse",
+      anticipatePin: 1,
+      invalidateOnRefresh: true,
+      onEnter: () => stWork && stWork.enable(),        // tit → work 열기
+      onEnterBack: () => stWork && stWork.enable(),    // 위로 스크롤 시에도 유지
+    }
+  }
+);
+
+// work가 들어올 때 personal 열기
+twWork.scrollTrigger.addEventListener("enter", () => {
+  stPersonal && stPersonal.enable();
+});
+twWork.scrollTrigger.addEventListener("enterBack", () => {
+  stPersonal && stPersonal.enable();
 });
 
+// 레이아웃 변동 반영
 ScrollTrigger.refresh();
 
 
