@@ -59,17 +59,17 @@ function setBodyBG(cls) {
   document.body.classList.add(cls);
 }
 
-$('[data-color]').each(function (i, el) {
+$('[data-color]').each(function () {
   const colorValue = $(el).data('color');          // "#fff" or "#000"
   const colorClass = (colorValue === '#fff') ? 'white-bg' : 'black-bg';
 
   ScrollTrigger.create({
-    trigger: el,                 // ← 이 el은 data-color 가진 section (여기선 #contact)
+    trigger: "#contact",                 // ← 이 el은 data-color 가진 section (여기선 #contact)
     start: "top 55%",            // 범위를 조금 안쪽으로 (너무 일찍 on 되는 것 방지)
     end:   "bottom 45%",
     scrub: false,                // 색 전환은 딱- 바뀌게, 원하면 1로
     anticipatePin: 1,            // 상단 pin 섹션 영향 보정
-    // markers: true,            // 디버그용
+    markers: true,            // 디버그용
     onEnter:     () => setBodyBG(colorClass),
     onEnterBack: () => setBodyBG(colorClass),
     onLeave:     () => document.body.classList.remove('white-bg','black-bg'),
