@@ -597,7 +597,24 @@ function smoothScroll(links) {
 smoothScroll(navLinks);
 smoothScroll(headerLinks);
 
+document.addEventListener("DOMContentLoaded", () => {
+  const contactSection = document.querySelector("#contact");
+  const snb = document.querySelector(".snb-wrap");
 
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting && entry.intersectionRatio >= 0.9) {
+        snb.classList.add("white"); // contact 90% 보이면 클래스 추가
+      } else {
+        snb.classList.remove("white"); // 90% 이하로 내려가면 제거
+      }
+    });
+  }, {
+    threshold: Array.from({length: 11}, (_, i) => i * 0.1) // 0.0~1.0까지 세밀하게 감지
+  });
+
+  observer.observe(contactSection);
+});
 
         </script>
         
