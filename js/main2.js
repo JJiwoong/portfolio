@@ -213,7 +213,6 @@ gsap.fromTo(".work_project>p",
       end: "bottom 40%",  // 필요시 조정
       toggleActions: "play none none reverse",
       markers:true,
-        invalidateOnRefresh: true,
     }
   }
 );
@@ -231,7 +230,6 @@ gsap.fromTo(".personal_project>p",
       end: "bottom 40%",  // 필요시 조정
       toggleActions: "play none none reverse",
       markers:true,
-        invalidateOnRefresh: true,
     }
   }
 );
