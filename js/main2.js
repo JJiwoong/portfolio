@@ -596,9 +596,19 @@ gsap.to("#contact", {
   backgroundColor: "#fff",
   scrollTrigger: {
     trigger: "#contact",
-    start: "top 80%",   // contact 섹션의 top이 화면 80% 지점에 닿을 때
-    end: "bottom top",  // contact 섹션이 화면 위로 사라질 때까지 유지
+    start: "top 80%",
+    end: "bottom top",
     toggleActions: "play reverse play reverse",
+    onEnter: () => {
+      document.querySelectorAll(".snb-wrap ul li a").forEach(a => {
+        a.classList.add("white"); // contact 구간에 진입 시 white 클래스 추가
+      });
+    },
+    onLeaveBack: () => {
+      document.querySelectorAll(".snb-wrap ul li a").forEach(a => {
+        a.classList.remove("white"); // contact 구간 벗어나면 제거
+      });
+    },
   }
 });
 

@@ -130,6 +130,9 @@ max-width: 1380px;
 .snb-wrap ul li a.active {
   color: #fff; /* 활성 섹션은 흰색 */
 }
+.snb-wrap ul li a.active.white {
+  color: #000; /* 활성 섹션은 흰색 */
+}
 
 .button ul li p::after {
   content: "";
