@@ -225,6 +225,7 @@ max-width: 1380px;
 #project p {
   color: #fff;
   font-size: 24px;
+  opacity: 0;
 }
 
 #project{
