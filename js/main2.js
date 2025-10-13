@@ -194,7 +194,6 @@ gsap.fromTo(".project_tit",
       start: "top 40%",   // about 섹션의 top이 뷰포트 60% 지점에 닿을 때 시작
       end: "bottom 40%",  // 필요시 조정
       toggleActions: "play none none reverse",
-      markers:true,
       invalidateOnRefresh: true,
     }
   }
@@ -212,6 +211,7 @@ gsap.fromTo(".work_project",
       start: "top 60%",   // about 섹션의 top이 뷰포트 60% 지점에 닿을 때 시작
       end: "bottom 40%",  // 필요시 조정
       toggleActions: "play none none reverse",
+      markers:true,
     }
   }
 );
