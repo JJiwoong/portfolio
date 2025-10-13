@@ -208,7 +208,7 @@ gsap.fromTo(".work_project",
     ease: "power3.out",
     scrollTrigger: {
       trigger: ".project_wrap",
-      start: "top 30%",   // about 섹션의 top이 뷰포트 60% 지점에 닿을 때 시작
+      start: "top 40%",   // about 섹션의 top이 뷰포트 60% 지점에 닿을 때 시작
       end: "bottom 60%",  // 필요시 조정
       toggleActions: "play none none reverse",
       markers:true,
@@ -225,7 +225,7 @@ gsap.fromTo(".personal_project",
     ease: "power3.out",
     scrollTrigger: {
       trigger: ".project_wrap",
-      start: "top 40%",   // about 섹션의 top이 뷰포트 60% 지점에 닿을 때 시작
+      start: "top 30%",   // about 섹션의 top이 뷰포트 60% 지점에 닿을 때 시작
       end: "bottom 70%",  // 필요시 조정
       toggleActions: "play none none reverse",
       markers:true,
