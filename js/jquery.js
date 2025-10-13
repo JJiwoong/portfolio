@@ -53,32 +53,32 @@ $('a').mouseleave(function(){
   gsap.to('.cursor2 span', { visibility: "hidden", opacity: 0,duration:0.1})
 })
 
-$('[data-color]').each(function(){ 
-  color = ($(this).data('color') == '#fff') ? 'white' : 'black' // 만약 data-color = "#fff" 면 "white" 아니면 "black" -> 클래스명 변수
-  gsap.to('.background',{
-      scrollTrigger:{
-          trigger:"#contact",
-          start:"top 10%",
-          end:"bottom 10%",
-          scrub:1,
-          toggleClass: {targets: ".background", className: color},
-          markers:true
-      }
-  })
-})
+// $('[data-color]').each(function(){ 
+//   color = ($(this).data('color') == '#fff') ? 'white' : 'black' // 만약 data-color = "#fff" 면 "white" 아니면 "black" -> 클래스명 변수
+//   gsap.to('.background',{
+//       scrollTrigger:{
+//           trigger:"#contact",
+//           start:"top 10%",
+//           end:"bottom 10%",
+//           scrub:1,
+//           toggleClass: {targets: ".background", className: color},
+//           markers:true
+//       }
+//   })
+// })
 
-$(".sc-contact .sub-tit").mousemove(function(e){
-  var x = ((-$(this).width() / 2) + e.offsetX) *0.3;      
-  // -(sub-tit width / 2) + sub-tit offsetX값 * 0.3
-  var y = ((-$(this).height() / 2) + e.offsetY) *0.3;     
-  // -(sub-tit width / 2) + sub-tit offsetY값 * 0.3
-  gsap.to(".sc-contact .link-mail", {
-      transform: "translate(" + x + "px," + y + "px)"
-      })
-  })
-$(".sc-contact .sub-tit").mouseout(function(e){
-  gsap.to(".sc-contact .link-mail", {
-      transform: "translate(0,0)"
-   })
-})
+// $(".sc-contact .sub-tit").mousemove(function(e){
+//   var x = ((-$(this).width() / 2) + e.offsetX) *0.3;      
+//   // -(sub-tit width / 2) + sub-tit offsetX값 * 0.3
+//   var y = ((-$(this).height() / 2) + e.offsetY) *0.3;     
+//   // -(sub-tit width / 2) + sub-tit offsetY값 * 0.3
+//   gsap.to(".sc-contact .link-mail", {
+//       transform: "translate(" + x + "px," + y + "px)"
+//       })
+//   })
+// $(".sc-contact .sub-tit").mouseout(function(e){
+//   gsap.to(".sc-contact .link-mail", {
+//       transform: "translate(0,0)"
+//    })
+// })
 
