@@ -591,3 +591,14 @@ gsap.to(".square_circle", {
 // // 감시할 대상 등록
 // observer.observe(document.querySelector(".about_title"));
 // observer.observe(document.querySelector(".about_name"));
+
+gsap.to("body", {
+  backgroundColor: "#fff",
+  scrollTrigger: {
+    trigger: "#contact",
+    start: "top 80%",   // contact 섹션의 top이 화면 80% 지점에 닿을 때
+    end: "bottom top",  // contact 섹션이 화면 위로 사라질 때까지 유지
+    toggleActions: "play reverse play reverse",
+    markers:true,
+  }
+});
