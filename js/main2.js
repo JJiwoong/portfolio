@@ -233,31 +233,54 @@ document.querySelectorAll(".skills_wrap").forEach((group) => {
 //   }
 // );
 
-const tl = gsap.timeline({
+let stWork, stPersonal;
+
+// 1) 제목
+gsap.fromTo(".project_tit", { opacity: 0 }, {
+  opacity: 1, duration: 1.2, ease: "power3.out",
   scrollTrigger: {
     trigger: "#project",
     start: "top 40%",
-    end: "bottom 40%",
     toggleActions: "play none none reverse",
-    // scrub: true,   // 스크롤에 연동시키고 싶으면 켜기
-    // markers: true,
+    onEnter: () => stWork.enable(),  // 제목이 들어오면 work를 허용
     anticipatePin: 1,
     invalidateOnRefresh: true,
   }
 });
 
-tl.fromTo(".project_tit",
-  { opacity: 0 },
-  { opacity: 1, duration: 1.2, ease: "power3.out", immediateRender: false }
-).fromTo(".work_project",
-  { opacity: 0 },
-  { opacity: 1, duration: 1.2, ease: "power3.out", immediateRender: false }, "+=0.1"
-).fromTo(".personal_project",
-  { opacity: 0 },
-  { opacity: 1, duration: 1.2, ease: "power3.out", immediateRender: false }, "+=0.1"
-);
+// 2) 워크 (처음엔 비활성화)
+stWork = ScrollTrigger.create({
+  trigger: "#project",
+  start: "top 60%",
+  toggleActions: "play none none reverse",
+  onEnter: () => stPersonal.enable(),   // work가 들어오면 personal 허용
+  enabled: false,
+  // markers: true,
+  onToggle: (self) => {
+    if (self.isActive) {
+      gsap.to(".work_project", { opacity: 1, duration: 1.2, ease: "power3.out" });
+    } else {
+      gsap.to(".work_project", { opacity: 0, duration: 0.2 });
+    }
+  }
+});
 
-// 모든 트리거 생성 후 레이아웃 변동 있으면 한번 갱신
+// 3) 퍼스널 (처음엔 비활성화)
+stPersonal = ScrollTrigger.create({
+  trigger: "#project",
+  start: "top 80%",
+  toggleActions: "play none none reverse",
+  enabled: false,
+  // markers: true,
+  onToggle: (self) => {
+    if (self.isActive) {
+      gsap.to(".personal_project", { opacity: 1, duration: 1.2, ease: "power3.out" });
+    } else {
+      gsap.to(".personal_project", { opacity: 0, duration: 0.2 });
+    }
+  }
+});
+
 ScrollTrigger.refresh();
 
 
