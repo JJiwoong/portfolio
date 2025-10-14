@@ -498,7 +498,7 @@ function typing_() {
 }
 typing_();
 
-/* document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", () => {
   const page1 = document.querySelector("#page1");
 
   const observer = new IntersectionObserver((entries) => {
@@ -524,30 +524,42 @@ gsap.to(".scroll-indicator", {
     start: "top top+=50", // 페이지 살짝만 내려도
     toggleActions: "play none none reverse"
   }
-}); */
+});
 
-const sections = document.querySelectorAll("section");
+const TARGET_IDS = ['about','project','contact'];
+const sections = TARGET_IDS
+  .map(id => document.getElementById(id))
+  .filter(Boolean);
+
 const navLinks = document.querySelectorAll(".snb-wrap ul li a");
 const headerLinks = document.querySelectorAll(".button ul li a");
 const snb = document.querySelector(".snb-wrap");
 
-// 📌 스크롤 스파이 (현재 섹션 active 처리)
 const spyObserver = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      navLinks.forEach(link => link.classList.remove("active"));
-      headerLinks.forEach(link => link.classList.remove("active"));
-
-      const id = entry.target.getAttribute("id");
-      const activeLink = document.querySelector(`.snb-wrap ul li a[href="#${id}"]`);
-      const activeLink2 = document.querySelector(`.button ul li a[href="#${id}"]`);
-      if (activeLink) activeLink.classList.add("active");
-      if (activeLink2) activeLink2.classList.add("active");
-    }
+    if (!entry.isIntersecting) return;
+    const id = entry.target.id;
+    // 여기 오는 건 항상 about/project/contact 중 하나
+    navLinks.forEach(link => link.classList.toggle("active", link.getAttribute("href") === `#${id}`));
+    headerLinks.forEach(link => link.classList.toggle("active", link.getAttribute("href") === `#${id}`));
   });
-}, { threshold: 0.6 });
+}, {
+  // 화면 중앙쯤 들어오면 활성화 (상단에서도 잘 잡힘)
+  rootMargin: '-40% 0px -50% 0px',
+  threshold: 0
+});
 
 sections.forEach(section => spyObserver.observe(section));
+
+// 초기 최상단일 때 About 강제 세팅
+const kickTop = () => {
+  if (window.scrollY < (sections[0]?.offsetTop ?? 0) + 10) {
+    navLinks.forEach(a => a.classList.toggle("active", a.getAttribute("href")==="#about"));
+    headerLinks.forEach(a => a.classList.toggle("active", a.getAttribute("href")==="#about"));
+  }
+};
+kickTop();
+window.addEventListener('scroll', kickTop, { passive: true });
 
 
 // 📌 snb 노출 제어 (page1 보이면 숨김, 아니면 항상 보임)
