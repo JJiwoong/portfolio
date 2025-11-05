@@ -32,18 +32,27 @@
           </div>
 
           <!-- button -->
-          <aside class="button">
-            <ul>
-                <li><a href="#about">
+          <!-- a태그안에 p태그는 박스 영역을 조금이라도 높히기 위해 넣음 -->
+          <aside class="header__nav">
+            <nav>
+              <ul class="nav__list">
+                <li>
+                  <a href="#about">
                         <p>About</p>
-                    </a></li>
-                <li><a href="#project">
+                  </a>
+                </li>
+                <li>
+                  <a href="#project">
                         <p>Project</p>
-                    </a></li>
-                <li><a href="#contact">
+                  </a>
+                </li>
+                <li>
+                  <a href="#contact">
                         <p>Contact</p>
-                    </a></li>
-            </ul>
+                  </a>
+                </li>
+              </ul>
+            </nav>
             <div class="clWrap">
                 <div class="clock">
                     <div class="time"></div>
@@ -534,7 +543,7 @@ const sections = TARGET_IDS
   .filter(Boolean);
 
 const navLinks = document.querySelectorAll(".snb-wrap ul li a");
-const headerLinks = document.querySelectorAll(".button ul li a");
+const headerLinks = document.querySelectorAll(".header__nav ul li a");
 const snb = document.querySelector(".snb-wrap");
 
 const spyObserver = new IntersectionObserver((entries) => {

@@ -12,7 +12,7 @@ gsap.to("#page1", {
   }
 });
 
-const button = document.querySelector(".button");
+const button = document.querySelector(".header__nav");
 const logo = document.querySelector(".header__logo");
 
 // opacity 애니 끝난 후 z-index 낮추기
