@@ -120,6 +120,7 @@ max-width: 1380px;
   height: 100%;
   justify-content: center;
   gap: 100px;
+  align-items: center;
 }
 
 .snb-wrap ul li a {
