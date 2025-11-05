@@ -171,7 +171,7 @@ body.black-bg::before {
     transition:opacity 0.2s ease;
   }
   
-  .header__logo-txt .header__logo-effect {
+  .header__logo-effect {
     width: 100px;
     position: fixed;
     left: 30px;
