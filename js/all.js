@@ -122,8 +122,8 @@ let smoothScrolling = function () {
   
         let time = hr + ':' + min + ':' + sec;
   
-        document.querySelector('.date').innerHTML = showDays + ',' + ' ' + showMonth + ' ' + dayOfMonth;
-        document.querySelector('.time').innerHTML = time + ' ' + ampm;
+        document.querySelector('.clock__date').innerHTML = showDays + ',' + ' ' + showMonth + ' ' + dayOfMonth;
+        document.querySelector('.clock__time').innerHTML = time + ' ' + ampm;
   
         setTimeout(showClock, 1000);
       }
