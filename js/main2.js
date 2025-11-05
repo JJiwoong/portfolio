@@ -60,22 +60,22 @@ gsap.to(".about__mv", {
   }
 });
 
-gsap.to(".about_title", {
+gsap.to(".about__title", {
   opacity:0,
   y:100,
   scrollTrigger: {
-    trigger: ".about_title",
+    trigger: ".about__title",
     start: "bottom 10%",
     end: "bottom bottom",
     toggleActions: "play none none reverse",
   }
 });
 
-gsap.to(".about_name", {
+gsap.to(".about__name", {
   opacity:0,
   y:100,
   scrollTrigger: {
-    trigger: ".about_name",
+    trigger: ".about__name",
     start: "20% top",
     end: "bottom bottom",
     toggleActions: "play none none reverse",
@@ -278,7 +278,7 @@ gsap.fromTo(".career",
 );
 
 
-gsap.to(".img-wrap", {
+gsap.to(".about__img", {
   opacity:1,
   duration: 1.2,
   ease: "power2.out",

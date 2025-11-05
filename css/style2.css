@@ -731,16 +731,16 @@ padding: 200px 0 100px 0;
   top: 0;
 }
 
-.about_title p{
+.about__title p{
   text-align: end;
 }
 
-.about_name p:nth-child(2){
+.about__name p:nth-child(2){
   padding-left: 200px;
 }
 
-.about__visual .about__mv .about_name p,
-.about__visual .about__mv .about_title p{
+.about__visual .about__mv .about__name p,
+.about__visual .about__mv .about__title p{
   color: #fff;
   font-size: 120px;
   position: relative;
@@ -749,7 +749,7 @@ padding: 200px 0 100px 0;
 }
 
 .about__visual .title,
-.about__visual .img-wrap {
+.about__visual .about__img {
   opacity: 0;
 }
 
