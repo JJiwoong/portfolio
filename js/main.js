@@ -40,7 +40,7 @@ closeBtn.addEventListener("click",function(){
 
 
 function typing_() {
-  const $text = document.querySelector(".sc_typing .text1");
+  const $text = document.querySelector(".hero__typing .text1");
 
   // 글자 모음
   const letters = [
