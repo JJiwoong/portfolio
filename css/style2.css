@@ -15,7 +15,7 @@
 }
 
 
-.button {
+.snb {
   background-color: #fff;
   position: fixed;
   top: 10px;
@@ -98,7 +98,7 @@ max-width: 1380px;
     color: #fff;
 }
 
-.snb-wrap{
+.header__nav{
   position: fixed;
   color:#fff;
   top:80px;
@@ -109,32 +109,32 @@ max-width: 1380px;
   transition: opacity 0.5s ease;
 }
 
-.snb-wrap ul {
+.header__nav ul {
   display: flex;
   flex-direction: column;
   gap: 12px;
 }
 
-.button ul {
+.snb ul {
   display: flex;
   height: 100%;
   justify-content: center;
   gap: 100px;
 }
 
-.snb-wrap ul li a {
+.header__nav ul li a {
   color: #aaa; /* 기본 옅은 회색 */
   transition: color 0.3s ease;
 }
 
-.snb-wrap ul li a.active {
+.header__nav ul li a.active {
   color: #fff; /* 활성 섹션은 흰색 */
 }
-.snb-wrap ul li a.active.white {
+.header__nav ul li a.active.white {
   color: #000; /* 활성 섹션은 흰색 */
 }
 
-.button ul li p::after {
+.snb ul li p::after {
   content: "";
   display: block;
   position: absolute;
@@ -149,7 +149,7 @@ max-width: 1380px;
   z-index: -1;
 }
 
-.button ul li p {
+.snb ul li p {
   position: relative;
   transition: 0.2s;
   color: #000;
@@ -157,11 +157,11 @@ max-width: 1380px;
   font-size: 25px;
 }
 
-.button ul li p:hover {
+.snb ul li p:hover {
   color: #fff;
 }
 
-.button ul li p:hover::after {
+.snb ul li p:hover::after {
   transform: scaleX(1);
 }
 
