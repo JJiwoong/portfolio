@@ -676,7 +676,7 @@ padding: 200px 0 100px 0;
 
 
 
-.about_visual {
+.about__visual {
     width: 100vw;
     background-color: #101010;
     position: relative;
@@ -701,7 +701,7 @@ padding: 200px 0 100px 0;
   50% { opacity: 0.3; transform: translateY(5px); }
 }
 
-.about_visual .about_visual-mv {
+.about__visual .about__mv {
     height: 100%;
     max-width: 1380px;
     width: 100%;
@@ -739,8 +739,8 @@ padding: 200px 0 100px 0;
   padding-left: 200px;
 }
 
-.about_visual .about_visual-mv .about_name p,
-.about_visual .about_visual-mv .about_title p{
+.about__visual .about__mv .about_name p,
+.about__visual .about__mv .about_title p{
   color: #fff;
   font-size: 120px;
   position: relative;
@@ -748,8 +748,8 @@ padding: 200px 0 100px 0;
   transition: 0.2s;
 }
 
-.about_visual .title,
-.about_visual .img-wrap {
+.about__visual .title,
+.about__visual .img-wrap {
   opacity: 0;
 }
 
@@ -759,14 +759,14 @@ padding: 200px 0 100px 0;
 }
 
 
-.about_visual .about_visual-mv img {
+.about__visual .about__mv img {
     width: 100%;
     height: 440px;
     filter: url(#crumple-effect-1);
     transition: 0.2s;
 }
 
-.about_visual .about_visual-mv img:hover {
+.about__visual .about__mv img:hover {
   filter: initial;
 }
 
@@ -793,11 +793,11 @@ padding: 200px 0 100px 0;
   margin-left: 12px;
 }
 
-.about_visual .title {
+.about__visual .title {
   transition: transform 0.5s ease, font-size 0.5s ease;
 }
 
-.about_visual .title.nav {
+.about__visual .title.nav {
   position: fixed;
   top: 20px;
   left: 30px;

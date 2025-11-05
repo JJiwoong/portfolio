@@ -24,9 +24,9 @@ const logo = document.querySelector(".header__logo");
   });
 });
 
-gsap.to(".about_visual", {
+gsap.to(".about__visual", {
   scrollTrigger: {
-    trigger: ".about_visual",
+    trigger: ".about__visual",
     start: "top top",
     end: "bottom bottom",
     toggleActions: "play none none reverse",
@@ -48,12 +48,12 @@ gsap.to(".about_visual", {
   }
 });
 
-gsap.to(".about_visual-mv", {
+gsap.to(".about__mv", {
   opacity:1,
     duration: 1.2, // 1.2초 동안 서서히 나타남
   ease: "power2.out",
   scrollTrigger: {
-    trigger: ".about_visual",
+    trigger: ".about__visual",
     start: "top 20%",
     end: "bottom bottom",
     toggleActions: "play none none reverse",
@@ -93,7 +93,7 @@ gsap.to(".about_name", {
 
 // gsap.to(".snb-wrap", {
 //   scrollTrigger: {
-//     trigger: ".about_visual",
+//     trigger: ".about__visual",
 //     start: "top top",
 //     // end 제거 → 끝 범위 없음
 //     toggleActions: "play none none none",
@@ -110,12 +110,12 @@ gsap.to(".about_name", {
 //   }
 // });
 
-gsap.to(".about_visual .title", {
+gsap.to(".about__visual .title", {
   opacity:1,
   duration: 1.2,
   ease: "power2.out",  // 스무스 easing
   scrollTrigger: {
-    trigger: ".about_visual",
+    trigger: ".about__visual",
     start: "top 35%",
     end: "top 10%", 
   }
@@ -283,7 +283,7 @@ gsap.to(".img-wrap", {
   duration: 1.2,
   ease: "power2.out",
   scrollTrigger: {
-    trigger: ".about_visual",
+    trigger: ".about__visual",
     start: "top 35%",
     end: "top 10%", 
   }
