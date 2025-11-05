@@ -13,7 +13,7 @@ gsap.to("#page1", {
 });
 
 const button = document.querySelector(".button");
-const logo = document.querySelector(".logo");
+const logo = document.querySelector(".header__logo");
 
 // opacity 애니 끝난 후 z-index 낮추기
 [button, logo].forEach(el => {

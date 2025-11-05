@@ -167,7 +167,7 @@ body.black-bg::before {
   
   /* logo */
 
-  .logo{
+  .header__logo{
     transition:opacity 0.2s ease;
   }
   
