@@ -4,7 +4,6 @@ let smoothScrolling = function () {
     })
   
     lenis.on('scroll', (e) => {
-      console.log(e)
     })
   
     lenis.on('scroll', ScrollTrigger.update)
@@ -58,7 +57,6 @@ let smoothScrolling = function () {
     let ySet = gsap.quickSetter(ball, "y", "px");
   
     window.addEventListener("mousemove", function (e) {
-      console.log(e);
       mouse.x = e.x;
       mouse.y = e.y;
     });
