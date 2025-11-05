@@ -16,22 +16,20 @@
 
 <body class="loading">
         <!-- cursor -->
-        <div class="cursor">
-          <span>click</span>
-        </div>
+        <div class="cursor"><span>click</span></div>
         <!-- cursor end -->
 
-        <header>
+
         <!-- logo -->
-        <div class="header__logo">
-            <div class="header__logo-txt">
-                <div class="header__logo-effect">
+        <div class="logo">
+            <div class="pf_txt">
+                <div class="effect">
                     <img src="./img/MOSHED-2024-6-21-10-50-25-crop-unscreen.gif" alt="">
                 </div>
             </div>
         </div>
 
-        <nav class="header__nav">
+        <nav class="snb-wrap">
             <ul>
                 <li><a href="#about">About</a></li>
                 <li><a href="#project">Project</a></li>
@@ -39,21 +37,19 @@
             </ul>
         </nav>
 
-        <!-- snb -->
-        <aside class="snb">
-          <nav>
-            <ul>
-                <li><a href="#about">
-                        <p>About</p>
-                    </a></li>
-                <li><a href="#project">
-                        <p>Project</p>
-                    </a></li>
-                <li><a href="#contact">
-                        <p>Contact</p>
-                    </a></li>
-            </ul>
-          </nav>
+        <!-- button -->
+        <aside class="button">
+          <ul>
+              <li><a href="#about">
+                      <p>About</p>
+                  </a></li>
+              <li><a href="#project">
+                      <p>Project</p>
+                  </a></li>
+              <li><a href="#contact">
+                      <p>Contact</p>
+                  </a></li>
+          </ul>
           <div class="clWrap">
               <div class="clock">
                   <div class="time"></div>
@@ -534,9 +530,9 @@ const sections = TARGET_IDS
   .map(id => document.getElementById(id))
   .filter(Boolean);
 
-const navLinks = document.querySelectorAll(".header__nav ul li a");
-const headerLinks = document.querySelectorAll(".snb ul li a");
-const snb = document.querySelector(".header__nav");
+const navLinks = document.querySelectorAll(".snb-wrap ul li a");
+const headerLinks = document.querySelectorAll(".button ul li a");
+const snb = document.querySelector(".snb-wrap");
 
 const spyObserver = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
@@ -611,7 +607,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
-      const activeLink = document.querySelector(".header__nav ul li a.active");
+      const activeLink = document.querySelector(".snb-wrap ul li a.active");
 
       if (!activeLink) return; // active가 없을 때 에러 방지
 
