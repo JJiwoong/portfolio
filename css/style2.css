@@ -16,12 +16,10 @@
 
 
 .header__nav {
-  background-color: #fff;
   top: 10px;
-  right:0;
+  right: 0;
   z-index: 1;
   display: flex;
-  padding-left: 30px;
   transition: opacity 0.2s ease;
 }
 
