@@ -213,7 +213,7 @@ header{
     display: inline-block;
     text-align: center;
     display: flex;
-    gap: 40px;
+    gap: 10px;
   }
 
   .clock .time,
