@@ -8,15 +8,13 @@
     <link rel="shortcut icon" href="./img/favicon-32x32.png" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/style2.css">
     <link rel="stylesheet" href="./css/all.css">
 </head>
 
 <body class="loading">
-
-    <div class="fixed">
         <!-- cursor -->
         <div class="cursor"><span>click</span></div>
         <!-- cursor end -->
@@ -31,51 +29,53 @@
             </div>
         </div>
 
-        <div class="snb-wrap">
+        <nav class="snb-wrap">
             <ul>
                 <li><a href="#about">About</a></li>
                 <li><a href="#project">Project</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-        </div>
+        </nav>
 
         <!-- button -->
-        <div class="button">
-            <ul>
-                <li><a href="#about">
-                        <p>About</p>
-                    </a></li>
-                <li><a href="#project">
-                        <p>Project</p>
-                    </a></li>
-                <li><a href="#contact">
-                        <p>Contact</p>
-                    </a></li>
-            </ul>
-            <div class="clWrap">
-                <div class="clock">
-                    <div class="time"></div>
-                    <p>/</p>
-                    <div class="date"></div>
-                </div>
-            </div>
-        </div>
+        <aside class="button">
+          <ul>
+              <li><a href="#about">
+                      <p>About</p>
+                  </a></li>
+              <li><a href="#project">
+                      <p>Project</p>
+                  </a></li>
+              <li><a href="#contact">
+                      <p>Contact</p>
+                  </a></li>
+          </ul>
+          <div class="clWrap">
+              <div class="clock">
+                  <div class="time"></div>
+                  <p>/</p>
+                  <div class="date"></div>
+              </div>
+          </div>
+        </aside>
 
         <!-- scroll bar -->
         <div class="progress-container">
-            <div class="progress-bar" id="myBar"></div>
+          <div class="progress-bar" id="myBar"></div>
         </div>
         <!-- scroll bar end -->
 
-        <section id="page1">
+
+        <main id="main">
+          <section id="page1">
             <!-- <canvas id="myCanvas"></canvas> -->
             <div class="sc_typing">
                 <h1 class="text1"></h1>
             </div>
             <div class="scroll-indicator">▼ Scroll</div>
-        </section>
+          </section>
 
-        <section id="about">
+          <section id="about">
           <div class="about_visual">
               <div class="about_visual-mv">
                 <div class="img-wrap">
@@ -253,9 +253,9 @@
               </div>
             </div>
           </div>
-        </section>
+          </section>
 
-        <section id="project">
+          <section id="project">
           <div class="project_wrap">
             <p class="project_tit">PROJECT</p>
             <div class="work_project">
@@ -361,9 +361,9 @@
               </div>
             </div>
           </div>
-        </section>
+          </section>
 
-        <section class="contact" id="contact" data-color="#fff">
+          <section class="contact" id="contact" data-color="#fff">
             <div class="sc-contact">
                 <div class="msg-area">
                     <p class="contact-msg">Thank you for watching my project</p>
@@ -381,11 +381,10 @@
                     <div class="email">jeongjw0520@naver.com</div>
                     <div class="git"><a target="_blank" href="https://github.com/JJiwoong/portfolio">Git hub</a></div>
                     <div class="year">&#169;<span id="year"></span></div>
-
                 </div>
             </div>
-        </section>
-
+          </section>
+        </main>
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.trunk.min.js"></script>
