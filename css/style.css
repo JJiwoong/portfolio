@@ -197,7 +197,7 @@
   position: relative;
 }
 
-.sc_typing {
+.hero__typing {
   display: flex;
   justify-content: center;
   font-size: 4rem;
