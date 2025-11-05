@@ -167,15 +167,15 @@ body.black-bg::before {
   
   /* logo */
 
-  .header__logo{
-    transition:opacity 0.2s ease;
-  }
+.header__logo {
+    display: flex;
+    transition: opacity 0.2s ease;
+    align-items: center;
+}
   
   .header__logo-effect {
     width: 100px;
-    position: fixed;
-    left: 30px;
-    top: 10px;
+    position: relative;
     z-index: 1;
   }
   
