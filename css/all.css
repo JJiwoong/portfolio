@@ -206,7 +206,7 @@ header{
   }
   
   .clock {
-    color: #2f2f2f;
+    color: #000;
     border-radius: 50px;
     font-size: 25px;
     display: inline-block;
