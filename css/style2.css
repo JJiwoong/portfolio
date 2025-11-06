@@ -770,25 +770,25 @@ padding: 200px 0 100px 0;
   filter: initial;
 }
 
-.info_wrap{
+.about__info{
   font-size: 24px;
   color: #fff;
   padding-top: 200px;
   font-weight: 600;
 }
 
-.info_con{
+.about__info-list{
   display: flex;
   flex-direction: column;
   gap: 16px;
 }
 
-.info_txt{
+.about__info-row{
   display: flex;
   align-items: flex-end;
 }
 
-.info_txt_sub{
+.about__info-value{
   font-weight: 400;
   margin-left: 12px;
 }
