@@ -1885,7 +1885,20 @@ input[type=range] {
     height: 60px;
   }
 
+  #project{
+    height: initial;
+    padding-bottom: 100px;
+  }
+
   .project__section{
     padding: 0 30px;
+  }
+
+  #project .project_box{
+    width: 47%;
+  }
+
+  .project_box .hashtags{
+    flex-wrap: wrap;
   }
   }
