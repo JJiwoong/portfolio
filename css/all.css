@@ -219,3 +219,13 @@ header{
   .clock .date{
     white-space: nowrap;
   }
+
+  @media (max-width:1024px){
+  .clock{
+    flex-direction: column;
+  }
+
+  .clock span:nth-child(2){
+    display: none;
+  }
+}
