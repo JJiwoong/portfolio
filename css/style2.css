@@ -1829,4 +1829,9 @@ input[type=range] {
   }
   }
 
-  @media (max-width:768px){}
+  @media (max-width:768px){
+    .about__visual{
+    padding: 0 30px;
+    height: 1000px;
+  }
+  }
