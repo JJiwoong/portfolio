@@ -1807,4 +1807,8 @@ input[type=range] {
   .project__section{
     padding: 0 50px;
   }
+
+  .skills_con{
+    gap: 40px;
+  }
   }
