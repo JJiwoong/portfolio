@@ -228,4 +228,8 @@ header{
   .clock span:nth-child(2){
     display: none;
   }
+
+  .text1{
+    font-size: 4rem;
+  }
 }

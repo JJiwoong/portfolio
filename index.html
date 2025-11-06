@@ -418,41 +418,44 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.trunk.min.js"></script>
         <script>
+let vantaEffect = null;
+
 function initVanta() {
-  let effect;
+  // 이미 VANTA가 생성되었다면 중복 생성 방지
+  if (vantaEffect) return;
 
   const isMobile = window.matchMedia("(max-width: 767px)").matches;
   const isTablet = window.matchMedia("(min-width: 768px) and (max-width: 1023px)").matches;
 
   if (isMobile) {
-    effect = VANTA.TRUNK({
+    vantaEffect = VANTA.TRUNK({
       el: "#page1",
       scale: 1.0,
       scaleMobile: 1.0,
-      chaos: 2.0,
+      chaos: 1.5,
       spacing: 1.0,
       color: 0x000000,
       backgroundColor: 0xffffff,
       resize: true
     });
   } else if (isTablet) {
-    effect = VANTA.TRUNK({
+    vantaEffect = VANTA.TRUNK({
       el: "#page1",
       scale: 1.0,
       scaleMobile: 1.0,
-      chaos: 3.0,
-      spacing: 0.7,
+      chaos: 2.5,
+      spacing: 0.8,
       color: 0x000000,
       backgroundColor: 0xffffff,
       resize: true
     });
   } else {
-    effect = VANTA.TRUNK({
+    vantaEffect = VANTA.TRUNK({
       el: "#page1",
       scale: 1.0,
       scaleMobile: 1.0,
-      chaos: 5.0,
-      spacing: 0.5,
+      chaos: 4.0,
+      spacing: 0.7,
       color: 0x000000,
       backgroundColor: 0xffffff,
       resize: true
@@ -460,8 +463,8 @@ function initVanta() {
   }
 }
 
-window.addEventListener('load', initVanta);
-window.addEventListener('resize', initVanta);
+// ✅ only once init
+window.addEventListener("DOMContentLoaded", initVanta);
         </script>
         <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
