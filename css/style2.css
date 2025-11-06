@@ -660,8 +660,11 @@ padding: 200px 0 100px 0;
 .about__skills ul li svg{width: 80px; height: 80px;}
 
 .skills__title{
-      margin-bottom: 100px;
-    text-align: center;
+  margin-bottom: 100px;
+  text-align: center;
+  color: #fff;
+  font-size: 50px; 
+  font-weight: 500;
 }
 
 .skill img{
@@ -1860,5 +1863,13 @@ input[type=range] {
   .about__intro-text{
     font-size: 16px;
     padding: initial;
+  }
+
+  .skills__title{
+    font-size: 30px;
+  }
+
+  .skill_box{
+    opacity: 1;
   }
   }
