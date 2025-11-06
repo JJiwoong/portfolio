@@ -130,26 +130,21 @@ gsap.fromTo(".about__intro-text p",
   }
 );
 
-const mm = gsap.matchMedia();
+document.querySelectorAll(".about__skills").forEach((group) => {
+  const skills = group.querySelectorAll(".skill_box");
 
-mm.add("(min-width: 768px)", () => {
-  // ✅ 768px 이상일 때만 실행됨 (Tablet + Desktop)
-  document.querySelectorAll(".about__skills").forEach((group) => {
-    const skills = group.querySelectorAll(".skill_box");
-
-    gsap.timeline({
-      scrollTrigger: {
-        trigger: group,
-        start: "top top",
-        end: "+=200%",
-        scrub: true,
-        pin: true,
-      }
-    })
-    .to(skills[0], { y: "0%", opacity: 1, duration: 1 })
-    .to(skills[1], { y: "0%", opacity: 1, duration: 1 })
-    .to(skills[2], { y: "0%", opacity: 1, duration: 1 });
-  });
+  gsap.timeline({
+    scrollTrigger: {
+      trigger: group,
+      start: "top top",
+      end: "+=200%",  // 한 화면 동안
+      scrub: true,
+      pin: true,      // 그룹 고정
+    }
+  })
+  .to(skills[0], { y: "0%", opacity: 1, duration: 1 })
+  .to(skills[1], { y: "0%", opacity: 1, duration: 1 })
+  .to(skills[2], { y: "0%", opacity: 1, duration: 1 })
 });
 
 gsap.fromTo(".project__title", 
