@@ -110,41 +110,6 @@ gsap.to(".about__name", {
 //   }
 // });
 
-gsap.to(".about__visual .title", {
-  opacity:1,
-  duration: 1.2,
-  ease: "power2.out",  // 스무스 easing
-  scrollTrigger: {
-    trigger: ".about__visual",
-    start: "top 35%",
-    end: "top 10%", 
-  }
-});
-
-gsap.fromTo(".about_IdPhoto img", 
-  { 
-    y: -100,   // 시작 위치 (위에서)
-    opacity: 0 // 시작 시 투명
-  }, 
-  { 
-    y: 0,      // 원래 위치
-    opacity: 1,
-    duration: 1,
-    ease: "power3.out",
-    scrollTrigger: {
-      trigger: ".about_personal",
-      start: "40% bottom",   // about 섹션의 top이 뷰포트 60% 지점에 닿을 때 시작
-      end: "bottom 40%",  // 필요시 조정
-      toggleActions: "play none none reverse",
-      onEnter: () => {
-        snb.style.zIndex = "1"; 
-      },
-      onLeaveBack: () => {
-        snb.style.opacity = "0";
-      }
-    }
-  }
-);
 gsap.fromTo(".about__intro-text p", 
   { 
     y: 100,   // 시작 위치 (위에서)
