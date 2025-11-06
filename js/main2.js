@@ -217,32 +217,6 @@ gsap.fromTo(".about__skills .skills__title",
   }
 );
 
-gsap.fromTo(".career", 
-  { 
-    y: -100,   // 시작 위치 (위에서)
-    opacity: 0 // 시작 시 투명
-  }, 
-  { 
-    y: 0,      // 원래 위치
-    opacity: 1,
-    duration: 1,
-    ease: "power3.out",
-    scrollTrigger: {
-      trigger: ".about_personal",
-      start: "70% bottom",   // about 섹션의 top이 뷰포트 60% 지점에 닿을 때 시작
-      end: "bottom 40%",  // 필요시 조정
-      toggleActions: "play none none reverse",
-      onEnter: () => {
-        snb.style.zIndex = "1"; 
-      },
-      onLeaveBack: () => {
-        snb.style.opacity = "0";
-      }
-    }
-  }
-);
-
-
 gsap.to(".about__img", {
   opacity:1,
   duration: 1.2,
@@ -253,20 +227,6 @@ gsap.to(".about__img", {
     end: "top 10%", 
   }
 });
-
-
-gsap.to(".square_circle", {
-  duration: 8,
-  repeat: -1,
-  ease: "none",
-  motionPath: {
-    path: ".orbit-context path",
-    align: ".orbit-context path",
-    alignOrigin: [0.5, 0.5], // 점의 중심 정렬
-    autoRotate: true
-  }
-});
-
 
 // let tl2 = gsap.timeline();
 
