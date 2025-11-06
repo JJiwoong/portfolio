@@ -1834,4 +1834,8 @@ input[type=range] {
     padding: 0 30px;
     height: 1000px;
   }
+
+  .about__img{
+    top: 100px;
+  }
   }
