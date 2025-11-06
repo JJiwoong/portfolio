@@ -44,14 +44,14 @@ $('.project .thumb-box').mouseover(function(){
     })
 })
 
-$('a').mouseover(function(){
-  gsap.to('.cursor2',{scale:3})
-  gsap.to('.cursor2 span', { visibility: "visible", opacity: 1,duration:0.1})
-})
-$('a').mouseleave(function(){
-  gsap.to('.cursor2',{scale:1})
-  gsap.to('.cursor2 span', { visibility: "hidden", opacity: 0,duration:0.1})
-})
+// $('a').mouseover(function(){
+//   gsap.to('.cursor2',{scale:3})
+//   gsap.to('.cursor2 span', { visibility: "visible", opacity: 1,duration:0.1})
+// })
+// $('a').mouseleave(function(){
+//   gsap.to('.cursor2',{scale:1})
+//   gsap.to('.cursor2 span', { visibility: "hidden", opacity: 0,duration:0.1})
+// })
 
 // $('[data-color]').each(function(){ 
 //   color = ($(this).data('color') == '#fff') ? 'white' : 'black' // 만약 data-color = "#fff" 면 "white" 아니면 "black" -> 클래스명 변수
