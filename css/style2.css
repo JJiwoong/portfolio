@@ -1831,15 +1831,19 @@ input[type=range] {
 
   @media (max-width:768px){
   .about__skills {
+    position: relative;   /* absolute 자식 정렬 기준 */
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    height: 100vh;        /* ✅ 스티키 높이 확보 */
   }
 
   .skill_box {
-    position: absolute;     /* ✅ 이전 박스 위에 다음 박스가 겹치도록 */
+    position: absolute;
+    top: 50%;             /* ✅ 정확히 화면 중앙 */
+    left: 50%;
+    transform: translate(-50%, -50%);  /* 정확히 중심 배치 */
     opacity: 0;
-    transform: translateY(60%);
   }
   }
