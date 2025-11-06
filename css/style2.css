@@ -1815,4 +1815,11 @@ input[type=range] {
   .project_box .hashtags{
     flex-wrap: wrap;
   }
+
+  .contact__inner .contact__info{
+    width: 100%;
+    padding: 0 50px;
+    align-items: center;
+    gap: initial;
+  }
   }
