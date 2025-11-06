@@ -532,7 +532,7 @@ gsap.to(".progress-bar", {
   backgroundColor: "#000",
   scrollTrigger: {
     trigger: "#contact",
-    start: "top 80%",
+    start: "top 40%",
     end: "bottom top",
     toggleActions: "play reverse play reverse",
     markers:"true"
