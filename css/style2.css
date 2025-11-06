@@ -654,7 +654,6 @@ padding: 200px 0 100px 0;
 }
 
 .wrap{position: relative;}
-.about__skills{}
 .about__skills ul{display: flex; justify-content: space-between; }
 .about__skills ul li{flex-shrink: 0}
 .about__skills ul li svg{width: 80px; height: 80px;}
@@ -1870,5 +1869,19 @@ input[type=range] {
   }
 
   .skill_box{
+    font-size: 14px;
+  }
+  
+  .skills__title{
+    margin-bottom: 40px;
+  }
+
+  .skills_con{
+    gap: 16px;
+  }
+
+  .skill_box svg{
+    width: 60px;
+    height: 60px;
   }
   }
