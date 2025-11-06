@@ -1838,4 +1838,12 @@ input[type=range] {
   .about__img{
     top: 100px;
   }
+
+  .about__info{
+    font-size: 16px;
+  }
+
+  .none-mobile{
+    display: none;
+  }
   }
