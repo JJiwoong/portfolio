@@ -238,12 +238,3 @@ header{
   }
 }
 
-  @media (min-width:768px) and (max-width:1024px){
-  .about__visual{
-    padding: 0 50px;
-  }
-
-  .about__visual .about__mv .about__name p, .about__visual .about__mv .about__title p{
-    font-size: 60px;
-  }
-  }
