@@ -535,6 +535,7 @@ gsap.to(".progress-bar", {
     start: "top 80%",
     end: "bottom top",
     toggleActions: "play reverse play reverse",
+    markers:"true"
   }
 });
 document.getElementById("year").innerHTML = new Date().getFullYear();
