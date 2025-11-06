@@ -1870,7 +1870,6 @@ input[type=range] {
   }
 
   .skill_box{
-    opacity: 1;
     transform: initial;
   }
   }
