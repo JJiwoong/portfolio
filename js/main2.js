@@ -145,7 +145,7 @@ gsap.fromTo(".about_IdPhoto img",
     }
   }
 );
-gsap.fromTo(".introduction_txt p", 
+gsap.fromTo(".about__intro-text p", 
   { 
     y: 100,   // 시작 위치 (위에서)
     opacity: 0 // 시작 시 투명
@@ -156,7 +156,7 @@ gsap.fromTo(".introduction_txt p",
     duration: 1,
     ease: "power3.out",
     scrollTrigger: {
-      trigger: ".introduction_wrap",
+      trigger: ".about__intro",
       start: "top 40%",   // about 섹션의 top이 뷰포트 60% 지점에 닿을 때 시작
       end: "bottom 40%",  // 필요시 조정
       toggleActions: "play none none reverse",
@@ -164,7 +164,7 @@ gsap.fromTo(".introduction_txt p",
   }
 );
 
-document.querySelectorAll(".skills_wrap").forEach((group) => {
+document.querySelectorAll(".about__skills").forEach((group) => {
   const skills = group.querySelectorAll(".skill_box");
 
   gsap.timeline({
@@ -207,7 +207,7 @@ gsap.fromTo(".work_project, .personal_project",
     duration: 1.5,
     ease: "power3.out",
     scrollTrigger: {
-      trigger: ".project_wrap",
+      trigger: ".project__section",
       start: "top 40%",   // about 섹션의 top이 뷰포트 60% 지점에 닿을 때 시작
       end: "bottom 60%",  // 필요시 조정
       toggleActions: "play none none reverse",
@@ -233,7 +233,7 @@ gsap.fromTo(".work_project, .personal_project",
 //   }
 // });
 
-gsap.fromTo(".skills_wrap .skills_tit", 
+gsap.fromTo(".about__skills .skills_tit", 
   { 
     y: -100,
     opacity: 0
@@ -244,7 +244,7 @@ gsap.fromTo(".skills_wrap .skills_tit",
     duration: 0.4,
     ease: "power3.out",
     scrollTrigger: {
-      trigger: ".skills_wrap",
+      trigger: ".about__skills",
       start: "40% bottom",   // skills_wrap의 top이 뷰포트 80% 지점에 닿을 때 (즉, 20% 보였을 때)
       end: "bottom 40%",  // 필요하면 조정 가능
       toggleActions: "play none none reverse",
