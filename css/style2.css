@@ -1890,6 +1890,10 @@ input[type=range] {
     padding-bottom: 100px;
   }
 
+  #project .project_box_wrap{
+    justify-content: initial;
+  }
+
   .project__section{
     padding: 0 30px;
   }
