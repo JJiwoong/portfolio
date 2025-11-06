@@ -1822,4 +1822,9 @@ input[type=range] {
     align-items: center;
     gap: initial;
   }
+
+  .contact{
+    height: initial;
+    padding: 100px 0;
+  }
   }
