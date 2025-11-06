@@ -1811,4 +1811,8 @@ input[type=range] {
   .skills_con{
     gap: 40px;
   }
+
+  .project_box .hashtags{
+    flex-wrap: wrap;
+  }
   }
