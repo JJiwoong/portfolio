@@ -421,50 +421,47 @@
 let vantaEffect = null;
 
 function initVanta() {
-  // 이미 VANTA가 생성되었다면 중복 생성 방지
-  if (vantaEffect) return;
-
   const isMobile = window.matchMedia("(max-width: 767px)").matches;
   const isTablet = window.matchMedia("(min-width: 768px) and (max-width: 1023px)").matches;
+  let chaos = 4;
+  let spacing = 0.7;
 
   if (isMobile) {
-    vantaEffect = VANTA.TRUNK({
-      el: "#page1",
-      scale: 1.0,
-      scaleMobile: 1.0,
-      chaos: 1.5,
-      spacing: 1.0,
-      color: 0x000000,
-      backgroundColor: 0xffffff,
-      resize: true
-    });
+    chaos = 1.5;
+    spacing = 1.0;
   } else if (isTablet) {
-    vantaEffect = VANTA.TRUNK({
-      el: "#page1",
-      scale: 1.0,
-      scaleMobile: 1.0,
-      chaos: 2.5,
-      spacing: 0.8,
-      color: 0x000000,
-      backgroundColor: 0xffffff,
-      resize: true
-    });
-  } else {
-    vantaEffect = VANTA.TRUNK({
-      el: "#page1",
-      scale: 1.0,
-      scaleMobile: 1.0,
-      chaos: 4.0,
-      spacing: 0.7,
-      color: 0x000000,
-      backgroundColor: 0xffffff,
-      resize: true
-    });
+    chaos = 2.5;
+    spacing = 0.9;
   }
+
+  vantaEffect = VANTA.TRUNK({
+    el: "#page1",
+    scale: 1.0,
+    scaleMobile: 1.0,
+    chaos,
+    spacing,
+    color: 0x000000,
+    backgroundColor: 0xffffff,
+  });
 }
 
-// ✅ only once init
-window.addEventListener("DOMContentLoaded", initVanta);
+// ✅ resize 시 destroy 후 새로 생성
+function handleResize() {
+  if (vantaEffect) {
+    vantaEffect.destroy();
+    vantaEffect = null;
+  }
+  initVanta();
+}
+
+window.addEventListener("load", initVanta);
+
+// Debounce 적용해서 resize 시 과도한 실행 방지
+let resizeTimer;
+window.addEventListener("resize", function () {
+  clearTimeout(resizeTimer);
+  resizeTimer = setTimeout(handleResize, 300);
+});
         </script>
         <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
