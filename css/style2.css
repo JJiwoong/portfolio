@@ -1779,4 +1779,8 @@ input[type=range] {
   header nav{
     display: none;
   }
+
+  .clock{
+    font-size: 16px;
+  }
 }
