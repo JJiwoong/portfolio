@@ -130,36 +130,26 @@ gsap.fromTo(".about__intro-text p",
   }
 );
 
-document.querySelectorAll(".about__skills").forEach((group) => {
-  const skills = group.querySelectorAll(".skill_box");
+const mm = gsap.matchMedia();
 
-  const isMobile = window.matchMedia("(max-width: 768px)").matches;
+mm.add("(min-width: 768px)", () => {
+  // ✅ 768px 이상일 때만 실행됨 (Tablet + Desktop)
+  document.querySelectorAll(".about__skills").forEach((group) => {
+    const skills = group.querySelectorAll(".skill_box");
 
-  let tl = gsap.timeline({
-    scrollTrigger: {
-      trigger: group,
-      start: "top top",
-      end: "+=200%",
-      scrub: true,
-      pin: true
-    }
+    gsap.timeline({
+      scrollTrigger: {
+        trigger: group,
+        start: "top top",
+        end: "+=200%",
+        scrub: true,
+        pin: true,
+      }
+    })
+    .to(skills[0], { y: "0%", opacity: 1, duration: 1 })
+    .to(skills[1], { y: "0%", opacity: 1, duration: 1 })
+    .to(skills[2], { y: "0%", opacity: 1, duration: 1 });
   });
-
-  if (!isMobile) {
-    // ✅ PC / 태블릿 (누적 등장)
-    tl.to(skills[0], { y: "0%", opacity: 1, duration: 1 })
-      .to(skills[1], { y: "0%", opacity: 1, duration: 1 })
-      .to(skills[2], { y: "0%", opacity: 1, duration: 1 });
-  } else {
-    // ✅ 모바일 (하나 보여주고 → 사라지고 → 다음 등장)
-    tl.fromTo(skills[0], { y: "60%", opacity: 0 }, { y: "0%", opacity: 1, duration: 1 })
-      .fromTo(skills[0], { opacity: 1 }, { opacity: 0, duration: 0.5 })
-
-      .fromTo(skills[1], { y: "60%", opacity: 0 }, { y: "0%", opacity: 1, duration: 1 })
-      .fromTo(skills[1], { opacity: 1 }, { opacity: 0, duration: 0.5 })
-
-      .fromTo(skills[2], { y: "60%", opacity: 0 }, { y: "0%", opacity: 1, duration: 1 });
-  }
 });
 
 gsap.fromTo(".project__title", 
