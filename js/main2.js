@@ -198,7 +198,7 @@ gsap.fromTo(".work_project, .personal_project",
 //   }
 // });
 
-gsap.fromTo(".about__skills .skills_tit", 
+gsap.fromTo(".about__skills .skills__title", 
   { 
     y: -100,
     opacity: 0
