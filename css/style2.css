@@ -1834,7 +1834,7 @@ input[type=range] {
   .about__visual .about__mv .about__name p, .about__visual .about__mv .about__title p{
     font-size: 60px;
   }
-  
+
   .about__visual{
     padding: 0 30px;
     height: 1000px;
@@ -1851,5 +1851,14 @@ input[type=range] {
 
   .none-mobile{
     display: none;
+  }
+
+  .about__intro{
+    padding: 0 30px;
+  }
+
+  .about__intro-text{
+    font-size: 16px;
+    padding: initial;
   }
   }
