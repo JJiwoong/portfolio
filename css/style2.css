@@ -1828,3 +1828,19 @@ input[type=range] {
     padding: 100px 0;
   }
   }
+
+  @media (max-width:768px){
+      .about__skills {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh; /* ✅ 스티키 영역 확보 */
+    justify-content: center;
+  }
+
+  .skill_box {
+    position: absolute;     /* ✅ 이전 박스 위에 다음 박스가 겹치도록 */
+    opacity: 0;
+    transform: translateY(60%);
+  }
+  }
