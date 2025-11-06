@@ -222,7 +222,7 @@ const fx8Titles = [...document.querySelectorAll('.work_otherwork__tit[data-split
 const fx9Titles = [...document.querySelectorAll('.project-tit[data-splitting][data-effect9]')];
 const fx10Titles = [...document.querySelectorAll('.project-tit[data-splitting][data-effect10]')];
 const fx11Titles = [...document.querySelectorAll('.project-tit[data-splitting][data-effect11]')];
-const fx16Titles = [...document.querySelectorAll('.contact-msg[data-splitting][data-effect16]')];
+const fx16Titles = [...document.querySelectorAll('.contact__message-text[data-splitting][data-effect16]')];
 
 const scrollText = () => {
 fx10Titles.forEach(title => {

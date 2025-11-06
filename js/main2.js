@@ -181,7 +181,7 @@ document.querySelectorAll(".about__skills").forEach((group) => {
   .to(skills[2], { y: "0%", opacity: 1, duration: 1 })
 });
 
-gsap.fromTo(".project_tit", 
+gsap.fromTo(".project__title", 
   { 
     opacity: 0 // 시작 시 투명
   }, 
