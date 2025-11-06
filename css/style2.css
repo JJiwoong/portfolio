@@ -1830,7 +1830,12 @@ input[type=range] {
   }
 
   @media (max-width:768px){
-    .about__visual{
+
+  .about__visual .about__mv .about__name p, .about__visual .about__mv .about__title p{
+    font-size: 60px;
+  }
+  
+  .about__visual{
     padding: 0 30px;
     height: 1000px;
   }
@@ -1841,6 +1846,7 @@ input[type=range] {
 
   .about__info{
     font-size: 16px;
+    padding-top: initial;
   }
 
   .none-mobile{
