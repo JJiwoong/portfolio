@@ -1866,16 +1866,13 @@ input[type=range] {
 
   .skills__title{
     font-size: 30px;
+    margin-bottom: 40px;
   }
 
   .skill_box{
     font-size: 14px;
   }
   
-  .skills__title{
-    margin-bottom: 40px;
-  }
-
   .skills_con{
     gap: 16px;
   }
@@ -1888,6 +1885,10 @@ input[type=range] {
   #project{
     height: initial;
     padding-bottom: 100px;
+  }
+
+  #project p{
+    font-size: 14px;
   }
 
   #project .project_box_wrap{
