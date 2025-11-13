@@ -1887,6 +1887,10 @@ input[type=range] {
     padding-bottom: 100px;
   }
 
+  #project .project__title{
+    font-size:30px;
+  }
+
   #project p{
     font-size: 14px;
   }
