@@ -537,8 +537,8 @@ display: flex;
 }
 
 .contact {
-      height: 100vh;
-
+  height: 100vh;
+  display: flex;
   }
 
   .contact__inner {
