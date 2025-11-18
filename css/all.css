@@ -49,8 +49,6 @@
     background: #101010;
     overflow-x: hidden;
     font-family: 'Montserrat', sans-serif;
-    display: flex;
-    justify-content: center;
   }
 
   body.bg-active::before{
@@ -174,7 +172,6 @@ header{
   display: flex;
   justify-content: space-between;
   padding: 10px 30px;
-  max-width: 1280px;
 }
 
   /* logo */
