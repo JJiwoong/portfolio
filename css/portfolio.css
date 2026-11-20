@@ -1,0 +1,611 @@
+/* ==========================================================================
+   Jeong Jiwoo — Portfolio
+   Split Sticky Editorial Layout (Brittany Chiang × Paco Coursey inspired)
+   ========================================================================== */
+
+:root {
+  --bg: #f8f8f6;
+  --surface-hover: rgba(20, 20, 19, 0.032);
+  --surface-pill: rgba(15, 118, 110, 0.08);
+  --border: rgba(20, 20, 19, 0.1);
+  --border-subtle: rgba(20, 20, 19, 0.06);
+  --text: #141413;
+  --text-body: #52524e;
+  --text-muted: #8a8a82;
+  --accent: #0f766e;
+  --accent-text: #0f766e;
+  --line-inactive: #c9c9c2;
+  --spotlight: rgba(15, 118, 110, 0.04);
+  --font-sans: 'Pretendard Variable', 'Pretendard', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+[data-theme="dark"] {
+  --bg: #0f172a;
+  --surface-hover: rgba(148, 163, 184, 0.06);
+  --surface-pill: rgba(45, 212, 191, 0.1);
+  --border: rgba(148, 163, 184, 0.16);
+  --border-subtle: rgba(148, 163, 184, 0.09);
+  --text: #e2e8f0;
+  --text-body: #94a3b8;
+  --text-muted: #64748b;
+  --accent: #5eead4;
+  --accent-text: #5eead4;
+  --line-inactive: #475569;
+  --spotlight: rgba(29, 78, 216, 0.14);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  font-size: 15px;
+  line-height: 1.72;
+  background-color: var(--bg);
+  color: var(--text-body);
+  transition: background-color 0.22s ease, color 0.22s ease;
+  selection-background-color: var(--surface-pill);
+}
+
+::selection {
+  background: var(--surface-pill);
+  color: var(--accent-text);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+/* Subtle cursor spotlight (Brittany Chiang signature — barely there in light, soft navy glow in dark) */
+.spotlight {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background: radial-gradient(640px at var(--cx, 50%) var(--cy, 20%), var(--spotlight), transparent 80%);
+}
+
+/* ==========================================================================
+   Split Layout Wrapper
+   ========================================================================== */
+.wrap {
+  position: relative;
+  z-index: 1;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 48px;
+  display: flex;
+  justify-content: space-between;
+  gap: 48px;
+}
+
+/* ==========================================================================
+   Left Fixed / Sticky Column
+   ========================================================================== */
+.left {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  width: 44%;
+  max-width: 440px;
+  padding: 88px 0 72px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.identity__name {
+  margin: 0;
+  font-size: 40px;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 1.1;
+  color: var(--text);
+}
+.identity__en {
+  display: inline-block;
+  margin-left: 8px;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  color: var(--text-muted);
+}
+
+.identity__role {
+  margin: 12px 0 0;
+  font-size: 17px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: var(--text);
+}
+
+.identity__bio {
+  margin: 16px 0 0;
+  max-width: 340px;
+  font-size: 14.5px;
+  line-height: 1.68;
+  color: var(--text-body);
+  word-break: keep-all;
+}
+
+/* Brittany Chiang Growing-Line Navigation */
+.side-nav {
+  margin-top: 56px;
+}
+.side-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.side-nav a {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  padding: 8px 0;
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  transition: color 0.2s ease;
+}
+.side-nav .nav-line {
+  display: inline-block;
+  width: 30px;
+  height: 1px;
+  background-color: var(--line-inactive);
+  transition: width 0.22s cubic-bezier(0.22, 1, 0.36, 1), background-color 0.2s ease;
+}
+.side-nav a:hover,
+.side-nav a.is-active {
+  color: var(--text);
+}
+.side-nav a:hover .nav-line,
+.side-nav a.is-active .nav-line {
+  width: 62px;
+  background-color: var(--text);
+}
+
+/* Bottom Meta & Social Links */
+.left-foot {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.social-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 18px;
+}
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13.5px;
+  font-weight: 500;
+  color: var(--text-muted);
+  border: 0;
+  background: transparent;
+  padding: 0;
+  transition: color 0.18s ease;
+}
+.social-link i {
+  font-size: 17px;
+}
+.social-link:hover {
+  color: var(--text);
+}
+
+.theme-switch {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  width: fit-content;
+  border: 0;
+  background: transparent;
+  padding: 4px 0;
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  color: var(--text-muted);
+  transition: color 0.18s ease;
+}
+.theme-switch:hover {
+  color: var(--text);
+}
+
+/* ==========================================================================
+   Right Scrolling Column
+   ========================================================================== */
+.right {
+  width: 54%;
+  padding: 88px 0 96px;
+}
+
+.sec {
+  margin-bottom: 108px;
+  scroll-margin-top: 88px;
+}
+.sec:last-of-type {
+  margin-bottom: 64px;
+}
+
+.sec-label {
+  display: none;
+  margin: 0 0 20px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text);
+}
+
+/* About */
+.about-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  font-size: 15px;
+  line-height: 1.78;
+  word-break: keep-all;
+}
+.about-copy p {
+  margin: 0;
+}
+.about-copy strong {
+  color: var(--text);
+  font-weight: 600;
+}
+
+/* ==========================================================================
+   Interactive Dim-Sibling List (Experience & Projects)
+   ========================================================================== */
+.item-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* When hovering the list container, dim non-hovered items */
+.item-list:hover .entry {
+  opacity: 0.45;
+}
+.item-list .entry:hover {
+  opacity: 1;
+  background: var(--surface-hover);
+  box-shadow: inset 0 1px 0 0 var(--border-subtle);
+}
+
+.entry {
+  display: grid;
+  grid-template-columns: 124px 1fr;
+  gap: 20px;
+  padding: 20px;
+  margin: 0 -20px;
+  border-radius: 10px;
+  transition: opacity 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.entry__aside {
+  padding-top: 3px;
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+.entry__aside-sub {
+  display: block;
+  margin-top: 4px;
+  font-size: 11px;
+  opacity: 0.8;
+}
+
+.entry__title {
+  margin: 0;
+  font-size: 15.5px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--text);
+  line-height: 1.4;
+}
+.entry__title a {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 5px;
+  transition: color 0.18s ease;
+}
+.entry:hover .entry__title a {
+  color: var(--accent-text);
+}
+.entry__arrow {
+  display: inline-block;
+  font-size: 14px;
+  transition: transform 0.2s ease;
+}
+.entry:hover .entry__arrow {
+  transform: translate(3px, -3px);
+}
+
+.entry__role {
+  font-size: 13.5px;
+  font-weight: 500;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+.entry__desc {
+  margin: 10px 0 0;
+  font-size: 14px;
+  line-height: 1.68;
+  color: var(--text-body);
+  word-break: keep-all;
+}
+
+/* Inline Expandable Details for Work Projects */
+.entry__toggle {
+  margin-top: 10px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text-muted);
+  transition: color 0.18s ease;
+}
+.entry__toggle:hover {
+  color: var(--accent-text);
+}
+
+.entry__detail {
+  display: none;
+  margin-top: 14px;
+  padding: 14px 16px;
+  border-left: 2px solid var(--border);
+  font-size: 13.5px;
+  line-height: 1.68;
+  color: var(--text-body);
+}
+.entry__detail.is-open {
+  display: block;
+}
+.entry__detail-group + .entry__detail-group {
+  margin-top: 12px;
+}
+.entry__detail-h {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text);
+  margin-bottom: 5px;
+}
+.entry__detail ul {
+  margin: 0;
+  padding-left: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.entry__detail li {
+  word-break: keep-all;
+}
+
+/* Subtle Tech Pills */
+.pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 14px;
+}
+.pill {
+  padding: 3px 10px;
+  border-radius: 999px;
+  background: var(--surface-pill);
+  color: var(--accent-text);
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+/* ==========================================================================
+   Skills Index (Paco Coursey / Swiss Minimalist Table)
+   ========================================================================== */
+.skill-index {
+  border-top: 1px solid var(--border);
+}
+.skill-row {
+  display: grid;
+  grid-template-columns: 144px 1fr;
+  gap: 20px;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--border-subtle);
+  align-items: baseline;
+}
+.skill-row__k {
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+.skill-row__v {
+  font-size: 14px;
+  color: var(--text);
+  line-height: 1.75;
+  word-break: keep-all;
+}
+.skill-row__v span {
+  color: var(--text-muted);
+  margin: 0 7px;
+  font-size: 12px;
+}
+
+/* ==========================================================================
+   Contact & Colophon Footer
+   ========================================================================== */
+.contact-block {
+  padding-top: 28px;
+  border-top: 1px solid var(--border);
+}
+.contact-block__lead {
+  margin: 0 0 18px;
+  font-size: 14.5px;
+  color: var(--text-body);
+  word-break: keep-all;
+}
+.contact-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.contact-line {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--border-subtle);
+  font-size: 14px;
+  color: var(--text);
+  transition: color 0.18s ease;
+}
+.contact-line:hover {
+  color: var(--accent-text);
+}
+.contact-line__k {
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.contact-line__v {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+}
+.contact-line__hint {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+.colophon {
+  margin-top: 40px;
+  font-size: 12.5px;
+  color: var(--text-muted);
+  line-height: 1.65;
+}
+
+/* Toast */
+.toast {
+  position: fixed;
+  left: 50%;
+  bottom: 28px;
+  transform: translateX(-50%) translateY(10px);
+  z-index: 100;
+  padding: 9px 16px;
+  border-radius: 8px;
+  background: var(--text);
+  color: var(--bg);
+  font-size: 13px;
+  font-weight: 600;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.18s ease, transform 0.18s ease;
+}
+.toast.is-show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* ==========================================================================
+   Responsive (Tablet & Mobile)
+   ========================================================================== */
+@media (max-width: 980px) {
+  .wrap {
+    flex-direction: column;
+    padding: 0 28px;
+    gap: 0;
+  }
+  .left {
+    position: static;
+    height: auto;
+    width: 100%;
+    max-width: none;
+    padding: 56px 0 36px;
+    gap: 28px;
+  }
+  .side-nav {
+    display: none;
+  }
+  .right {
+    width: 100%;
+    padding: 16px 0 72px;
+  }
+  .sec {
+    margin-bottom: 68px;
+    scroll-margin-top: 24px;
+  }
+  .sec-label {
+    display: block;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    padding: 14px 0;
+    background: var(--bg);
+    border-bottom: 1px solid var(--border-subtle);
+  }
+  .item-list:hover .entry {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 600px) {
+  .wrap {
+    padding: 0 20px;
+  }
+  .identity__name {
+    font-size: 32px;
+  }
+  .entry {
+    grid-template-columns: 1fr;
+    gap: 6px;
+    padding: 16px 12px;
+    margin: 0 -12px;
+  }
+  .skill-row {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+}
