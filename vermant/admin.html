@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VERMANT BACKOFFICE — 통합 관리자</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  <link rel="stylesheet" href="./css/admin.css" />
+</head>
+<body>
+  <!-- Admin Login Gate -->
+  <div class="admin-auth-gate" id="adminAuthGate" hidden>
+    <div class="admin-auth-card">
+      <div class="admin-auth-brand">VERMANT</div>
+      <p class="admin-auth-sub">OPERATIONS BACKOFFICE SIGN IN</p>
+      <div class="admin-auth-error" id="adminAuthError" hidden></div>
+      <form id="adminLoginForm" class="admin-auth-form">
+        <div class="form-field">
+          <label>관리자 이메일</label>
+          <input type="email" class="input" name="email" required value="admin@vermant.kr" autocomplete="email" />
+        </div>
+        <div class="form-field">
+          <label>비밀번호</label>
+          <input type="password" class="input" name="password" required placeholder="••••••••" autocomplete="current-password" />
+        </div>
+        <button type="submit" class="btn-solid" style="width:100%; justify-content:center; padding:11px;">
+          관리자 로그인
+        </button>
+      </form>
+
+      <div class="admin-auth-demo">
+        <button type="button" class="btn-outline" id="quickAdminLoginBtn" style="width:100%; justify-content:center; padding:10px;">
+          데모 관리자로 바로 입장 (admin@vermant.kr) →
+        </button>
+        <p class="admin-auth-hint">기본 계정: admin@vermant.kr / admin1234 (SHA-256 인증)</p>
+      </div>
+
+      <div class="admin-auth-links">
+        <a href="./index.html">← 스토어프론트 돌아가기</a>
+        <a href="../index.html">포트폴리오 ←</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="admin-shell" id="adminShell">
+    <!-- Left Operations Sidebar -->
+    <aside class="admin-sidebar" id="adminSidebar">
+      <div class="sidebar-brand">
+        <a href="./index.html" class="brand-title">VERMANT</a>
+        <span class="brand-sub">OPERATIONS BACKOFFICE</span>
+      </div>
+
+      <nav class="sidebar-nav" id="sidebarNav" aria-label="관리자 메뉴">
+        <button type="button" class="nav-item active" data-tab="dashboard">
+          <span class="nav-code">01</span>
+          <span>대시보드</span>
+        </button>
+        <button type="button" class="nav-item" data-tab="products">
+          <span class="nav-code">02</span>
+          <span>상품 관리</span>
+        </button>
+        <button type="button" class="nav-item" data-tab="layout">
+          <span class="nav-code">03</span>
+          <span>진열 · 에디토리얼</span>
+        </button>
+        <button type="button" class="nav-item" data-tab="orders">
+          <span class="nav-code">04</span>
+          <span>주문 · 교환/반품</span>
+          <span class="nav-badge" id="navReturnBadge" hidden>0</span>
+        </button>
+        <button type="button" class="nav-item" data-tab="cms">
+          <span class="nav-code">05</span>
+          <span>콘텐츠 · CMS</span>
+        </button>
+        <button type="button" class="nav-item" data-tab="users">
+          <span class="nav-code">06</span>
+          <span>회원 관리 (CRM)</span>
+        </button>
+      </nav>
+
+      <div class="sidebar-foot">
+        <div class="sync-pill">
+          <span class="sync-dot"></span>
+          <span>스토어 실시간 연동 중</span>
+        </div>
+        <a href="./index.html" target="_blank" rel="noopener" class="side-action-link">
+          스토어프론트 새 탭으로 열기 ↗
+        </a>
+        <button type="button" class="side-reset-btn" id="resetDemoBtn">
+          초기 데모 데이터로 복원
+        </button>
+      </div>
+    </aside>
+
+    <!-- Main Workspace -->
+    <div class="admin-main">
+      <header class="admin-topbar">
+        <div class="topbar-left">
+          <button type="button" class="mobile-menu-btn" id="mobileMenuBtn">MENU</button>
+          <div>
+            <h1 class="page-title" id="pageTitle">대시보드</h1>
+            <p class="page-desc" id="pageDesc">VERMANT 스토어프론트와 localStorage로 실시간 동기화됩니다.</p>
+          </div>
+        </div>
+        <div class="topbar-right">
+          <span class="admin-user-pill" id="adminUserLabel">VERMANT 관리자</span>
+          <a href="./index.html" class="btn-outline" target="_blank" rel="noopener">스토어 보기 ↗</a>
+          <button type="button" class="btn-ghost" id="adminLogoutBtn">로그아웃</button>
+        </div>
+      </header>
+
+      <main class="admin-content" id="adminContent"></main>
+    </div>
+  </div>
+
+  <!-- Admin Modal -->
+  <div class="modal-backdrop" id="adminModalBackdrop" hidden>
+    <div class="modal-box" id="adminModalBox" role="dialog" aria-modal="true"></div>
+  </div>
+
+  <!-- Toast -->
+  <div class="toast" id="adminToast" role="status" aria-live="polite" hidden></div>
+
+  <script src="./js/data.js"></script>
+  <script src="./js/admin.js"></script>
+</body>
+</html>

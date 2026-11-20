@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VERMANT — Official Online Store</title>
+  <meta name="description" content="VERMANT SEOUL — Contemporary Tailoring & Archival Menswear." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  <link rel="stylesheet" href="./css/store.css" />
+</head>
+<body>
+  <!-- Fixed Minimal Gallery Header (PC & Mobile) -->
+  <header class="site-header" id="siteHeader">
+    <div class="header-left">
+      <button type="button" class="mobile-tc-btn" id="mobileTcBtn" aria-expanded="false" aria-controls="mobileDrawer">
+        T/C
+      </button>
+      <button type="button" class="desktop-toc-trigger" id="desktopTocTrigger" aria-expanded="false">
+        <span class="toc-label" data-i18n="toc">TABLE OF CONTENTS</span>
+        <span class="toc-indicator" aria-hidden="true">+</span>
+      </button>
+    </div>
+
+    <div class="header-center">
+      <a href="#home" class="brand-wordmark" id="brandWordmark">VERMANT</a>
+    </div>
+
+    <div class="header-right">
+      <button type="button" class="util-btn" id="authHeaderBtn">LOGIN</button>
+      <button type="button" class="util-btn lang-toggle" id="langToggleBtn" aria-label="Toggle Language">
+        <span class="lang-opt" data-lang="ko">KR</span>
+        <span class="lang-sep">/</span>
+        <span class="lang-opt" data-lang="en">EN</span>
+      </button>
+      <button type="button" class="util-btn cart-btn" id="openCartBtn">
+        <span class="cart-text-pc" data-i18n="shoppingCart">SHOPPING CART</span>
+        <span class="cart-text-mo">CART</span>
+        <span class="cart-count" id="cartCount">(0)</span>
+      </button>
+      <a href="./admin.html" class="util-btn admin-link" title="VERMANT Operations Backoffice">ADMIN ↗</a>
+    </div>
+  </header>
+
+  <!-- Desktop Floating 3-Category TOC Overlay (Accessible from non-home views) -->
+  <div class="toc-dropdown" id="tocDropdown" hidden>
+    <div class="toc-dropdown-inner" id="tocDropdownInner"></div>
+  </div>
+
+  <!-- Mobile Full-Screen T/C Drawer (REPOS Mobile Reference) -->
+  <div class="mobile-drawer" id="mobileDrawer" hidden>
+    <div class="mobile-drawer-top">
+      <button type="button" class="mobile-tc-btn" id="closeMobileDrawerBtn">CLOSE</button>
+      <span class="brand-wordmark small">VERMANT</span>
+      <button type="button" class="util-btn" id="mobileCartBtn">CART <span id="mobileCartCount">(0)</span></button>
+    </div>
+    <div class="mobile-drawer-body" id="mobileDrawerBody"></div>
+    <div class="mobile-drawer-foot">
+      <button type="button" class="drawer-foot-btn" id="mobileAuthBtn">LOGIN</button>
+      <button type="button" class="drawer-foot-btn" id="mobileLangBtn">KR / EN</button>
+      <a href="./admin.html" class="drawer-foot-btn">ADMIN ↗</a>
+    </div>
+  </div>
+
+  <!-- Main Dynamic Application Container -->
+  <main class="site-main" id="appMain"></main>
+
+  <!-- Minimal Gallery Footer -->
+  <footer class="site-footer" id="siteFooter">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <span class="footer-brand">VERMANT SEOUL</span>
+        <p class="footer-copy" data-i18n="footerAddr">서울특별시 성동구 연무장길 48, 1–3F · CS +82 2-462-0918</p>
+      </div>
+      <div class="footer-col footer-links">
+        <a href="#info/about" data-i18n="navAbout">ABOUT</a>
+        <a href="#info/notice" data-i18n="navNotice">NOTICE</a>
+        <a href="#info/stockist" data-i18n="navStockist">STOCKIST</a>
+        <a href="#info/faq" data-i18n="navFaq">FAQ</a>
+        <a href="./admin.html">ADMIN ↗</a>
+      </div>
+      <div class="footer-col footer-right">
+        <span>© 2026 VERMANT. ALL RIGHTS RESERVED.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Slide-Over Shopping Cart Drawer -->
+  <div class="drawer-backdrop" id="cartBackdrop" hidden></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Shopping Cart" hidden>
+    <div class="cart-drawer-header">
+      <h2 class="drawer-title" data-i18n="shoppingCart">SHOPPING CART</h2>
+      <button type="button" class="icon-close-btn" id="closeCartBtn" aria-label="Close">✕</button>
+    </div>
+    <div class="cart-drawer-body" id="cartItemsWrap"></div>
+    <div class="cart-drawer-footer" id="cartFooterWrap"></div>
+  </aside>
+
+  <!-- Modal Container (Checkout & Return/Exchange Auto-Fee Payment Popup) -->
+  <div class="modal-backdrop" id="modalBackdrop" hidden>
+    <div class="modal-sheet" id="modalSheet" role="dialog" aria-modal="true"></div>
+  </div>
+
+  <!-- Subtle Notification Toast -->
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+  <script src="./js/data.js"></script>
+  <script src="./js/store.js"></script>
+</body>
+</html>
